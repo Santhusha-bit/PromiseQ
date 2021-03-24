@@ -1,52 +1,60 @@
-import axios from 'axios'
+import axios from "axios";
 
 function getRequestParams(name, email, subject, message) {
-  const Portal_ID = process.env.hubspotPortalId
-  const Form_ID = process.env.hubspotFormId
+  const Portal_ID = process.env.hubspotPortalId;
+  const Form_ID = process.env.hubspotFormId;
 
-  const url = `https://api.hsforms.com/submissions/v3/integration/submit/${Portal_ID}/${Form_ID}`
+  console.log(Portal_ID, Form_ID);
+
+  const url = `https://api.hsforms.com/submissions/v3/integration/submit/${Portal_ID}/${Form_ID}`;
   const data = {
-    "fields": [
+    fields: [
       {
-        "name": "email",
-        "value": email
+        name: "email",
+        value: email,
       },
       {
-        "name": "firstname",
-        "value": name
+        name: "firstname",
+        value: name,
       },
       {
-        "name": "subject",
-        "value": subject
+        name: "subject",
+        value: subject,
       },
       {
-        "name": "message",
-        "value": message
-      }
+        name: "message",
+        value: message,
+      },
     ],
-  }
+  };
 
   const headers = {
-    "Content-Type": "application/json"
-  }
+    "Content-Type": "application/json",
+  };
 
   return {
     url,
     data,
     headers,
-  }
+  };
 }
 
 export default async (req, res) => {
-  const { name, email, subject, message } = req.body
+  const { name, email, subject, message } = req.body;
 
   try {
-    const { url, data, headers } = getRequestParams(name, email, subject, message);
+    const { url, data, headers } = getRequestParams(
+      name,
+      email,
+      subject,
+      message
+    );
+
+    console.log(url);
 
     const response = await axios.post(url, data, { headers });
 
     return res.status(201).json({ error: null });
-
   } catch (error) {
     return res.status(400).json({
       error: `Oops, something went wrong....`,
