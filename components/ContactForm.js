@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const ContactForm = () => {
-  const { register, handleSubmit, errors, reset } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,8 +17,6 @@ const ContactForm = () => {
   function getRequestParams(name, email, subject, message) {
     const Portal_ID = "19542633";
     const Form_ID = "df44df7c-6b86-4387-9bcf-ca970558ae24";
-
-    console.log(Portal_ID, Form_ID);
 
     const url = `https://api.hsforms.com/submissions/v3/integration/submit/${Portal_ID}/${Form_ID}`;
     const data = {
@@ -65,11 +63,7 @@ const ContactForm = () => {
         message
       );
 
-      console.log(url);
-
       const response = await axios.post(url, data, { headers });
-
-      console.log(response);
 
       return response;
     } catch (error) {
@@ -89,8 +83,8 @@ const ContactForm = () => {
         message,
       });
       setState("SUCCESS");
-    } catch (e) {
-      setErrorMessage(e);
+    } catch (error) {
+      setErrorMessage(error);
       setState("ERROR");
     }
   };
