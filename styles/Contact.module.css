@@ -1,0 +1,31 @@
+.form {
+  border-radius: 5px;
+  padding: 20px;
+  background:rgba(0, 0, 0, 0.925);
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.button{
+  margin-top: 5px;
+  margin-left: 10px;
+  width:150px;
+  height: 30px;
+  background: #FFD42A;
+  border: 2px solid #FFD42A;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 210, 181, 0.4);
+  border-radius: 30px;
+}
+
+.label {
+  font-size:12pt;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-size:10pt;
+}
