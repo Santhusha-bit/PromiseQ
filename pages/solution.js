@@ -1,7 +1,7 @@
 import Meta from "components/Meta";
 import Header from "components/Header";
 import TextLayout from "components/TextLayout";
-import VideoLayout from "@components/VideoLayout";
+import VideoLayout from "components/VideoLayout";
 
 const solution = () => {
 	return (
