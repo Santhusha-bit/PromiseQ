@@ -3,7 +3,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
 import GavelRoundedIcon from "@material-ui/icons/GavelRounded";
 import ShuffleRoundedIcon from "@material-ui/icons/ShuffleRounded";
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const benifitsItems = [
+const benefitsItems = [
 	{
 		icon: <GavelRoundedIcon />,
 		title: "First Mover",
@@ -67,26 +67,26 @@ const benifitsItems = [
 	},
 ];
 
-const BenifitsList = () => {
+const BenefitsList = () => {
 	const classes = useStyles();
 	return (
 		<>
 			<Grid container spacing={5} justify="center">
-				{benifitsItems.map((benifit) => (
-					<Grid item key={benifit.title} xs={12} sm={6} md={4}>
+				{benefitsItems.map((benefit) => (
+					<Grid item key={benefit.title} xs={12} sm={6} md={4}>
 						<Card className={classes.card}>
 							<CardActionArea className={classes.action}>
 								<CardContent>
-									<Icon className={classes.iconStyle}>{benifit.icon}</Icon>
+									<Icon className={classes.iconStyle}>{benefit.icon}</Icon>
 									<Typography gutterBottom variant="subtitle1" component="h2">
-										{benifit.title}
+										{benefit.title}
 									</Typography>
 									<Typography
 										variant="body2"
 										color="textSecondary"
 										component="p"
 									>
-										{benifit.description}
+										{benefit.description}
 									</Typography>
 								</CardContent>
 							</CardActionArea>
@@ -98,4 +98,4 @@ const BenifitsList = () => {
 	);
 };
 
-export default BenifitsList;
+export default BenefitsList;

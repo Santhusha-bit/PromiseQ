@@ -106,13 +106,13 @@ const Navbar = (props) => {
 										</Button>
 									</Link>
 
-									<Link href="/benifits" passHref>
+									<Link href="/benefits" passHref>
 										<Button
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
 										>
-											Benifits
+											Benefits
 										</Button>
 									</Link>
 
@@ -166,9 +166,9 @@ const Navbar = (props) => {
 							</ListItem>
 						</Link>
 
-						<Link href="/benifits" passHref>
+						<Link href="/benefits" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
-								<ListItemText primary="Benifits" />
+								<ListItemText primary="Benefits" />
 							</ListItem>
 						</Link>
 
