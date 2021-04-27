@@ -1,14 +1,26 @@
-import textStyles from "styles/TextLayout.module.css";
+import Typography from "@material-ui/core/Typography";
+import Button from "components/Button";
 
-const TextLayout = ({ textHeading, textParagraph, buttonText, buttonRef }) => {
+const TextLayout = ({
+	textHeading,
+	headingVariant = "h3",
+	textParagraph,
+	paragraphVariant = "subtitle1",
+	buttonText,
+	buttonRef,
+}) => {
 	return (
-		<div className={textStyles.container}>
-			<h2 className={textStyles.title}>{textHeading}</h2>
-			<p className={textStyles.paragraph}>{textParagraph}</p>
-			<a href={buttonRef}>
-				<button className={textStyles.button}>{buttonText}</button>
+		<>
+			<Typography gutterBottom variant={headingVariant}>
+				{textHeading}
+			</Typography>
+			<Typography gutterBottom variant={paragraphVariant}>
+				{textParagraph}
+			</Typography>
+			<a href={buttonRef} style={{ textDecoration: "none" }}>
+				<Button text={buttonText} />
 			</a>
-		</div>
+		</>
 	);
 };
 

@@ -1,10 +1,13 @@
-import imageStyles from "styles/ImageLayout.module.css";
-
-const ImageLayout = ({ imageRef, desc, width, height }) => {
+const ImageLayout = ({
+	imageRef,
+	desc,
+	width = "100%",
+	objectFit = "fill",
+}) => {
 	return (
-		<div className={imageStyles.container}>
-			<img src={imageRef} alt={desc} width={width} height={height} />
-		</div>
+		<>
+			<img src={imageRef} alt={desc} width={width} object-fit={objectFit} />
+		</>
 	);
 };
 

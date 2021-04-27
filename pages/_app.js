@@ -1,12 +1,41 @@
-import Layout from "components/Layout";
-import "styles/globals.css";
+import React from "react";
+import PropTypes from "prop-types";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "styles/theme";
+import Meta from "components/Meta";
+import Navbar from "components/Navbar";
+import { Box, Container } from "@material-ui/core";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp(props) {
+	const { Component, pageProps } = props;
+
+	React.useEffect(() => {
+		// Remove the server-side injected CSS.
+		const jssStyles = document.querySelector("#jss-server-side");
+		if (jssStyles) {
+			jssStyles.parentElement.removeChild(jssStyles);
+		}
+	}, []);
+
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<React.Fragment>
+			<Meta />
+			<ThemeProvider theme={theme}>
+				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+				<CssBaseline />
+				<Navbar />
+				<Container maxWidth={false}>
+					<Box marginTop={15}>
+						<Component {...pageProps} />
+					</Box>
+				</Container>
+			</ThemeProvider>
+		</React.Fragment>
 	);
 }
 
-export default MyApp;
+MyApp.propTypes = {
+	Component: PropTypes.elementType.isRequired,
+	pageProps: PropTypes.object.isRequired,
+};
