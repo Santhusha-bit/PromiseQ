@@ -37,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
 			color: theme.palette.secondary.main,
 			backgroundColor: "transparent",
 		},
-		"&:action": {
-			color: theme.palette.primary.main,
-		},
 	},
 }));
 
@@ -65,14 +62,18 @@ const Navbar = (props) => {
 	const handleDrawer = () => {
 		setOpen(true);
 	};
-
 	return (
 		<div className={classes.root}>
 			<ElevationScroll {...props}>
 				<AppBar className={classes.appBar}>
 					<Toolbar>
 						<Box className={classes.imageBox}>
-							<img src="/banner.png" width="180" height="auto" />
+							<img
+								src="/banner.png"
+								width="180"
+								height="auto"
+								alt="Company Logo"
+							/>
 						</Box>
 						{isMobile ? (
 							<IconButton

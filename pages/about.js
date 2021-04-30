@@ -9,6 +9,7 @@ const about = () => {
 		<>
 			<Meta title="About Us" />
 			<Header title="About Us" />
+
 			<Grid container justify="center" spacing={4}>
 				<Grid item xs={12} sm={12} md={7}>
 					<ImageLayout imageRef="/team_foto.png" desc="team" />

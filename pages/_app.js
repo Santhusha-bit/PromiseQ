@@ -6,6 +6,7 @@ import theme from "styles/theme";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import { Box, Container } from "@material-ui/core";
+import Footer from "components/Footer";
 
 export default function MyApp(props) {
 	const { Component, pageProps } = props;
@@ -25,11 +26,14 @@ export default function MyApp(props) {
 				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 				<CssBaseline />
 				<Navbar />
-				<Container maxWidth={false}>
+
+				<Container>
 					<Box marginTop={15}>
 						<Component {...pageProps} />
 					</Box>
 				</Container>
+
+				<Footer />
 			</ThemeProvider>
 		</React.Fragment>
 	);
