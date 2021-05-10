@@ -1,18 +1,18 @@
 import Meta from "components/Meta";
 import Header from "components/Header";
-import ApplicationsList from "@components/ApplicationsList";
+import BenefitsList from "components/BenefitsList";
 import Box from "@material-ui/core/Box";
 
-const applications = () => {
+const benefits = () => {
 	return (
 		<>
-			<Meta title="Applications" />
-			<Header title="Applications" />
+			<Meta title="Benefits" />
+			<Header title="Benefits" />
 			<Box alignItems="center" display="flex" minHeight={"100vh"}>
-				<ApplicationsList />
+				<BenefitsList />
 			</Box>
 		</>
 	);
 };
 
-export default applications;
+export default benefits;

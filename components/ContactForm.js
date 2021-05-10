@@ -1,10 +1,23 @@
-import contactStyles from "styles/Contact.module.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import TextField from "@material-ui/core/TextField";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "components/Button";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		"& .MuiFormControl-root": {
+			width: "100%",
+			margin: theme.spacing(1),
+		},
+	},
+}));
 
 const ContactForm = () => {
-	const { register, handleSubmit, errors, reset } = useForm();
+	const classes = useStyles();
+	const { handleSubmit } = useForm();
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -13,10 +26,21 @@ const ContactForm = () => {
 
 	const [state, setState] = useState("IDLE");
 	const [errorMessage, setErrorMessage] = useState(null);
+	const [errors, setErrors] = useState({});
+
+	const validation = () => {
+		let temp = {};
+		temp.name = name ? "" : "This field is required.";
+		temp.email = /$^|.+@.+..+/.test(email) ? "" : "Email is not valid.";
+		temp.subject = subject ? "" : "This field is required.";
+		temp.message = message ? "" : "This field is required.";
+		setErrors({ ...temp });
+		return Object.values(temp).every((x) => x == "");
+	};
 
 	function getRequestParams(name, email, subject, message) {
-		const Portal_ID = "19542633";
-		const Form_ID = "df44df7c-6b86-4387-9bcf-ca970558ae24";
+		const Portal_ID = "9094398";
+		const Form_ID = "219adb3f-b43c-4b02-babc-13467c28a98d";
 
 		const url = `https://api.hsforms.com/submissions/v3/integration/submit/${Portal_ID}/${Form_ID}`;
 		const data = {
@@ -73,106 +97,88 @@ const ContactForm = () => {
 
 	const onSubmitForm = async (evt) => {
 		evt.preventDefault;
-		setState("LOADING");
-		setErrorMessage(null);
-		try {
-			const response = await sendToHubSpot({
-				name,
-				email,
-				subject,
-				message,
-			});
-			setState("SUCCESS");
-		} catch (error) {
-			setErrorMessage(error);
-			setState("ERROR");
+		if (validation()) {
+			setState("LOADING");
+			setErrorMessage(null);
+			try {
+				const response = await sendToHubSpot({
+					name,
+					email,
+					subject,
+					message,
+				});
+				setState("SUCCESS");
+			} catch (error) {
+				setErrorMessage(error);
+				setState("ERROR");
+			}
 		}
 	};
 
 	return (
-		<form className={contactStyles.form} onSubmit={handleSubmit(onSubmitForm)}>
-			<label className={contactStyles.label}>
-				Your Name
-				<div className={contactStyles.container}>
-					<input
-						className={contactStyles.inputBox}
-						type="text"
+		<form className={classes.root} onSubmit={handleSubmit(onSubmitForm)}>
+			<Grid container spacing={4} justify="center">
+				<Grid item xs={12} md={6}>
+					<TextField
+						label="Your Name"
 						name="name"
 						value={name}
 						onChange={(e) => setName(e.target.value)}
-						ref={register({ required: true })}
+						{...(errors.name && { error: true, helperText: errors.name })}
 					/>
-					<span className={contactStyles.error}>
-						{errors?.name && <p> Name is required</p>}
-					</span>
-				</div>
-			</label>
-
-			<label className={contactStyles.label}>
-				Your Email
-				<div className={contactStyles.container}>
-					<input
-						className={contactStyles.inputBox}
-						type="email"
+				</Grid>
+				<Grid item xs={12} md={6}>
+					<TextField
+						required
+						label="Your Email"
 						name="email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						ref={register({ required: true })}
+						{...(errors.email && { error: true, helperText: errors.email })}
 					/>
-					<span className={contactStyles.error}>
-						{errors?.email && <p> Email is required</p>}
-					</span>
-				</div>
-			</label>
-			<label className={contactStyles.label}>
-				Subject
-				<div className={contactStyles.container}>
-					<input
-						className={contactStyles.inputBox}
-						type="text"
+				</Grid>
+				<Grid item xs={12}>
+					<TextField
+						fullWidth
+						label="Subject"
 						name="subject"
 						value={subject}
 						onChange={(e) => setSubject(e.target.value)}
-						ref={register({ required: true })}
+						{...(errors.subject && { error: true, helperText: errors.subject })}
 					/>
-					<span className={contactStyles.error}>
-						{errors?.subject && <p> Subject is required</p>}
-					</span>
-				</div>
-			</label>
-
-			<label className={contactStyles.label}>
-				Your Message
-				<div className={contactStyles.container}>
-					<textarea
-						className={contactStyles.inputBox}
-						type="text"
+				</Grid>
+				<Grid item xs={12}>
+					<TextField
+						fullWidth
+						multiline
+						rows={4}
+						label="Your Message"
 						name="message"
 						value={message}
 						onChange={(e) => setMessage(e.target.value)}
-						ref={register({ required: true })}
+						{...(errors.message && { error: true, helperText: errors.message })}
 					/>
-					<span className={contactStyles.error}>
-						{errors?.message && <p> Message is required</p>}
-					</span>
-				</div>
-			</label>
-			<div className={contactStyles.buttonContainer}>
-				<button
-					className={contactStyles.button}
-					type="submit"
-					disabled={state === "LOADING"}
-				>
-					Send Message
-				</button>
+				</Grid>
+				<Grid item>
+					<Button
+						type="submit"
+						text="Send Message"
+						disabled={state === "LOADING"}
+					></Button>
 
-				<div>
-					{state === "ERROR" && <p style={{ color: "red" }}>{errorMessage}</p>}
-					{state === "SUCCESS" && (
-						<p style={{ color: "green" }}>Message Sent!</p>
-					)}
-				</div>
-			</div>
+					<div>
+						{state === "ERROR" && (
+							<p style={{ color: "red" }}>{errorMessage}</p>
+						)}
+						{state === "SUCCESS" && (
+							<p style={{ color: "green" }}>
+								Thank you for contacting us!. Your message has been successfully
+								sent. We will contact you very soon!
+							</p>
+						)}
+					</div>
+				</Grid>
+			</Grid>
 		</form>
 	);
 };

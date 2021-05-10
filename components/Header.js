@@ -1,11 +1,22 @@
-import headerStyles from "styles/Header.module.css";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 
-const Header = ({title}) => {
-  return (
-    <div className= {headerStyles.heading}>
-      {title}
-    </div>
-  )
-}
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+		justifyContent: "center",
+	},
+}));
 
-export default Header
+const Header = ({ title }) => {
+	const classes = useStyles();
+	return (
+		<div className={classes.root}>
+			<Typography variant="h3" gutterBottom>
+				{title}
+			</Typography>
+		</div>
+	);
+};
+
+export default Header;
