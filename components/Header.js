@@ -12,7 +12,7 @@ const Header = ({ title }) => {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<Typography variant="h4" gutterBottom>
+			<Typography variant="h3" gutterBottom>
 				{title}
 			</Typography>
 		</div>

@@ -17,8 +17,7 @@ const theme = createMuiTheme({
 		MuiCssBaseline: {
 			"@global": {
 				body: {
-					background:
-						"linear-gradient(90deg, rgba(255,255,255,1) 45%, rgba(255,212,42,0.30) 100%)",
+					backgroundColor: "#FFFFFF",
 					backgroundRepeat: "no-repeat",
 					backgroundAttachment: "fixed",
 				},

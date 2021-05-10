@@ -37,9 +37,9 @@ const ApplicationsList = () => {
 							/>
 
 							<Typography gutterBottom variant="h6" component="h6">
-								{application.title}{" "}
+								{application.title}
 							</Typography>
-							<Typography gutterBottom variant="subtitle1" component="h2">
+							<Typography gutterBottom variant="subtitle1">
 								{application.description}
 							</Typography>
 						</Container>

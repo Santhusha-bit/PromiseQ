@@ -10,7 +10,7 @@ import EmailIcon from "@material-ui/icons/Email";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		background: "rgba(0, 0, 0, 0.1)",
+		background: "#F6F6F6",
 		flexGrow: 1,
 		marginTop: theme.spacing(2),
 	},
@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(1),
 		"&:hover": {
 			backgroundColor: theme.palette.secondary.main,
-			fontSize: "large",
 		},
 	},
 }));
@@ -37,7 +36,7 @@ const Footer = () => {
 		<footer className={classes.root}>
 			<Container>
 				<Grid container spacing={3} justify="center">
-					<Grid item xs={3}>
+					<Grid item xs={6} sm={3}>
 						<Grid item xs={12}>
 							<Typography variant="body1" color="inherit">
 								Managing Directors:
@@ -50,7 +49,7 @@ const Footer = () => {
 							</Typography>
 						</Grid>
 					</Grid>
-					<Grid item xs={3}>
+					<Grid item xs={6} sm={3}>
 						<Grid item xs={12}>
 							<Typography variant="body1" color="inherit">
 								Location & Contact:
@@ -82,7 +81,7 @@ const Footer = () => {
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid item xs={3}>
+					<Grid item xs={6} sm={3}>
 						<Grid container>
 							<Grid item xs={12}>
 								<Typography variant="body1" color="inherit">
@@ -130,23 +129,32 @@ const Footer = () => {
 						</Grid>
 					</Grid>
 
-					<Grid item xs={3}>
+					<Grid item xs={6} sm={3}>
 						<Typography variant="body1" color="inherit">
 							Connect with us:
 						</Typography>
 						<Divider />
 
-						<a
-							href="https://www.linkedin.com/company/promiseq/"
-							target="_blank"
-							rel="noreferrer"
+						<IconButton
+							className={classes.iconButton}
+							aria-label="Linkedin"
+							onClick={() =>
+								window.open(
+									"https://www.linkedin.com/company/promiseq/",
+									"_blank"
+								)
+							}
 						>
-							<LinkedInIcon color="action" className={classes.iconButton} />
-						</a>
+							<LinkedInIcon color="action" />
+						</IconButton>
 
-						<a href="mailto:info@promiseq.com">
-							<EmailIcon color="action" className={classes.iconButton} />
-						</a>
+						<IconButton
+							className={classes.iconButton}
+							aria-label="Linkedin"
+							onClick={() => window.open("mailto:info@promiseq.com")}
+						>
+							<EmailIcon color="action" />
+						</IconButton>
 
 						<Divider />
 						<Typography variant="caption" color="inherit">

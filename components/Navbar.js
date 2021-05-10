@@ -17,10 +17,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
-	root: { [theme.breakpoints.down("sm")]: { flexGrow: 1 } },
+	root: {
+		[theme.breakpoints.down("sm")]: { flexGrow: 1 },
+	},
 	appBar: {
-		background:
-			"linear-gradient(90deg, rgba(255,255,255,1) 45%, rgba(255,212,42,0.30) 100%)",
+		background: "#F6F6F6",
+		padding: "10px 0px 10px 0px",
 	},
 	drawer: {
 		width: "250px",

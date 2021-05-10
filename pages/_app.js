@@ -28,7 +28,7 @@ export default function MyApp(props) {
 				<Navbar />
 
 				<Container>
-					<Box marginTop={15}>
+					<Box marginTop={13}>
 						<Component {...pageProps} />
 					</Box>
 				</Container>

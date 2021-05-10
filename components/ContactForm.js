@@ -39,8 +39,8 @@ const ContactForm = () => {
 	};
 
 	function getRequestParams(name, email, subject, message) {
-		const Portal_ID = "19542633";
-		const Form_ID = "df44df7c-6b86-4387-9bcf-ca970558ae24";
+		const Portal_ID = "9094398";
+		const Form_ID = "219adb3f-b43c-4b02-babc-13467c28a98d";
 
 		const url = `https://api.hsforms.com/submissions/v3/integration/submit/${Portal_ID}/${Form_ID}`;
 		const data = {
