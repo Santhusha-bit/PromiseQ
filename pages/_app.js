@@ -25,10 +25,11 @@ export default function MyApp(props) {
 			<ThemeProvider theme={theme}>
 				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 				<CssBaseline />
+
 				<Navbar />
 
-				<Container>
-					<Box marginTop={13}>
+				<Container maxWidth="lg">
+					<Box marginTop={13} minHeight={"100vh"}>
 						<Component {...pageProps} />
 					</Box>
 				</Container>

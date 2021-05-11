@@ -92,22 +92,22 @@ const Footer = () => {
 							<Grid item xs={12}>
 								<Divider />
 								<List disablePadding>
-									<Link href="/" passHref>
+									<Link href="/#home" passHref>
 										<ListItem component="a" className={classes.listItem}>
 											Home
 										</ListItem>
 									</Link>
-									<Link href="/solution" passHref>
+									<Link href="/#solution" passHref>
 										<ListItem component="a" className={classes.listItem}>
 											Our Solution
 										</ListItem>
 									</Link>
-									<Link href="/benefits" passHref>
+									<Link href="/#benefits" passHref>
 										<ListItem component="a" className={classes.listItem}>
 											Benefits
 										</ListItem>
 									</Link>
-									<Link href="/applications" passHref>
+									<Link href="/#applications" passHref>
 										<ListItem component="a" className={classes.listItem}>
 											Applications
 										</ListItem>

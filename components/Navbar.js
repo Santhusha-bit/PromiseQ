@@ -72,8 +72,8 @@ const Navbar = (props) => {
 						<Box className={classes.imageBox}>
 							<img
 								src="/banner.png"
-								width="180"
-								height="auto"
+								width="50%"
+								height="50%"
 								alt="Company Logo"
 							/>
 						</Box>
@@ -89,7 +89,7 @@ const Navbar = (props) => {
 						) : (
 							<Grid container justify="center">
 								<Grid item>
-									<Link href="/" passHref>
+									<Link href="/#home" passHref>
 										<Button
 											className={classes.buttonStyles}
 											disableRipple
@@ -99,7 +99,7 @@ const Navbar = (props) => {
 										</Button>
 									</Link>
 
-									<Link href="/solution" passHref>
+									<Link href="/#solution" passHref>
 										<Button
 											className={classes.buttonStyles}
 											disableRipple
@@ -109,7 +109,7 @@ const Navbar = (props) => {
 										</Button>
 									</Link>
 
-									<Link href="/benefits" passHref>
+									<Link href="/#benefits" passHref>
 										<Button
 											className={classes.buttonStyles}
 											disableRipple
@@ -119,7 +119,7 @@ const Navbar = (props) => {
 										</Button>
 									</Link>
 
-									<Link href="/applications" passHref>
+									<Link href="/#applications" passHref>
 										<Button
 											className={classes.buttonStyles}
 											disableRipple
@@ -157,25 +157,25 @@ const Navbar = (props) => {
 			<Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
 				<div className={classes.drawer}>
 					<List component="nav" aria-label="navigation">
-						<Link href="/" passHref>
+						<Link href="/#home" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
 								<ListItemText primary="Home" />
 							</ListItem>
 						</Link>
 
-						<Link href="/solution" passHref>
+						<Link href="/#solution" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
 								<ListItemText primary="Our Solution" />
 							</ListItem>
 						</Link>
 
-						<Link href="/benefits" passHref>
+						<Link href="/#benefits" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
 								<ListItemText primary="Benefits" />
 							</ListItem>
 						</Link>
 
-						<Link href="/applications" passHref>
+						<Link href="/#applications" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
 								<ListItemText primary="Applications" />
 							</ListItem>
