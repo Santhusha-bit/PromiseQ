@@ -1,6 +1,6 @@
 import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
-import { Grid, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import VideoLayout from "components/VideoLayout";
 import Header from "components/Header";
 import BenefitsList from "components/BenefitsList";

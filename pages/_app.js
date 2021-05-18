@@ -7,11 +7,13 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import { Box, Container } from "@material-ui/core";
 import Footer from "components/Footer";
+import firebase from "lib/initFirebase";
 
 export default function MyApp(props) {
 	const { Component, pageProps } = props;
 
 	React.useEffect(() => {
+		firebase();
 		// Remove the server-side injected CSS.
 		const jssStyles = document.querySelector("#jss-server-side");
 		if (jssStyles) {
@@ -25,15 +27,12 @@ export default function MyApp(props) {
 			<ThemeProvider theme={theme}>
 				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 				<CssBaseline />
-
 				<Navbar />
-
 				<Container maxWidth="lg">
-					<Box marginTop={13} minHeight={"100vh"}>
+					<Box marginTop={15} minHeight={"100vh"}>
 						<Component {...pageProps} />
 					</Box>
 				</Container>
-
 				<Footer />
 			</ThemeProvider>
 		</React.Fragment>

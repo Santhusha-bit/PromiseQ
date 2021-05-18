@@ -5,7 +5,7 @@ const TextLayout = ({
 	textHeading,
 	headingVariant = "h3",
 	textParagraph,
-	paragraphVariant = "subtitle1",
+	paragraphVariant = "body1",
 	buttonText,
 	buttonRef,
 }) => {

@@ -36,10 +36,10 @@ const ApplicationsList = () => {
 								desc={application.title}
 							/>
 
-							<Typography gutterBottom variant="h6" component="h6">
+							<Typography gutterBottom variant="h6" component="subtitle1">
 								{application.title}
 							</Typography>
-							<Typography gutterBottom variant="subtitle1">
+							<Typography gutterBottom variant="body1">
 								{application.description}
 							</Typography>
 						</Container>

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	appBar: {
 		background: "#F6F6F6",
-		padding: "10px 0px 10px 0px",
+		padding: "5px 0px 5px 0px",
 	},
 	drawer: {
 		width: "250px",

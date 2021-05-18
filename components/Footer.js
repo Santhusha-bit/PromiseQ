@@ -93,34 +93,34 @@ const Footer = () => {
 								<Divider />
 								<List disablePadding>
 									<Link href="/#home" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											Home
 										</ListItem>
 									</Link>
 									<Link href="/#solution" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											Our Solution
 										</ListItem>
 									</Link>
 									<Link href="/#benefits" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											Benefits
 										</ListItem>
 									</Link>
 									<Link href="/#applications" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											Applications
 										</ListItem>
 									</Link>
 
 									<Link href="/about" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											About Us
 										</ListItem>
 									</Link>
 
 									<Link href="/contact" passHref>
-										<ListItem component="a" className={classes.listItem}>
+										<ListItem component="li" className={classes.listItem}>
 											Contact Us
 										</ListItem>
 									</Link>
