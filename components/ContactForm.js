@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import TextField from "@material-ui/core/TextField";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 
@@ -12,6 +12,14 @@ const useStyles = makeStyles((theme) => ({
 			width: "100%",
 			margin: theme.spacing(1),
 		},
+	},
+	successMessage: {
+		color: "green",
+		fontSize: "0.9rem",
+	},
+	errorMessage: {
+		color: "red",
+		fontSize: "0.9rem",
 	},
 }));
 
@@ -165,16 +173,17 @@ const ContactForm = () => {
 						text="Send Message"
 						disabled={state === "LOADING"}
 					></Button>
-
 					<div>
 						{state === "ERROR" && (
-							<p style={{ color: "red" }}>{errorMessage}</p>
+							<Typography className={classes.errorMessage}>
+								{errorMessage}
+							</Typography>
 						)}
 						{state === "SUCCESS" && (
-							<p style={{ color: "green" }}>
+							<Typography id="success" className={classes.successMessage}>
 								Thank you for contacting us!. Your message has been successfully
 								sent. We will contact you very soon!
-							</p>
+							</Typography>
 						)}
 					</div>
 				</Grid>

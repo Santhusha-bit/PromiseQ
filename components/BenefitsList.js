@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Link } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -11,6 +11,7 @@ import SentimentSatisfiedRoundedIcon from "@material-ui/icons/SentimentSatisfied
 import AssessmentRoundedIcon from "@material-ui/icons/AssessmentRounded";
 import PowerRoundedIcon from "@material-ui/icons/PowerRounded";
 import Icon from "@material-ui/core/Icon";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 const useStyles = makeStyles((theme) => ({
 	card: {
@@ -26,8 +27,18 @@ const useStyles = makeStyles((theme) => ({
 		color: theme.palette.primary.main,
 		fontSize: "large",
 	},
+	linkStyle: {
+		color: "primary",
+		marginTop: "10px",
+		variant: "body2",
+		fontSize: "12px",
+		component: "p",
+	},
 	action: {
 		"&:hover $iconStyle": {
+			color: "#fff",
+		},
+		"&:hover $linkStyle": {
 			color: "#fff",
 		},
 	},
@@ -69,6 +80,7 @@ const benefitsItems = [
 
 const BenefitsList = () => {
 	const classes = useStyles();
+
 	return (
 		<>
 			<Grid container spacing={5} justify="center">
@@ -88,6 +100,16 @@ const BenefitsList = () => {
 									>
 										{benefit.description}
 									</Typography>
+									<Link href="/#benefits">
+										<Grid
+											className={classes.linkStyle}
+											container
+											direction="row"
+											alignItems="center"
+										>
+											Learn More <NavigateNextIcon />
+										</Grid>
+									</Link>
 								</CardContent>
 							</CardActionArea>
 						</Card>

@@ -62,7 +62,7 @@ const Footer = () => {
 							</Grid>
 							<Grid>
 								<Typography variant="caption" color="inherit">
-									promiseQ GmbH, <br /> i.G. c/o The Drivery GmbH,
+									promiseQ GmbH, <br /> c/o The Drivery GmbH,
 									<br /> Mariendorfer Damm 1,
 									<br />
 									12099 Berlin.

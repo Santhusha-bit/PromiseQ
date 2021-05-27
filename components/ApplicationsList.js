@@ -1,7 +1,34 @@
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Container } from "@material-ui/core";
+import { Container, Link } from "@material-ui/core";
 import ImageLayout from "components/ImageLayout";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+	box: {
+		justifyContent: "center",
+		alignItems: "center",
+		"&:hover $imageStyle": {
+			opacity: "0.2",
+		},
+		"&:hover $textMiddle": {
+			opacity: "1",
+		},
+	},
+	imageStyle: {
+		opacity: "1",
+		transition: ".5s ease",
+	},
+	textMiddle: {
+		position: "absolute",
+		padding: "12px",
+		borderRadius: "10px",
+		opacity: "0",
+		color: "black",
+		textAlign: "center",
+		backgroundColor: "rgba(32, 32, 32, 0.5)",
+	},
+}));
 
 const applicationItems = [
 	{
@@ -25,17 +52,32 @@ const applicationItems = [
 ];
 
 const ApplicationsList = () => {
+	const classes = useStyles();
+
 	return (
 		<div>
 			<Grid container justify="center" spacing={2}>
 				{applicationItems.map((application) => (
 					<Grid item key={application.title} xs={12} sm={4}>
 						<Container>
-							<ImageLayout
-								imageRef={application.image}
-								desc={application.title}
-							/>
-
+							<Grid container className={classes.box}>
+								<Grid item className={classes.imageStyle}>
+									<ImageLayout
+										imageRef={application.image}
+										desc={application.title}
+									/>
+								</Grid>
+								<Grid item className={classes.textMiddle}>
+									<Link
+										href="/#applications"
+										style={{ textDecoration: "none" }}
+									>
+										<Typography variant="body1" color="primary" component="p">
+											Learn More
+										</Typography>
+									</Link>
+								</Grid>
+							</Grid>
 							<Typography gutterBottom variant="h6" component="subtitle1">
 								{application.title}
 							</Typography>
