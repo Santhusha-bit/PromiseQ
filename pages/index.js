@@ -8,10 +8,12 @@ import ApplicationsList from "@components/ApplicationsList";
 import { makeStyles } from "@material-ui/core/styles";
 import Products from "@components/Products";
 import Button from "components/Button";
+import CompanyLogo from "components/CompanyLogo";
 
 const useStyles = makeStyles((theme) => ({
 	sectionStyle: {
 		paddingTop: "10%",
+		minHeight: "100vh",
 	},
 }));
 export default function Home() {
@@ -64,6 +66,10 @@ export default function Home() {
 			<section id="applications" className={classes.sectionStyle}>
 				<Header title="Applications" />
 				<ApplicationsList />
+			</section>
+			<section id="supportedBy" className={classes.sectionStyle}>
+				<Header title="Supported By" />
+				<CompanyLogo />
 			</section>
 		</>
 	);

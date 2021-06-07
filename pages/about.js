@@ -3,7 +3,7 @@ import Header from "components/Header";
 import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
 import Grid from "@material-ui/core/Grid";
-import { Typography, Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import Button from "components/Button";
 
 const about = () => {
@@ -33,32 +33,6 @@ const about = () => {
 				all industries and help fight poverty across the globe."
 								/>
 								<Button text="Get in Touch" href="/contact" />
-							</Grid>
-						</Grid>
-					</section>
-					<section>
-						<Grid container justify="center" spacing={4}>
-							<Grid item xs={12}>
-								<Typography variant="h4">Supported By:</Typography>
-							</Grid>
-
-							<Grid item xs={2}>
-								<ImageLayout
-									imageRef="/berlin_senate_logo_new.png"
-									desc="Berlin Senate Logo"
-								/>
-							</Grid>
-							<Grid item xs={2}>
-								<ImageLayout imageRef="/eu-sozialfonds.jpg" desc="EU Logo" />
-							</Grid>
-							<Grid item xs={2}>
-								<ImageLayout imageRef="/esf_logo.jpg" desc="ESF Logo" />
-							</Grid>
-							<Grid item xs={2}>
-								<ImageLayout imageRef="/bosch_logo.jpg" desc="Bosch Logo" />
-							</Grid>
-							<Grid item xs={2}>
-								<ImageLayout imageRef="/htw_logo.jpg" desc="HTW Logo" />
 							</Grid>
 						</Grid>
 					</section>

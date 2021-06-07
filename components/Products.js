@@ -43,7 +43,7 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								text="Go to Security & Safety Things store to purchase the product"
 								onClick={() =>
 									window.open(
-										"https://store.securityandsafetythings.com/shop/",
+										"https://store.securityandsafetythings.com/shop/p/A_00125001",
 										"_blank"
 									)
 								}
@@ -75,7 +75,7 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								text="Go to Security & Safety Things store to purchase the product"
 								onClick={() =>
 									window.open(
-										"https://store.securityandsafetythings.com/shop/",
+										"https://store.securityandsafetythings.com/shop/p/A_00125000",
 										"_blank"
 									)
 								}
@@ -106,7 +106,7 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								text="Go to Security & Safety Things store to purchase the product"
 								onClick={() =>
 									window.open(
-										"https://store.securityandsafetythings.com/shop/",
+										"https://store.securityandsafetythings.com/shop/p/A_00125001",
 										"_blank"
 									)
 								}
@@ -144,7 +144,7 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								text="Go to Security & Safety Things store to purchase the product"
 								onClick={() =>
 									window.open(
-										"https://store.securityandsafetythings.com/shop/",
+										"https://store.securityandsafetythings.com/shop/p/A_00125000",
 										"_blank"
 									)
 								}
