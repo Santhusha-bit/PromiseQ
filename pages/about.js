@@ -4,6 +4,7 @@ import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
 import Grid from "@material-ui/core/Grid";
 import { Typography, Box } from "@material-ui/core";
+import Button from "components/Button";
 
 const about = () => {
 	return (
@@ -30,9 +31,8 @@ const about = () => {
 				modern web-technology, we believe we can deliver the last percent
 				accuracy through realtime human computing for all AI appliances across
 				all industries and help fight poverty across the globe."
-									buttonText="Get in Touch"
-									buttonRef="/contact"
 								/>
+								<Button text="Get in Touch" href="/contact" />
 							</Grid>
 						</Grid>
 					</section>

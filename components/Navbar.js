@@ -105,7 +105,7 @@ const Navbar = (props) => {
 											disableRipple
 											component="a"
 										>
-											Our Solution{" "}
+											Our Solution
 										</Button>
 									</Link>
 
@@ -125,7 +125,7 @@ const Navbar = (props) => {
 											disableRipple
 											component="a"
 										>
-											Applications{" "}
+											Applications
 										</Button>
 									</Link>
 

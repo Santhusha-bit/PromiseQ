@@ -5,11 +5,20 @@ import VideoLayout from "components/VideoLayout";
 import Header from "components/Header";
 import BenefitsList from "components/BenefitsList";
 import ApplicationsList from "@components/ApplicationsList";
+import { makeStyles } from "@material-ui/core/styles";
+import Products from "@components/Products";
+import Button from "components/Button";
 
+const useStyles = makeStyles((theme) => ({
+	sectionStyle: {
+		paddingTop: "10%",
+	},
+}));
 export default function Home() {
+	const classes = useStyles();
 	return (
-		<div>
-			<section id="home">
+		<>
+			<section id="home" className={classes.sectionStyle}>
 				<Grid container justify="center" spacing={3}>
 					<Grid item xs={12} sm={12} md={5}>
 						<TextLayout
@@ -17,16 +26,15 @@ export default function Home() {
 							textParagraph="promiseQ provides a fully distributed, on-demand human verification
 				service in real-time to enable AI companies to maximize the precision of
 				their algorithms in production."
-							buttonText="Learn More!"
-							buttonRef="/contact"
 						/>
+						<Button text="Learn More!" href="/contact" />
 					</Grid>
 					<Grid item xs={12} sm={12} md={6}>
 						<ImageLayout imageRef="/engine.png" desc="AI" />
 					</Grid>
 				</Grid>
 			</section>
-			<section id="solution">
+			<section id="solution" className={classes.sectionStyle}>
 				<Header title="Our Solutions" />
 				<Grid container justify="center" spacing={3}>
 					<Grid item xs={12} sm={12} md={8}>
@@ -43,20 +51,20 @@ export default function Home() {
 							headingVariant="h4"
 							textParagraph="Any Image Processing Related Event can be Reviewed in Real-Time by
 				Online Workers via our easy-to-use RestAPI to the promiseQ Cloud."
-							buttonText="Contact Us!"
-							buttonRef="/contact"
 						/>
+						<Button text="Contact Us!" href="/contact" />
 					</Grid>
 				</Grid>
+				<Products />
 			</section>
-			<section id="benefits">
+			<section id="benefits" className={classes.sectionStyle}>
 				<Header title="Benefits" />
 				<BenefitsList />
 			</section>
-			<section id="applications">
+			<section id="applications" className={classes.sectionStyle}>
 				<Header title="Applications" />
 				<ApplicationsList />
 			</section>
-		</div>
+		</>
 	);
 }

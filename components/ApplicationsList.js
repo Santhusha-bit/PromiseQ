@@ -78,7 +78,7 @@ const ApplicationsList = () => {
 									</Link>
 								</Grid>
 							</Grid>
-							<Typography gutterBottom variant="h6" component="subtitle1">
+							<Typography gutterBottom variant="h6" component="h6">
 								{application.title}
 							</Typography>
 							<Typography gutterBottom variant="body1">

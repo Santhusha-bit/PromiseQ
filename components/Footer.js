@@ -7,6 +7,7 @@ import { Grid, List, ListItem, Divider, IconButton } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
+import YouTubeIcon from "@material-ui/icons/YouTube";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -150,10 +151,23 @@ const Footer = () => {
 
 						<IconButton
 							className={classes.iconButton}
-							aria-label="Linkedin"
+							aria-label="E-mail"
 							onClick={() => window.open("mailto:info@promiseq.com")}
 						>
 							<EmailIcon color="action" />
+						</IconButton>
+
+						<IconButton
+							className={classes.iconButton}
+							aria-label="Youtube"
+							onClick={() =>
+								window.open(
+									"https://www.youtube.com/channel/UCmiUt8nhkkksPoyt60E_BfQ/featured",
+									"_blank"
+								)
+							}
+						>
+							<YouTubeIcon color="action" />
 						</IconButton>
 
 						<Divider />

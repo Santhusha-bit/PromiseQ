@@ -1,13 +1,10 @@
 import Typography from "@material-ui/core/Typography";
-import Button from "components/Button";
 
 const TextLayout = ({
 	textHeading,
 	headingVariant = "h3",
 	textParagraph,
 	paragraphVariant = "body1",
-	buttonText,
-	buttonRef,
 }) => {
 	return (
 		<>
@@ -17,9 +14,6 @@ const TextLayout = ({
 			<Typography gutterBottom variant={paragraphVariant}>
 				{textParagraph}
 			</Typography>
-			<a href={buttonRef} style={{ textDecoration: "none" }}>
-				<Button text={buttonText} />
-			</a>
 		</>
 	);
 };

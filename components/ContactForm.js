@@ -175,7 +175,7 @@ const ContactForm = () => {
 					></Button>
 					<div>
 						{state === "ERROR" && (
-							<Typography className={classes.errorMessage}>
+							<Typography id="error" className={classes.errorMessage}>
 								{errorMessage}
 							</Typography>
 						)}
