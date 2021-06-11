@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: "10%",
 		minHeight: "100vh",
 	},
+	logoSection: {
+		padding: "10% 3% 10% 3%",
+	},
 }));
 export default function Home() {
 	const classes = useStyles();
@@ -67,8 +70,7 @@ export default function Home() {
 				<Header title="Applications" />
 				<ApplicationsList />
 			</section>
-			<section id="supportedBy" className={classes.sectionStyle}>
-				<Header title="Supported By" />
+			<section id="companyLogo" className={classes.logoSection}>
 				<CompanyLogo />
 			</section>
 		</>

@@ -39,17 +39,13 @@ const Products = () => {
 promiseQ Intruder Detection BETA can be installed in both indoor and outdoor environments."
 							/>
 							<Button
-								variant="text"
-								text="Go to Security & Safety Things store to purchase the product"
+								text="Go to the SAST Store"
 								onClick={() =>
 									window.open(
 										"https://store.securityandsafetythings.com/shop/p/A_00125001",
 										"_blank"
 									)
 								}
-								style={{
-									backgroundColor: "transparent",
-								}}
 							/>
 						</Grid>
 					</Box>
@@ -71,17 +67,13 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 				This app receives alarm events, evaluates them and filters false alarms."
 							/>
 							<Button
-								variant="text"
-								text="Go to Security & Safety Things store to purchase the product"
+								text="Buy Now at SAST Store"
 								onClick={() =>
 									window.open(
 										"https://store.securityandsafetythings.com/shop/p/A_00125000",
 										"_blank"
 									)
 								}
-								style={{
-									backgroundColor: "transparent",
-								}}
 							/>
 						</Grid>
 					</Box>
@@ -102,17 +94,13 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 promiseQ Intruder Detection BETA can be installed in both indoor and outdoor environments."
 							/>
 							<Button
-								variant="text"
-								text="Go to Security & Safety Things store to purchase the product"
+								text="Go to the SAST Store"
 								onClick={() =>
 									window.open(
 										"https://store.securityandsafetythings.com/shop/p/A_00125001",
 										"_blank"
 									)
 								}
-								style={{
-									backgroundColor: "transparent",
-								}}
 							/>
 						</Grid>
 						<Grid container item justify="flex-start" lg={3}>
@@ -140,17 +128,13 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 			This app receives alarm events, evaluates them and filters false alarms."
 							/>
 							<Button
-								variant="text"
-								text="Go to Security & Safety Things store to purchase the product"
+								text="Go to the SAST Store"
 								onClick={() =>
 									window.open(
 										"https://store.securityandsafetythings.com/shop/p/A_00125000",
 										"_blank"
 									)
 								}
-								style={{
-									backgroundColor: "transparent",
-								}}
 							/>
 						</Grid>
 						<Grid container item justify="flex-end" lg={3}>

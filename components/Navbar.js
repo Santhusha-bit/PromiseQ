@@ -139,6 +139,16 @@ const Navbar = (props) => {
 										</Button>
 									</Link>
 
+									<Link href="/careers" passHref>
+										<Button
+											className={classes.buttonStyles}
+											disableRipple
+											component="a"
+										>
+											Careers
+										</Button>
+									</Link>
+
 									<Link href="/contact" passHref>
 										<Button
 											className={classes.buttonStyles}
@@ -184,6 +194,11 @@ const Navbar = (props) => {
 						<Link href="/about" passHref>
 							<ListItem button component="a" className={classes.buttonStyles}>
 								<ListItemText primary="About Us" />
+							</ListItem>
+						</Link>
+						<Link href="/careers" passHref>
+							<ListItem button component="a" className={classes.buttonStyles}>
+								<ListItemText primary="Careers" />
 							</ListItem>
 						</Link>
 
