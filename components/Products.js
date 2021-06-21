@@ -39,13 +39,10 @@ const Products = () => {
 promiseQ Intruder Detection BETA can be installed in both indoor and outdoor environments."
 							/>
 							<Button
+								id="intruder detection"
 								text="Go to the SAST Store"
-								onClick={() =>
-									window.open(
-										"https://store.securityandsafetythings.com/shop/p/A_00125001",
-										"_blank"
-									)
-								}
+								href="https://store.securityandsafetythings.com/shop/p/A_00125001"
+								target="_blank"
 							/>
 						</Grid>
 					</Box>
@@ -67,13 +64,10 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 				This app receives alarm events, evaluates them and filters false alarms."
 							/>
 							<Button
-								text="Buy Now at SAST Store"
-								onClick={() =>
-									window.open(
-										"https://store.securityandsafetythings.com/shop/p/A_00125000",
-										"_blank"
-									)
-								}
+								id="false alarm filter agent"
+								text="Go to the SAST Store"
+								href="https://store.securityandsafetythings.com/shop/p/A_00125000"
+								target="_blank"
 							/>
 						</Grid>
 					</Box>
@@ -94,13 +88,10 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 promiseQ Intruder Detection BETA can be installed in both indoor and outdoor environments."
 							/>
 							<Button
+								id="intruder detection"
 								text="Go to the SAST Store"
-								onClick={() =>
-									window.open(
-										"https://store.securityandsafetythings.com/shop/p/A_00125001",
-										"_blank"
-									)
-								}
+								href="https://store.securityandsafetythings.com/shop/p/A_00125001"
+								target="_blank"
 							/>
 						</Grid>
 						<Grid container item justify="flex-start" lg={3}>
@@ -128,13 +119,10 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 			This app receives alarm events, evaluates them and filters false alarms."
 							/>
 							<Button
+								id="false alarm filter agent"
 								text="Go to the SAST Store"
-								onClick={() =>
-									window.open(
-										"https://store.securityandsafetythings.com/shop/p/A_00125000",
-										"_blank"
-									)
-								}
+								href="https://store.securityandsafetythings.com/shop/p/A_00125000"
+								target="_blank"
 							/>
 						</Grid>
 						<Grid container item justify="flex-end" lg={3}>

@@ -27,7 +27,7 @@ const JobList = ({ jobId, jobTitle, subTitle }) => {
 
 	return (
 		<>
-			<Grid item xs={12} sm={12} md={6}>
+			<Grid item xs={12} sm={12} md={8}>
 				<Card>
 					<CardHeader
 						avatar={

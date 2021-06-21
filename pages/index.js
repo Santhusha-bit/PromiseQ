@@ -32,7 +32,11 @@ export default function Home() {
 				service in real-time to enable AI companies to maximize the precision of
 				their algorithms in production."
 						/>
-						<Button text="Learn More!" href="/contact" />
+						<Button
+							id="home section redirect"
+							text="Learn More!"
+							href="/contact"
+						/>
 					</Grid>
 					<Grid item xs={12} sm={12} md={6}>
 						<ImageLayout imageRef="/engine.png" desc="AI" />
@@ -57,7 +61,11 @@ export default function Home() {
 							textParagraph="Any Image Processing Related Event can be Reviewed in Real-Time by
 				Online Workers via our easy-to-use RestAPI to the promiseQ Cloud."
 						/>
-						<Button text="Contact Us!" href="/contact" />
+						<Button
+							id="solution section redirect"
+							text="Contact Us!"
+							href="/contact"
+						/>
 					</Grid>
 				</Grid>
 				<Products />

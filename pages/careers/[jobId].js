@@ -26,7 +26,7 @@ import {
 } from "next-share";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { jobs } from "data";
+import { jobs } from "job_details";
 import Header from "components/Header";
 import Meta from "components/Meta";
 import { Link } from "@material-ui/core";
@@ -206,8 +206,9 @@ const JobDescription = ({ job }) => {
 						<Grid container justify="flex-end">
 							<Grid item>
 								<Button
+									id="apply button"
 									text="Apply"
-									onClick={() => window.open("mailto:application@promiseq.com")}
+									href="mailto:application@promiseq.com"
 								/>
 							</Grid>
 						</Grid>

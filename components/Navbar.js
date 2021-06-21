@@ -91,6 +91,7 @@ const Navbar = (props) => {
 								<Grid item>
 									<Link href="/#home" passHref>
 										<Button
+											id="home navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -101,6 +102,7 @@ const Navbar = (props) => {
 
 									<Link href="/#solution" passHref>
 										<Button
+											id="solution navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -111,6 +113,7 @@ const Navbar = (props) => {
 
 									<Link href="/#benefits" passHref>
 										<Button
+											id="benefits navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -121,6 +124,7 @@ const Navbar = (props) => {
 
 									<Link href="/#applications" passHref>
 										<Button
+											id="application navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -131,6 +135,7 @@ const Navbar = (props) => {
 
 									<Link href="/about" passHref>
 										<Button
+											id="about navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -141,6 +146,7 @@ const Navbar = (props) => {
 
 									<Link href="/careers" passHref>
 										<Button
+											id="career navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"
@@ -151,6 +157,7 @@ const Navbar = (props) => {
 
 									<Link href="/contact" passHref>
 										<Button
+											id="contact navigation button"
 											className={classes.buttonStyles}
 											disableRipple
 											component="a"

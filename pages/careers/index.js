@@ -2,7 +2,7 @@ import Meta from "components/Meta";
 import Header from "components/Header";
 import { Grid, Typography } from "@material-ui/core";
 import JobList from "components/JobList";
-import { jobs } from "data";
+import { jobs } from "job_details";
 
 export const getStaticProps = async () => {
 	return {

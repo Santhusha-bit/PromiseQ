@@ -32,7 +32,11 @@ const about = () => {
 				accuracy through realtime human computing for all AI appliances across
 				all industries and help fight poverty across the globe."
 								/>
-								<Button text="Get in Touch" href="/contact" />
+								<Button
+									id="about section redirect"
+									text="Get in Touch"
+									href="/contact"
+								/>
 							</Grid>
 						</Grid>
 					</section>

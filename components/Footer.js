@@ -119,6 +119,11 @@ const Footer = () => {
 											About Us
 										</ListItem>
 									</Link>
+									<Link href="/careers" passHref>
+										<ListItem component="li" className={classes.listItem}>
+											Career
+										</ListItem>
+									</Link>
 
 									<Link href="/contact" passHref>
 										<ListItem component="li" className={classes.listItem}>
@@ -137,35 +142,30 @@ const Footer = () => {
 						<Divider />
 
 						<IconButton
+							id="Linkedin Icon"
 							className={classes.iconButton}
 							aria-label="Linkedin"
-							onClick={() =>
-								window.open(
-									"https://www.linkedin.com/company/promiseq/",
-									"_blank"
-								)
-							}
+							href="https://www.linkedin.com/company/promiseq/"
+							target="_blank"
 						>
 							<LinkedInIcon color="action" />
 						</IconButton>
 
 						<IconButton
+							id="E-mail Icon"
 							className={classes.iconButton}
 							aria-label="E-mail"
-							onClick={() => window.open("mailto:info@promiseq.com")}
+							href="mailto:info@promiseq.com"
 						>
 							<EmailIcon color="action" />
 						</IconButton>
 
 						<IconButton
+							id="Youtube Icon"
 							className={classes.iconButton}
 							aria-label="Youtube"
-							onClick={() =>
-								window.open(
-									"https://www.youtube.com/channel/UCmiUt8nhkkksPoyt60E_BfQ/featured",
-									"_blank"
-								)
-							}
+							href="https://www.youtube.com/channel/UCmiUt8nhkkksPoyt60E_BfQ/featured"
+							target="_blank"
 						>
 							<YouTubeIcon color="action" />
 						</IconButton>
