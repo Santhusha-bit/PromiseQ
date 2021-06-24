@@ -29,7 +29,7 @@ export default function MyApp(props) {
 				<CssBaseline />
 				<Navbar />
 				<Container maxWidth="lg">
-					<Box marginTop={15} minHeight={"100vh"}>
+					<Box marginTop={15}>
 						<Component {...pageProps} />
 					</Box>
 				</Container>

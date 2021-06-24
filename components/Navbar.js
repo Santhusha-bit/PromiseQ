@@ -18,7 +18,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		[theme.breakpoints.down("sm")]: { flexGrow: 1 },
+		[theme.breakpoints.down("md")]: { flexGrow: 1 },
 	},
 	appBar: {
 		background: "#F6F6F6",
@@ -59,7 +59,7 @@ const Navbar = (props) => {
 	const [open, setOpen] = useState(false);
 
 	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+	const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
 	const handleDrawer = () => {
 		setOpen(true);
@@ -67,7 +67,7 @@ const Navbar = (props) => {
 	return (
 		<div className={classes.root}>
 			<ElevationScroll {...props}>
-				<AppBar className={classes.appBar}>
+				<AppBar id="nav" className={classes.appBar}>
 					<Toolbar>
 						<Box className={classes.imageBox}>
 							<img

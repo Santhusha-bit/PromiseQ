@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
 			backgroundColor: theme.palette.secondary.main,
 		},
 	},
+	textStyles: {
+		cursor: "pointer",
+	},
 }));
 
 const Footer = () => {
@@ -171,11 +174,21 @@ const Footer = () => {
 						</IconButton>
 
 						<Divider />
-						<Typography variant="caption" color="inherit">
-							Privacy Policy
-						</Typography>
+						<Link href="/privacy" passHref>
+							<Typography
+								className={classes.textStyles}
+								variant="caption"
+								color="inherit"
+							>
+								Privacy Policy
+							</Typography>
+						</Link>
 						<br />
-						<Typography variant="caption" color="inherit">
+						<Typography
+							className={classes.textStyles}
+							variant="caption"
+							color="inherit"
+						>
 							Terms and Conditions
 						</Typography>
 						<br />

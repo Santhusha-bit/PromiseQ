@@ -1,4 +1,4 @@
-import { Grid, Link } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -6,9 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
 import GavelRoundedIcon from "@material-ui/icons/GavelRounded";
-import ShuffleRoundedIcon from "@material-ui/icons/ShuffleRounded";
-import SentimentSatisfiedRoundedIcon from "@material-ui/icons/SentimentSatisfiedRounded";
-import AssessmentRoundedIcon from "@material-ui/icons/AssessmentRounded";
 import SecurityIcon from "@material-ui/icons/Security";
 import PowerRoundedIcon from "@material-ui/icons/PowerRounded";
 import Icon from "@material-ui/core/Icon";
@@ -130,15 +127,34 @@ const BenefitsList = () => {
 										}}
 									>
 										{(close) => (
-											<Grid container justify="center">
-												<Grid container item justify="flex-end">
+											<Grid container justify="center" alignItems="baseline">
+												<Grid
+													container
+													item
+													xs={11}
+													sm={11}
+													md={11}
+													lg={11}
+													justify="center"
+												>
+													<Typography variant="h6" component="p">
+														{benefit.title}
+													</Typography>
+												</Grid>
+												<Grid
+													container
+													item
+													xs={1}
+													sm={1}
+													md={1}
+													lg={1}
+													justify="flex-end"
+												>
 													<IconButton onClick={close}>
 														<CloseIcon fontSize="small" />
 													</IconButton>
 												</Grid>
-												<Typography variant="h6" component="p">
-													{benefit.title}
-												</Typography>
+
 												<Typography variant="body2" component="p">
 													{benefit.popupText}
 												</Typography>
