@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "small",
 		color: "inherit",
 		"&:hover": {
-			color: theme.palette.secondary.main,
+			color: theme.palette.primary.main,
 		},
 	},
 	iconButton: {
@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
 	const classes = useStyles();
+	const year = new Date();
 	return (
 		<footer className={classes.root}>
 			<Container>
@@ -193,7 +194,7 @@ const Footer = () => {
 						</Typography>
 						<br />
 						<Typography variant="caption" color="inherit">
-							© 2021 promiseQ Gmbh. All Rights Reserved.
+							© {year.getFullYear()} promiseQ Gmbh. All Rights Reserved.
 						</Typography>
 					</Grid>
 				</Grid>

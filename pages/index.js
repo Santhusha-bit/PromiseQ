@@ -12,7 +12,7 @@ import CompanyLogo from "components/CompanyLogo";
 
 const useStyles = makeStyles((theme) => ({
 	sectionStyle: {
-		minHeight: "100vh",
+		minHeight: "60vh",
 	},
 	logoSection: {
 		padding: "10% 3% 10% 3%",

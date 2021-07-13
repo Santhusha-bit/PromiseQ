@@ -8,10 +8,9 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
 	formContainer: {
-		marginTop: theme.spacing(4),
 		marginLeft: theme.spacing(30),
 		marginRight: theme.spacing(30),
-		marginBottom: theme.spacing(15),
+		marginBottom: theme.spacing(6),
 		padding: theme.spacing(5),
 		[theme.breakpoints.down("sm")]: {
 			margin: theme.spacing(0),
@@ -26,7 +25,7 @@ const contact = () => {
 		<>
 			<Meta title="Contact Us" />
 			<Header title="Contact Us" />
-			<Box alignItems="center" display="flex" minHeight={"100vh"}>
+			<Box alignItems="center" display="flex">
 				<Paper className={classes.formContainer}>
 					<Typography variant="subtitle1" gutterBottom>
 						Do you have any questions? Please do not hesitate to contact us
