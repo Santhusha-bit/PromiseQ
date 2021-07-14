@@ -18,9 +18,9 @@ const careers = ({ jobs }) => {
 			<Meta title="Careers" />
 			<Header title="Join Our Team" />
 
-			<section id="current_jobs">
+			<section id="current_jobs" style={{height: "58vh"}}>
 				<Grid>
-					<Typography variant="h5" gutterBottom>
+					<Typography variant="h6" style={{marginBottom: "30px"}}>
 						Current job vacancies :
 					</Typography>
 				</Grid>

@@ -79,10 +79,11 @@ const BenefitsList = () => {
 	const classes = useStyles();
 	const contentStyle = {
 		background: "#fff",
-		width: "70%",
-		padding: "5px",
+		width: "65%",
+		padding: "20px",
 		margin: "auto",
 		border: "2px solid #ffd42a",
+		borderRadius: "15px"
 	};
 	const overlayStyle = { background: "rgba(0,0,0,0.5)" };
 

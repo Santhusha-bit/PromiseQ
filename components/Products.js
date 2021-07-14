@@ -94,9 +94,9 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								target="_blank"
 							/>
 						</Grid>
-						<Grid container item justify="flex-start" lg={3}>
+						<Grid container item justify="center" lg={6}>
 							<ImageLayout
-								width="45%"
+								width="40%"
 								imageRef="/intruder_detection_beta.svg"
 								desc="Intruder Detection Beta App Logo"
 							/>
@@ -125,9 +125,9 @@ promiseQ Intruder Detection BETA can be installed in both indoor and outdoor env
 								target="_blank"
 							/>
 						</Grid>
-						<Grid container item justify="flex-end" lg={3}>
+						<Grid container item justify="center" lg={6}>
 							<ImageLayout
-								width="45%"
+								width="40%"
 								imageRef="/false_alarm_filter_agent_beta.svg"
 								desc="False Alarm Filter Agent Beta App Logo"
 							/>
