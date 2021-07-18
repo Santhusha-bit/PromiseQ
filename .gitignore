@@ -69,3 +69,4 @@ node_modules/
 # by chamodi
 out/
 .next/
+.DS_Store

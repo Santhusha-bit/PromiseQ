@@ -43,7 +43,7 @@ const Footer = () => {
     <footer className={classes.root}>
       <Container>
         <Grid container spacing={3} justify="center">
-          <Grid item xs={8} sm={4}>
+          <Grid item xs={11} sm={4}>
             <Grid item xs={12}>
               <Typography variant="body1" color="inherit">
                 Managing Directors:
@@ -56,7 +56,7 @@ const Footer = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid item xs={8} sm={4}>
+          <Grid item xs={11} sm={4}>
             <Grid item xs={12}>
               <Typography variant="body1" color="inherit">
                 Location & Contact:
@@ -96,7 +96,7 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={8} sm={4}>
+          <Grid item xs={11} sm={4}>
             <Typography variant="body1" color="inherit">
               Connect with us:
             </Typography>

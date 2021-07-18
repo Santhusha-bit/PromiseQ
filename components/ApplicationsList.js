@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     opacity: "1",
     transition: ".5s ease",
   },
+  image: {
+    objectFit: "contain"
+  },
   textMiddle: {
     position: "absolute",
     padding: "12px",
@@ -32,19 +35,19 @@ const useStyles = makeStyles((theme) => ({
 
 const applicationItems = [
   {
-    image: "/security-icon.jpg",
+    image: "/security-icon.png",
     title: "Security",
     description:
       "Modern CCTV Cameras utilize algorithms to recognize humans, vehicles or objects. They send alerts if they detect e.g. a trespasser in a restricted area. promiseQ helps minimizing False Alarm Rates with Realtime Human Computing.",
   },
   {
-    image: "/manufacturing-icon.jpg",
+    image: "/manufacturing-icon.png",
     title: "Manufacturing",
     description:
       "Smart production monitoring is a crucial activity in manufacturing. Monitoring Systems aim to detect anomalies and trends with the help of image processing. promiseQ helps maximize efficiency on the shop floor by Human-Powered Realtime Verification.",
   },
   {
-    image: "/AI-icon.jpg",
+    image: "/AI-icon.png",
     title: "Artificial Intelligence",
     description:
       "AI software focuses on creating intelligent problem-solving solutions. It includes object recognition and problem-solving that can aid or even replace human engagement in a process. promiseQ helps by training and validating your algorithms in Realtime.",
@@ -62,9 +65,12 @@ const ApplicationsList = () => {
             <Container>
               <Grid container className={classes.box}>
                 <Grid item className={classes.imageStyle}>
-                  <ImageLayout
-                    imageRef={application.image}
-                    desc={application.title}
+                  <img
+                    src={application.image}
+                    alt={application.title}
+                    width="100%"
+                    height={300}
+                    className={classes.image}
                   />
                 </Grid>
                 <Grid item className={classes.textMiddle}>

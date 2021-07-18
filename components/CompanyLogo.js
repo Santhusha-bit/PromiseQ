@@ -51,7 +51,7 @@ const CompanyLogo = () => {
 					<Grid
 						item
 						key={logo.description}
-						xs={4}
+						xs={6}
 						sm={3}
 						md={3}
 						className={classes.logo}
