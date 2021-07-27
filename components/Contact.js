@@ -8,8 +8,8 @@ import HubspotForm from "react-hubspot-form";
 const useStyles = makeStyles((theme) => ({
 	formContainer: {
 		minHeight: '80vh',
-    marginLeft: theme.spacing(30),
-    marginRight: theme.spacing(30),
+    marginLeft: theme.spacing(10),
+    marginRight: theme.spacing(10),
     marginBottom: theme.spacing(6),
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const contact = () => {
+const Contact = () => {
   const classes = useStyles();
   return (
     <>
@@ -42,4 +42,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

@@ -6,19 +6,18 @@ import Grid from "@material-ui/core/Grid";
 import { Box } from "@material-ui/core";
 import Button from "components/Button";
 
-const about = () => {
+const About = () => {
 	return (
 		<>
 			<Meta title="About Us" />
 			<Header title="About Us" />
-			<Box alignItems="center" display="flex" minHeight={"100vh"}>
+			<Box alignItems="center" display="flex" minHeight={"70vh"}>
 				<div>
 					<section>
 						<Grid container justify="center" spacing={4}>
 							<Grid item xs={12} sm={12} md={6}>
 								<ImageLayout imageRef="/team_foto.png" desc="team" />
 							</Grid>
-							{/* <p>(Picture: Bosch)</p> */}
 							<Grid item xs={12} sm={12} md={6}>
 								<TextLayout
 									textHeading="Meet promiseQ"
@@ -35,7 +34,7 @@ const about = () => {
 								<Button
 									id="about section redirect"
 									text="Get in Touch"
-									href="/contact"
+									href="/#contact"
 								/>
 							</Grid>
 						</Grid>
@@ -46,4 +45,4 @@ const about = () => {
 	);
 };
 
-export default about;
+export default About;

@@ -1,6 +1,6 @@
 import Meta from "components/Meta";
 import Header from "components/Header";
-import { Grid, Typography, CircularProgress } from "@material-ui/core";
+import { Grid, Typography, CircularProgress, Box, Container } from "@material-ui/core";
 import JobList from "components/JobList";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -25,23 +25,27 @@ const careers = () => {
 
   return (
     <>
-      <Meta title="Careers" />
-      <Header title="Join Our Team" />
+      <Container maxWidth="lg">
+        <Box marginTop={15}>
+          <Meta title="Careers" />
+          <Header title="Join Our Team" />
 
-      <section id="current_jobs" style={{ height: "58vh" }}>
-        <Grid>
-          <Typography variant="h6" style={{ marginBottom: "30px" }}>
-            Current job vacancies :
-          </Typography>
-        </Grid>
-        <Grid container justify="center" spacing={3}>
-          {isLoading ? (
-            <CircularProgress color="primary" />
-          ) : (
-            jobs.map((job) => <JobList key={job.jobId} {...job} />)
-          )}
-        </Grid>
-      </section>
+          <section id="current_jobs" style={{ height: "58vh" }}>
+            <Grid>
+              <Typography variant="h6" style={{ marginBottom: "30px" }}>
+                Current job vacancies :
+              </Typography>
+            </Grid>
+            <Grid container justify="center" spacing={3}>
+              {isLoading ? (
+                <CircularProgress color="primary" />
+              ) : (
+                jobs.map((job) => <JobList key={job.jobId} {...job} />)
+              )}
+            </Grid>
+          </section>
+        </Box>
+      </Container>
     </>
   );
 };

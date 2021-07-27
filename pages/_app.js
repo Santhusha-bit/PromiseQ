@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/global.css';
+import "../styles/global.css";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -11,36 +11,34 @@ import Footer from "components/Footer";
 import firebase from "lib/initFirebase";
 
 export default function MyApp(props) {
-	const { Component, pageProps } = props;
+  const { Component, pageProps } = props;
 
-	React.useEffect(() => {
-		firebase();
-		// Remove the server-side injected CSS.
-		const jssStyles = document.querySelector("#jss-server-side");
-		if (jssStyles) {
-			jssStyles.parentElement.removeChild(jssStyles);
-		}
-	}, []);
+  React.useEffect(() => {
+    firebase();
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
 
-	return (
-		<>
-			<Meta />
-			<ThemeProvider theme={theme}>
-				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-				<CssBaseline />
-				<Navbar />
-				<Container maxWidth="lg">
-					<Box marginTop={15}>
-						<Component {...pageProps} />
-					</Box>
-				</Container>
-				<Footer />
-			</ThemeProvider>
-		</>
-	);
+  return (
+    <>
+      <Meta />
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Navbar />
+
+        <Component {...pageProps} />
+
+        <Footer />
+      </ThemeProvider>
+    </>
+  );
 }
 
 MyApp.propTypes = {
-	Component: PropTypes.elementType.isRequired,
-	pageProps: PropTypes.object.isRequired,
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
 };

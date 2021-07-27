@@ -138,17 +138,6 @@ const Navbar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link href="/about" passHref>
-                    <Button
-                      id="about navigation button"
-                      className={classes.buttonStyles}
-                      disableRipple
-                      component="a"
-                    >
-                      About Us
-                    </Button>
-                  </Link>
-
                   <Link href="/careers" passHref>
                     <Button
                       id="career navigation button"
@@ -160,16 +149,6 @@ const Navbar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link href="/contact" passHref>
-                    <Button
-                      id="contact navigation button"
-                      className={classes.buttonStyles}
-                      disableRipple
-                      component="a"
-                    >
-                      Contact
-                    </Button>
-                  </Link>
                 </Grid>
               )}
             </Toolbar>
@@ -203,22 +182,12 @@ const Navbar = (props) => {
               </ListItem>
             </Link>
 
-            <Link href="/about" passHref>
-              <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="About Us" />
-              </ListItem>
-            </Link>
             <Link href="/careers" passHref>
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
 
-            <Link href="/contact" passHref>
-              <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Contact" />
-              </ListItem>
-            </Link>
           </List>
         </div>
       </Drawer>
