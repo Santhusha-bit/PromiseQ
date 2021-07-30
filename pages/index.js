@@ -45,7 +45,7 @@ export default function Home() {
                 <Button
                   id="home section redirect"
                   text="Learn More!"
-                  href="/contact"
+                  href="/#contact"
                 />
               </Grid>
               <Grid item xs={12} sm={12} md={1}></Grid>
@@ -93,7 +93,7 @@ export default function Home() {
                 <Button
                   id="solution section redirect"
                   text="Contact Us!"
-                  href="/contact"
+                  href="/#contact"
                 />
               </Grid>
             </Grid>

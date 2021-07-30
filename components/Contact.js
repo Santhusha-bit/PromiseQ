@@ -1,4 +1,3 @@
-import Meta from "components/Meta";
 import Header from "components/Header";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,7 +22,6 @@ const Contact = () => {
   const classes = useStyles();
   return (
     <>
-      <Meta title="Contact Us" />
       <Header title="Contact Us" />
       <Paper className={classes.formContainer}>
         <Typography variant="subtitle1" gutterBottom>
