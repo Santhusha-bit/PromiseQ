@@ -11,14 +11,16 @@ import Button from "components/Button";
 import CompanyLogo from "components/CompanyLogo";
 import About from "components/About";
 import Contact from "components/Contact";
+import HowItWorks from "components/HowItWorks";
+import FreeTrial from "components/FreeTrial";
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
-		minHeight: "60vh",
-		paddingBottom: theme.spacing(6),
+    minHeight: "40vh",
+    paddingBottom: theme.spacing(6),
   },
   sectionColor: {
-    minHeight: "60vh",
+    minHeight: "40vh",
     paddingBottom: theme.spacing(6),
     paddingTop: "1rem",
     backgroundColor: "#F6F6F6",
@@ -35,12 +37,10 @@ export default function Home() {
         <Container maxWidth="lg">
           <Box marginTop={15}>
             <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={5}>
+              <Grid item xs={12} sm={12} md={6}>
                 <TextLayout
-                  textHeading="We promise the fastest human-powered source of truth!"
-                  textParagraph="promiseQ provides a fully distributed, on-demand human verification
-				service in real-time to enable AI companies to maximize the precision of
-				their algorithms in production."
+                  textHeading="Easily eliminate 99% of false alarms."
+                  textParagraph="promiseQ utilizes machine learning recognition and human verification to provide accurate and fast decisions on alarm detections."
                 />
                 <Button
                   id="home section redirect"
@@ -48,10 +48,25 @@ export default function Home() {
                   href="/contact"
                 />
               </Grid>
-              <Grid item xs={12} sm={12} md={6}>
+              <Grid item xs={12} sm={12} md={1}></Grid>
+              <Grid item xs={12} sm={12} md={4}>
                 <ImageLayout imageRef="/engine.png" desc="AI" />
               </Grid>
             </Grid>
+          </Box>
+        </Container>
+      </section>
+      <section id="howItWorks" className={classes.sectionColor}>
+        <Container maxWidth="lg">
+          <Box>
+            <HowItWorks />
+          </Box>
+        </Container>
+      </section>
+      <section id="freeTrial" className={classes.sectionStyle}>
+        <Container maxWidth="lg">
+          <Box>
+            <FreeTrial />
           </Box>
         </Container>
       </section>
