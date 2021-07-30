@@ -13,7 +13,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-const careers = () => {
+const Job = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState(null);
@@ -81,4 +81,4 @@ const careers = () => {
   );
 };
 
-export default careers;
+export default Job;
