@@ -105,36 +105,36 @@ const Navbar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link href="/#solution" passHref>
+                  <Link href="/#freeTrial" passHref>
                     <Button
-                      id="solution navigation button"
+                      id="free trial navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Our Solution
+                      Free Trial
                     </Button>
                   </Link>
 
-                  <Link href="/#benefits" passHref>
+                  <Link href="/#affiliate" passHref>
                     <Button
-                      id="benefits navigation button"
+                      id="affiliate navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Benefits
+                      Affiliate Program
                     </Button>
                   </Link>
 
-                  <Link href="/#applications" passHref>
+                  <Link href="/#contact" passHref>
                     <Button
-                      id="application navigation button"
+                      id="contact navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Applications
+                      Contact Us
                     </Button>
                   </Link>
 
@@ -164,21 +164,27 @@ const Navbar = (props) => {
               </ListItem>
             </Link>
 
-            <Link href="/#solution" passHref>
+            <Link href="/#freeTrail" passHref>
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Our Solution" />
+                <ListItemText primary="Free Trial" />
               </ListItem>
             </Link>
 
-            <Link href="/#benefits" passHref>
+            <Link href="/#affiliate" passHref>
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Benefits" />
+                <ListItemText primary="Affiliate Program" />
               </ListItem>
             </Link>
 
             <Link href="/#applications" passHref>
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Applications" />
+                <ListItemText primary="About Us" />
+              </ListItem>
+            </Link>
+
+            <Link href="/#contact" passHref>
+              <ListItem button component="a" className={classes.buttonStyles}>
+                <ListItemText primary="Contact Us" />
               </ListItem>
             </Link>
 

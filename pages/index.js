@@ -13,6 +13,7 @@ import About from "components/About";
 import Contact from "components/Contact";
 import HowItWorks from "components/HowItWorks";
 import FreeTrial from "components/FreeTrial";
+import Affiliate from "components/Affiliate";
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
@@ -56,6 +57,22 @@ export default function Home() {
           </Box>
         </Container>
       </section>
+      <section id="solution" className={classes.sectionStyle}>
+        <Container maxWidth="lg">
+          <Box>
+            <Grid container justify="center" spacing={3}>
+              <Grid item xs={12} sm={12} md={8}>
+                <VideoLayout
+                  videoSrc="/promiseq_gatecontrol.mp4"
+                  videoType="video/mp4"
+                  width="100%"
+                  height="auto"
+                />
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+      </section>
       <section id="howItWorks" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
@@ -70,50 +87,10 @@ export default function Home() {
           </Box>
         </Container>
       </section>
-      <section id="solution" className={classes.sectionColor}>
+      <section id="affiliate" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
-            <Header title="Our Solutions" />
-            <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={8}>
-                <VideoLayout
-                  videoSrc="/promiseq_gatecontrol.mp4"
-                  videoType="video/mp4"
-                  width="100%"
-                  height="auto"
-                />
-              </Grid>
-              <Grid item xs={12} sm={12} md={3}>
-                <TextLayout
-                  textHeading="Human-Powered Real Time Assessments"
-                  headingVariant="h4"
-                  textParagraph="Any Image Processing Related Event can be Reviewed in Real-Time by
-				Online Workers via our easy-to-use RestAPI to the promiseQ Cloud."
-                />
-                <Button
-                  id="solution section redirect"
-                  text="Contact Us!"
-                  href="/#contact"
-                />
-              </Grid>
-            </Grid>
-            <Products />
-          </Box>
-        </Container>
-      </section>
-      <section id="benefits" className={classes.sectionStyle}>
-        <Container maxWidth="lg">
-          <Box>
-            <Header title="Benefits" />
-            <BenefitsList />
-          </Box>
-        </Container>
-      </section>
-      <section id="applications" className={classes.sectionColor}>
-        <Container maxWidth="lg">
-          <Box>
-            <Header title="Applications" />
-            <ApplicationsList />
+            <Affiliate />
           </Box>
         </Container>
       </section>
