@@ -6,7 +6,6 @@ import Button from "components/Button";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
-    color: "#818181",
     marginBottom: 60,
     marginTop: 60,
   },

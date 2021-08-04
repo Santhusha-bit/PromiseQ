@@ -2,11 +2,7 @@ import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
 import { Grid, Box, Container } from "@material-ui/core";
 import VideoLayout from "components/VideoLayout";
-import Header from "components/Header";
-import BenefitsList from "components/BenefitsList";
-import ApplicationsList from "@components/ApplicationsList";
 import { makeStyles } from "@material-ui/core/styles";
-import Products from "@components/Products";
 import Button from "components/Button";
 import CompanyLogo from "components/CompanyLogo";
 import About from "components/About";
@@ -24,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "40vh",
     paddingBottom: theme.spacing(6),
     paddingTop: "1rem",
-    backgroundColor: "#F6F6F6",
+    backgroundColor: "#ffd42a0d",
   },
   logoSection: {
     padding: "10% 3% 10% 3%",
