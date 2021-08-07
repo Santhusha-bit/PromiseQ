@@ -34,7 +34,7 @@ export default function Home() {
         <Container maxWidth="lg">
           <Box marginTop={15}>
             <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={6}>
+              <Grid item xs={12} sm={12} md={5}>
                 <TextLayout
                   textHeading="Easily eliminate 99% of false alarms."
                   textParagraph="promiseQ utilizes machine learning recognition and human verification to provide accurate and fast decisions on alarm detections."
@@ -46,8 +46,8 @@ export default function Home() {
                 />
               </Grid>
               <Grid item xs={12} sm={12} md={1}></Grid>
-              <Grid item xs={12} sm={12} md={4}>
-                <ImageLayout imageRef="/engine.png" desc="AI" />
+              <Grid item xs={12} sm={12} md={6}>
+                <ImageLayout imageRef="/hero_image.jpg" desc="AI" />
               </Grid>
             </Grid>
           </Box>
@@ -57,7 +57,7 @@ export default function Home() {
         <Container maxWidth="lg">
           <Box>
             <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={8}>
+              <Grid item xs={12} sm={12} md={10}>
                 <VideoLayout
                   videoSrc="/promiseq_gatecontrol.mp4"
                   videoType="video/mp4"
