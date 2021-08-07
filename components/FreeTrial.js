@@ -33,7 +33,7 @@ const FreeTrial = () => {
               Free Trial
             </Typography>
             <Typography gutterBottom variant="body1">
-              Download the app and enjoy 30 days of enhanced alarm detection.
+              Download the app and enjoy 14 days of enhanced alarm detection.
             </Typography>
             <Typography gutterBottom variant="body1">
               Get in touch with us and we will send easy step-by-step
