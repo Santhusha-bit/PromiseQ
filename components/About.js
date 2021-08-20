@@ -69,11 +69,13 @@ const About = () => {
                 of decentralized security monitoring may sound far-fetched, but
                 the success rates and cost savings tell us it is anything but.
               </Typography>
-              <Typography gutterBottom variant="body1">
-                If you are interested in our solution, an investor, or keen to
-                join our team , please reach out to{" "}
-                <a href="mailto:info@promiseq.com">info@promiseq.com</a>
-              </Typography>
+              <Grid container sm={12} justify="center">
+                <Button
+                  id="about section redirect"
+                  text="Get in Touch"
+                  href="/#contact"
+                />
+              </Grid>
             </Grid>
           </Grid>
         </section>
