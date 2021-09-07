@@ -214,7 +214,7 @@ const JobDescription = ({ job, setCurrentJob }) => {
                   <Grid item>
                     <Grid>
                       <Typography variant="caption" color="inherit">
-                        promiseQ GmbH i.G.
+                        promiseQ GmbH
                       </Typography>
                     </Grid>
                     <Grid>
