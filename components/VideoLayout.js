@@ -6,8 +6,8 @@ const VideoLayout = ({ videoSrc, videoType, width, height }) => {
 				type={videoType}
 				width={width}
 				height={height}
-				muted={true}
-				autoPlay={true}
+				autoplay={'autoplay'}
+				controls
 				loop={true}
 			></video>
 		</>

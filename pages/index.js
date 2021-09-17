@@ -56,10 +56,10 @@ export default function Home() {
       <section id="solution" className={classes.sectionStyle}>
         <Container maxWidth="lg">
           <Box>
-            <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={10}>
+            <Grid container justify="center">
+              <Grid item xs={12}>
                 <VideoLayout
-                  videoSrc="/promiseq_gatecontrol.mp4"
+                  videoSrc="/promiseq_video.mp4"
                   videoType="video/mp4"
                   width="100%"
                   height="auto"
