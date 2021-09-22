@@ -41,6 +41,10 @@ const companies = [
 		imagePath: "/htw_logo.jpg",
 		description: "HTW Logo",
 	},
+	{
+		imagePath: "/data_guard_logo.png",
+		description: "Data guard Logo",
+	},
 ];
 const CompanyLogo = () => {
 	const classes = useStyles();
