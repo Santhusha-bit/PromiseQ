@@ -38,7 +38,7 @@ const About = () => {
         <section>
           <Grid container justify="center" spacing={4} className={classes.main}>
             <Grid item xs={12} sm={12} md={6} className={classes.img}>
-              <ImageLayout imageRef="/team_photo.png" desc="team" />
+              <ImageLayout imageRef="/team_photo.jpg" desc="team" />
             </Grid>
             <Grid item xs={12} sm={12} md={6} className={classes.img}>
               <Typography gutterBottom variant="body1">
@@ -57,25 +57,25 @@ const About = () => {
                 point, Tolga and Elias took the leap and forged a partnership
                 with the well-regarded platform Security & Safety Things.
               </Typography>
-              <Typography gutterBottom variant="body1">
-                The idea of crowd-working to ensure security is unheard-of. In
-                the world of fully-staffed monitoring centers, and appealing
-                automated solutions that require paying no human, the idea of
-                crowd-working to protect an infrastructure is altogether new.
-                But the numbers speak for themselves: in certified pilot
-                projects, promiseQ has achieved a 99,5% success rate in reducing
-                false alarms, and has done so cost-effectively. Akin to cars
-                that could travel at a speed faster than horses, the proposition
-                of decentralized security monitoring may sound far-fetched, but
-                the success rates and cost savings tell us it is anything but.
-              </Typography>
-              <Grid container sm={12} justify="center">
-                <Button
-                  id="about section redirect"
-                  text="Get in Touch"
-                  href="/#contact"
-                />
-              </Grid>
+            </Grid>
+            <Typography gutterBottom variant="body1">
+              The idea of crowd-working to ensure security is unheard-of. In the
+              world of fully-staffed monitoring centers, and appealing automated
+              solutions that require paying no human, the idea of crowd-working
+              to protect an infrastructure is altogether new. But the numbers
+              speak for themselves: in certified pilot projects, promiseQ has
+              achieved a 99,5% success rate in reducing false alarms, and has
+              done so cost-effectively. Akin to cars that could travel at a
+              speed faster than horses, the proposition of decentralized
+              security monitoring may sound far-fetched, but the success rates
+              and cost savings tell us it is anything but.
+            </Typography>
+            <Grid container sm={12} justify="center">
+              <Button
+                id="about section redirect"
+                text="Get in Touch"
+                href="/#contact"
+              />
             </Grid>
           </Grid>
         </section>
