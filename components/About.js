@@ -38,7 +38,7 @@ const About = () => {
         <section>
           <Grid container justify="center" spacing={4} className={classes.main}>
             <Grid item xs={12} sm={12} md={6} className={classes.img}>
-              <ImageLayout imageRef="/team_photo.jpg" desc="team" />
+              <ImageLayout imageRef="/team.jpg" desc="team" />
             </Grid>
             <Grid item xs={12} sm={12} md={6} className={classes.img}>
               <Typography gutterBottom variant="body1">
