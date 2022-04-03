@@ -5,12 +5,22 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography, Hidden } from "@material-ui/core";
 import Button from "components/Button";
+import useTranslation from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
-  img: {
+  topic: {
     alignSelf: "center",
   },
-
+  para: {
+    alignSelf: "center",
+  },
+  img: {
+    alignSelf: "center",
+    marginTop: 100,
+    marginLeft: 40,
+    marginRight: 40,
+    marginBottom: 40,
+  },
   header: {
     marginBottom: theme.spacing(6),
     marginTop: theme.spacing(6),
@@ -18,63 +28,103 @@ const useStyles = makeStyles((theme) => ({
 
   main: {
     marginBottom: theme.spacing(3),
+    marginTop: -60,
+  },
+  palette: {
+    tomato: "#FF6347",
+    pink: {
+      deep: "#FF1493",
+      hot: "#FF69B4",
+      medium: "#C71585",
+      pale: "#DB7093",
+      light: "#FFB6C1",
+    },
   },
 }));
 
 const About = () => {
   const classes = useStyles();
+  let { t } = useTranslation();
 
   return (
     <>
-      <Typography
-        variant="h4"
-        gutterBottom
-        align="center"
-        className={classes.header}
-      >
-        Our Story – Where We Saw Promise for Humans in the Loop
-      </Typography>
       <Box alignItems="center" display="flex">
         <section>
-          <Grid container justify="center" spacing={4} className={classes.main}>
-            <Grid item xs={12} sm={12} md={6} className={classes.img}>
-              <ImageLayout imageRef="/team.jpg" desc="team" />
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} className={classes.img}>
-              <Typography gutterBottom variant="body1">
-                One day our founders, Elias and Tolga, saw an opportunity for
-                artificial intelligence enhanced with the ability to escalate to
-                humans. After extensive market research, the two discovered that
-                false alarms in security were indeed a widespread problem:
-                nearly 95% of alarms from security cameras were sounded in
-                error.
-              </Typography>
-              <Typography gutterBottom variant="body1">
-                With this in mind, the two began using their days and nights to
-                work on promiseQ. The organization was eventually accepted into
-                the Bosch Startup Incubator, and received its first round of
-                funding from Berlin-based venture capital firm APX. At that
-                point, Tolga and Elias took the leap and forged a partnership
-                with the well-regarded platform Security & Safety Things.
+          <Grid container justify="center" spacing={3} className={classes.main}>
+            <Grid item xs={3} sm={3} md={2} className={classes.img}>
+              <ImageLayout imageRef="/Tolga.svg" desc="team" />
+              <Typography gutterBottom variant="body1" align="center">
+                <Box fontWeight="fontWeightBold" display="inline">
+                  Tolga Ermis
+                </Box>
               </Typography>
             </Grid>
-            <Typography gutterBottom variant="body1">
-              The idea of crowd-working to ensure security is unheard-of. In the
-              world of fully-staffed monitoring centers, and appealing automated
-              solutions that require paying no human, the idea of crowd-working
-              to protect an infrastructure is altogether new. But the numbers
-              speak for themselves: in certified pilot projects, promiseQ has
-              achieved a 99,5% success rate in reducing false alarms, and has
-              done so cost-effectively. Akin to cars that could travel at a
-              speed faster than horses, the proposition of decentralized
-              security monitoring may sound far-fetched, but the success rates
-              and cost savings tell us it is anything but.
-            </Typography>
+            <Grid item xs={3} sm={3} md={2} className={classes.img}>
+              <ImageLayout imageRef="/Elias.svg" desc="team" />
+              <Typography gutterBottom variant="body1" align="center">
+                <Box fontWeight="fontWeightBold" display="inline">
+                  Elias Kardel
+                </Box>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={12} className={classes.topic}>
+              <Typography variant="h6" gutterBottom>
+                {t("common:about-header-1")}{" "}
+                <Typography
+                  variant="h6"
+                  style={{ color: "#FFD42A" }}
+                  display="inline"
+                >
+                  promise for humans{" "}
+                </Typography>
+                in the loop
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} className={classes.para}>
+              <Typography gutterBottom variant="body1">
+                <Box fontWeight="fontWeightBold" display="inline">
+                  Tolga{" "}
+                </Box>
+                and
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  Elias{" "}
+                </Box>
+                {t("common:about-text-1")}
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                {t("common:about-text-2")}
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  {t("common:about-text-3")}{" "}
+                </Box>
+                {t("common:about-text-4")}
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  {t("common:about-text-5")}{" "}
+                </Box>
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                {t("common:about-text-6")}
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  {t("about-text-7")}{" "}
+                </Box>
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                {t("common:about-text-8")}
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  {t("common:about-text-9")}{" "}
+                </Box>
+              </Typography>
+            </Grid>
             <Grid container sm={12} justify="center">
               <Button
                 id="about section redirect"
-                text="Get in Touch"
-                href="/#contact"
+                text={t("common:btn-touch")}
+                href="/contact"
               />
             </Grid>
           </Grid>

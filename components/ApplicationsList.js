@@ -77,7 +77,7 @@ const ApplicationsList = () => {
                     href="/#applications"
                     style={{ textDecoration: "none" }}
                   >
-                    <Typography variant="body1" color="primary" component="p">
+                    <Typography variant="body1" color="primary" component="subtitle1">
                       Learn More
                     </Typography>
                   </Link>

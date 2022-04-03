@@ -4,14 +4,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(1),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+    marginRight: theme.spacing(3),
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-    borderRadius: 45,
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+    borderRadius: 7,
     "&:hover": {
-      backgroundColor: "rgb(247 196 0)",
+      backgroundColor: "rgb(235 195 35)",
     },
   },
   label: {

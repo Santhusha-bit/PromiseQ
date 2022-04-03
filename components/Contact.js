@@ -1,43 +1,83 @@
-import Header from "components/Header";
-import Paper from "@material-ui/core/Paper";
+import { Grid } from "@material-ui/core";
+import ImageLayout from "components/ImageLayout";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import HubspotForm from "react-hubspot-form";
 
 const useStyles = makeStyles((theme) => ({
-	formContainer: {
-		minHeight: '80vh',
-    marginLeft: theme.spacing(10),
-    marginRight: theme.spacing(10),
-    marginBottom: theme.spacing(6),
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(0),
-      padding: theme.spacing(2),
+  logo: {
+    WebkitFilter: "grayscale(100%)",
+    justifyContent: "center",
+    "&:hover": {
+      WebkitFilter: "grayscale(0%)",
     },
+  },
+  fullBox: {
+    margin: 10,
   },
 }));
 
-const Contact = () => {
+const companies = [
+  {
+    imagePath: "/berlin_senate_logo_new.png",
+    description: "Berlin Senate Logo",
+  },
+  {
+    imagePath: "/eu-sozialfonds.jpg",
+    description: "EU Logo",
+  },
+  {
+    imagePath: "/esf_logo.jpg",
+    description: "ESF Logo",
+  },
+  {
+    imagePath: "/invest-logo.jpg",
+    description: "Invest Logo",
+  },
+  {
+    imagePath: "/APX_logo.png",
+    description: "APX Logo",
+  },
+  {
+    imagePath: "/safety_&_security_things_logo.svg",
+    description: "SAST Logo",
+  },
+  {
+    imagePath: "/htw_logo.jpg",
+    description: "HTW Logo",
+  },
+  {
+    imagePath: "/data_guard.png",
+    description: "Data guard Logo",
+  },
+  {
+    imagePath: "/made.png",
+    description: "Made Logo",
+  },
+];
+const CompanyLogo = () => {
   const classes = useStyles();
   return (
-    <>
-      <Header title="Contact Us" />
-      <Paper className={classes.formContainer}>
-        <Typography variant="subtitle1" gutterBottom>
-          Do you have any questions? Please do not hesitate to contact us
-          directly.
-        </Typography>
-        <HubspotForm
-          portalId="9094398"
-          formId="219adb3f-b43c-4b02-babc-13467c28a98d"
-          onSubmit={() => console.log("SUCCESS")}
-          onReady={(form) => console.log("Form ready!")}
-          loading={<div>Loading...</div>}
-        />
-      </Paper>
-    </>
+    <div>
+      <Grid className={classes.fullBox} container justify="center" spacing={5}>
+        {companies.map((logo) => (
+          <Grid
+            item
+            key={logo.description}
+            xs={6}
+            sm={3}
+            md={3}
+            className={classes.logo}
+          >
+            <ImageLayout
+              imageRef={logo.imagePath}
+              desc={logo.description}
+              width="70%"
+              objectFit="none"
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
   );
 };
 
-export default Contact;
+export default CompanyLogo;

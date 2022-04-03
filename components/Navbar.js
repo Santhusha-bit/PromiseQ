@@ -14,11 +14,19 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { Box, Container } from "@material-ui/core";
+import {
+  Typography,
+  Box,
+  Container,
+  MenuItem,
+  MenuList,
+} from "@material-ui/core";
+import useTranslation from "next-translate/useTranslation";
+import { Menu } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    background: "#F6F6F6",
+    background: "#FFF",
     padding: "5px 0px 5px 0px",
   },
   drawer: {
@@ -28,19 +36,65 @@ const useStyles = makeStyles((theme) => ({
 
   imageBox: {
     display: "flex",
+    marginLeft: -24,
     flexGrow: 1,
     "&:hover": {
       cursor: "pointer",
     },
   },
-
+  imageBox2: {
+    align: "left",
+    display: "flex",
+    flexGrow: 1,
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
+  btnGroup: {
+    paddingLeft: 210,
+  },
   buttonStyles: {
     textTransform: "none",
     fontSize: "large",
-    marginLeft: theme.spacing(2),
+    align: "right",
+    marginLeft: theme.spacing(1),
     "&:hover": {
       color: theme.palette.primary.main,
       backgroundColor: "transparent",
+    },
+  },
+  btn: {
+    textTransform: "none",
+    fontSize: "large",
+    align: "right",
+    marginLeft: theme.spacing(3),
+    backgroundColor: "#FFD42A",
+    "&:hover": {
+      backgroundColor: "#EBC327",
+    },
+  },
+  ribbon: {
+    backgroundColor: "#F6F6F6",
+    marginTop: 15,
+    paddingLeft: 195,
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 750,
+  },
+  textStyles: {
+    cursor: "pointer",
+    margin: "auto",
+    fontSize: 13,
+    "&:hover": {
+      color: theme.palette.primary.main,
+    },
+  },
+  lang: {
+    cursor: "pointer",
+    margin: "auto",
+    fontSize: 13,
+    "&:hover": {
+      color: theme.palette.primary.main,
     },
   },
 }));
@@ -58,6 +112,7 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
+  let { t } = useTranslation();
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -93,107 +148,162 @@ const Navbar = (props) => {
                   <MenuIcon />
                 </IconButton>
               ) : (
-                <Grid container justify="center">
-                  <Link href="/#home" passHref>
+                <Grid container justify="center" className={classes.btnGroup}>
+                  <Link href="/roi" passHref>
+                    {/* ROI Calculator */}
                     <Button
-                      id="home navigation button"
+                      id="roi navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Home
+                      {t("common:nav-item-1")}
                     </Button>
                   </Link>
-
-                  <Link href="/#freeTrial" passHref>
+                  <Link href="/booking" passHref>
+                    {/* Book a meeting */}
                     <Button
-                      id="free trial navigation button"
+                      id="booking navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Free Trial
+                      {t("common:nav-item-2")}
                     </Button>
                   </Link>
-
-                  <Link href="/#affiliate" passHref>
-                    <Button
-                      id="affiliate navigation button"
-                      className={classes.buttonStyles}
-                      disableRipple
-                      component="a"
-                    >
-                      Affiliate Program
-                    </Button>
-                  </Link>
-
-                  <Link href="/#contact" passHref>
+                  <Link href="/contact" passHref>
+                    {/* Contact us */}
                     <Button
                       id="contact navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Contact Us
+                      {t("common:nav-item-3")}
                     </Button>
                   </Link>
-
                   <Link href="/careers" passHref>
+                    {/* Careers */}
                     <Button
                       id="career navigation button"
                       className={classes.buttonStyles}
                       disableRipple
                       component="a"
                     >
-                      Careers
+                      {t("common:nav-item-4")}
                     </Button>
                   </Link>
 
+                  <Link
+                    href={t("common:lang")}
+                    //
+                    passHref
+                  >
+                    <Button
+                      id="lang navigation button"
+                      className={classes.btn}
+                      component="a"
+                      variant="contained"
+                    >
+                      {t("common:nav-item-5")}
+                    </Button>
+                  </Link>
                 </Grid>
               )}
             </Toolbar>
           </Container>
+          <Grid
+            container
+            spacing={3}
+            justify="center"
+            className={classes.ribbon}
+          >
+            <Grid item xs={12}>
+              <Grid container item xs={12}>
+                <Link href="/#home" passHref>
+                  <Typography
+                    className={classes.textStyles}
+                    variant="caption"
+                    color="inherit"
+                  >
+                    {t("common:ribbon-item-1")}
+                  </Typography>
+                </Link>
+                <Link href="/#about" passHref>
+                  <Typography
+                    className={classes.textStyles}
+                    variant="caption"
+                    color="inherit"
+                  >
+                    {t("common:ribbon-item-2")}
+                  </Typography>
+                </Link>
+                <Link href="/#affiliate" passHref>
+                  <Typography
+                    className={classes.textStyles}
+                    variant="caption"
+                    color="inherit"
+                  >
+                    {t("common:ribbon-item-3")}
+                  </Typography>
+                </Link>
+                <Link href="/#freeTrial" passHref>
+                  <Typography
+                    variant="caption"
+                    color="inherit"
+                    className={classes.textStyles}
+                  >
+                    {t("common:ribbon-item-4")}
+                  </Typography>
+                </Link>
+                <Link href="/#privacy" passHref>
+                  <Typography
+                    variant="caption"
+                    color="inherit"
+                    className={classes.textStyles}
+                  >
+                    {t("common:ribbon-item-5")}
+                  </Typography>
+                </Link>
+              </Grid>
+            </Grid>
+          </Grid>
         </AppBar>
       </ElevationScroll>
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className={classes.drawer}>
           <List component="nav" aria-label="navigation">
-            <Link href="/#home" passHref>
+            <Link href="/roi" passHref>
+              {/* ROI Calculator */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Home" />
+                <ListItemText primary="ROI calculator" />
               </ListItem>
             </Link>
-
-            <Link href="/#freeTrail" passHref>
+            <Link href="/booking" passHref>
+              {/* Book a meeting */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Free Trial" />
+                <ListItemText primary="Book a meeting" />
               </ListItem>
             </Link>
-
-            <Link href="/#affiliate" passHref>
+            <Link href="/contact" passHref>
+              {/* Contact us */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Affiliate Program" />
+                <ListItemText primary="Contact us" />
               </ListItem>
             </Link>
-
-            <Link href="/#applications" passHref>
-              <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="About Us" />
-              </ListItem>
-            </Link>
-
-            <Link href="/#contact" passHref>
-              <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Contact Us" />
-              </ListItem>
-            </Link>
-
             <Link href="/careers" passHref>
+              {/* Careers */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
-
+            <Link href='/{t("common:lang")}' passHref>
+              {/* Careers */}
+              {/* Handle this */}
+              <ListItem button component="a" className={classes.buttonStyles}>
+                <ListItemText primary="Deutsch" />
+              </ListItem>
+            </Link>
           </List>
         </div>
       </Drawer>

@@ -11,6 +11,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import CheckIcon from "@material-ui/icons/Check";
 import ImageLayout from "components/ImageLayout";
+import useTranslation from "next-translate/useTranslation";
+import Header from "./Header";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
@@ -21,34 +23,28 @@ const useStyles = makeStyles(() => ({
     display: "block",
     margin: "0 auto",
   },
+  check: {
+    color: "#FFD42A",
+  },
 }));
 
 const Affiliate = () => {
+  let { t } = useTranslation();
   const classes = useStyles();
 
   return (
     <div>
-      <Typography
-        gutterBottom={10}
-        variant="h5"
-        component="h6"
-        align="center"
-        className={classes.textMiddle}
-      >
-        Affiliate Program
-      </Typography>
+      <Header title={t("common:affiliate-header")} />
       <Typography
         gutterBottom={10}
         variant="h4"
         component="h6"
         align="center"
         className={classes.textMiddle}
-      >
-        Explore how promiseQ can help you to improve your KPIs
-      </Typography>
+      ></Typography>
 
       <Box display={{ xs: "none", sm: "block" }}>
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <img
@@ -61,7 +57,7 @@ const Affiliate = () => {
             </Grid>
             <Grid item sm={4}>
               <img
-                src={"/monitoring_center.png"}
+                src="/monitoring_center.png"
                 width="45%"
                 height="auto"
                 object-fit="fill"
@@ -80,21 +76,33 @@ const Affiliate = () => {
           </Grid>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Improve your margins with promiseQ as part of your solution
-                portfolio
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub1")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Reduce your operating cost through increased operator efficiency
-                and easy-to-implement technology
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub2")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Increase your security levels to better protect what is
-                important to you
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub3")}
               </Typography>
             </Grid>
           </Grid>
@@ -103,37 +111,21 @@ const Affiliate = () => {
               <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Use latest technology to increase customer satisfaction" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-1")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="No hardware update required: Improve customer retention offering remote updates" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-2")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Reduce your own cost for false-alarm management" />
-                </ListItem>
-              </List>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon />
-                  </ListItemAvatar>
-                  <ListItemText primary="Eliminate 99% of false-alarms before they are reviewed by operators to provide more time to verify and solve true-alarms" />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon />
-                  </ListItemAvatar>
-                  <ListItemText primary="Increase operator motivation, and efficiency while reducing errors caused by an unwanted influx of false-alarms" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-3")} />
                 </ListItem>
               </List>
             </Grid>
@@ -141,21 +133,43 @@ const Affiliate = () => {
               <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Instantly upgrade your existing systems without new hardware through over-the-air software installation" />
+                  <ListItemText primary={t("common:affiliate-sub2-item-1")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Benefit from constantly improving promiseQ engine" />
+                  <ListItemText primary={t("common:affiliate-sub2-item-2")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Reduce time-to-action in case of true-alarms freeing up operator capacities " />
+                  <ListItemText primary={t("common:affiliate-sub2-item-3")} />
+                </ListItem>
+              </List>
+            </Grid>
+            <Grid item sm={4}>
+              <List>
+                <ListItem>
+                  <ListItemAvatar>
+                    <CheckIcon className={classes.check} />
+                  </ListItemAvatar>
+                  <ListItemText primary={t("common:affiliate-sub3-item-1")} />
+                </ListItem>
+                <ListItem>
+                  <ListItemAvatar>
+                    <CheckIcon className={classes.check} />
+                  </ListItemAvatar>
+                  <ListItemText primary={t("common:affiliate-sub3-item-2")} />
+                </ListItem>
+                <ListItem>
+                  <ListItemAvatar>
+                    <CheckIcon className={classes.check} />
+                  </ListItemAvatar>
+                  <ListItemText primary={t("common:affiliate-sub3-item-3")} />
                 </ListItem>
               </List>
             </Grid>
@@ -163,8 +177,8 @@ const Affiliate = () => {
           <Grid container item sm={12} spacing={3} justify="center">
             <Button
               id="about section redirect"
-              text="Get in Touch"
-              href="/#contact"
+              text={t("common:btn-roi")}
+              href="/roi"
             />
           </Grid>
         </Grid>
@@ -183,30 +197,34 @@ const Affiliate = () => {
               />
             </Grid>
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Reduce your operating cost through increased operator efficiency
-                and easy-to-implement technology
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub2")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
               <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Use latest technology to increase customer satisfaction" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-1")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="No hardware update required: Improve customer retention offering remote updates" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-2")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Reduce your own cost for false-alarm management" />
+                  <ListItemText primary={t("common:affiliate-sub1-item-3")} />
                 </ListItem>
               </List>
             </Grid>
@@ -223,9 +241,13 @@ const Affiliate = () => {
             </Grid>
 
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Improve your margins with promiseQ as part of your solution
-                portfolio
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub1")}
               </Typography>
             </Grid>
 
@@ -233,15 +255,21 @@ const Affiliate = () => {
               <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Eliminate 99% of false-alarms before they are reviewed by operators to provide more time to verify and solve true-alarms" />
+                  <ListItemText primary={t("common:affiliate-sub2-item-1")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Increase operator motivation, and efficiency while reducing errors caused by an unwanted influx of false-alarms" />
+                  <ListItemText primary={t("common:affiliate-sub2-item-2")} />
+                </ListItem>
+                <ListItem>
+                  <ListItemAvatar>
+                    <CheckIcon className={classes.check} />
+                  </ListItemAvatar>
+                  <ListItemText primary={t("common:affiliate-sub2-item-3")} />
                 </ListItem>
               </List>
             </Grid>
@@ -257,39 +285,43 @@ const Affiliate = () => {
               />
             </Grid>
             <Grid item sm={4}>
-              <Typography gutterBottom variant="h6" component="h6">
-                Increase your security levels to better protect what is
-                important to you
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="h6"
+                align="center"
+              >
+                {t("common:affiliate-sub3")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
               <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Instantly upgrade your existing systems without new hardware through over-the-air software installation" />
+                  <ListItemText primary={t("common:affiliate-sub3-item-1")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Benefit from constantly improving promiseQ engine" />
+                  <ListItemText primary={t("common:affiliate-sub3-item-2")} />
                 </ListItem>
                 <ListItem>
                   <ListItemAvatar>
-                    <CheckIcon />
+                    <CheckIcon className={classes.check} />
                   </ListItemAvatar>
-                  <ListItemText primary="Reduce time-to-action in case of true-alarms freeing up operator capacities " />
+                  <ListItemText primary={t("common:affiliate-sub3-item-3")} />
                 </ListItem>
               </List>
             </Grid>
           </Grid>
           <Grid container item sm={12} spacing={3} justify="center">
             <Button
-              id="about section redirect"
-              text="Get in Touch"
-              href="/#contact"
+              id="roi section redirect"
+              text={t("common:btn-roi")}
+              href="/roi"
             />
           </Grid>
         </Grid>
