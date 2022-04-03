@@ -12,8 +12,18 @@ import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { t } from "i18next";
+
+const useStyles = makeStyles((theme) => ({
+  fullBox: {
+    paddingTop: 70,
+    paddingBottom: 70,
+  },
+}));
 
 const careers = () => {
+  const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState(null);
@@ -35,10 +45,12 @@ const careers = () => {
 
   return (
     <>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.fullBox}>
         <Box marginTop={currentJob === null ? 15 : 5}>
           <Meta title="Careers" />
-          {currentJob === null && <Header title="Join Our Team" />}
+          {currentJob === null && (
+            <Header title={t("careers:careers-header")} />
+          )}
           <section id="current_jobs" style={{ minHeight: "60vh" }}>
             {currentJob === null && (
               <Grid>
