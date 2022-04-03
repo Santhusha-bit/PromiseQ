@@ -1,6 +1,5 @@
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import HowItWorks from "./HowItWorks";

@@ -6,11 +6,10 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "styles/theme";
 import Meta from "components/Meta";
 import Navbar from "components/Navbar";
-import { Box, Container } from "@material-ui/core";
 import Footer from "components/Footer";
 import firebase from "lib/initFirebase";
 
-export default function MyApp(props) {
+function MyApp(props) {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
@@ -42,3 +41,5 @@ MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
+
+export default MyApp;

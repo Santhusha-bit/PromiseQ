@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -14,15 +15,8 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import {
-  Typography,
-  Box,
-  Container,
-  MenuItem,
-  MenuList,
-} from "@material-ui/core";
+import { Typography, Box, Container } from "@material-ui/core";
 import useTranslation from "next-translate/useTranslation";
-import { Menu } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -114,6 +108,7 @@ function ElevationScroll(props) {
 const Navbar = (props) => {
   let { t } = useTranslation();
   const classes = useStyles();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const theme = useTheme();
@@ -195,13 +190,13 @@ const Navbar = (props) => {
                   </Link>
 
                   <Link
-                    href={t("common:lang")}
-                    //
-                    passHref
+                    href="/"
+                    locale={router.locale === "en-US" ? "de" : "en-US"}
                   >
                     <Button
                       id="lang navigation button"
                       className={classes.btn}
+                      onClick={t("common:lang")}
                       component="a"
                       variant="contained"
                     >
