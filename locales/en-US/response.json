@@ -1,0 +1,19 @@
+{
+  "btn-book": "Book a meeting",
+  "btn-touch": "Get in Touch",
+
+  "response-header": "ROI Calculator",
+  "response-sub-1-text-1": "Alarm volume per month",
+  "response-sub-1-text-2": "Operator count in SOC per shift",
+  "response-sub-1-text-3": "Number of cameras",
+  "response-sub-2-text-1": "With promiseQ",
+  "response-sub-2-text-2": "you save:",
+  "response-sub-2-text-3": "1306$",
+  "response-sub-2-text-4": "per month",
+  "response-sub-2-text-5": "To learn more,",
+  "response-sub-2-text-6": "book a meeting",
+  "response-sub-2-text-7": "with us and we will provide you with",
+  "response-sub-2-text-8": "new and effective AI technologies",
+  "response-sub-2-text-9": "and give you",
+  "response-sub-2-text-10": "free-thirty-day trial!"
+}
