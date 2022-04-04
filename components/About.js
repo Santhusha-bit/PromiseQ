@@ -109,7 +109,7 @@ const About = () => {
                 {t("common:about-text-6")}
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  {t("about-text-7")}{" "}
+                  {t("common:about-text-7")}{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">

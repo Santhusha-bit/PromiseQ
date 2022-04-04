@@ -15,9 +15,6 @@ const useStyles = makeStyles(() => ({
     marginBottom: 60,
     marginTop: 60,
   },
-  trial: {
-    paddingRight: 50,
-  },
   how1: {
     paddingLeft: 40,
     paddingTop: 40,
@@ -58,14 +55,7 @@ const FreeTrial = () => {
       <Grid className={classes.container}>
         <Header title={t("common:freetrial-header")} />
         <Grid container spacing={2}>
-          <Grid
-            container
-            spacing={2}
-            xs={12}
-            sm={12}
-            md={6}
-            className={classes.trial}
-          >
+          <Grid container xs={12} sm={12} md={6} className={classes.trial}>
             <Typography
               gutterBottom={10}
               variant="h5"
@@ -100,7 +90,7 @@ const FreeTrial = () => {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="contact section redirect"
-                    text={t("common:btn-trail")}
+                    text={t("common:btn-trial")}
                     href="/contact"
                     className={classes.btnOutline}
                   />

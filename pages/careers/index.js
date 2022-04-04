@@ -13,7 +13,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { t } from "i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   fullBox: {
@@ -27,6 +27,7 @@ const careers = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState(null);
+  let { t } = useTranslation();
 
   useEffect(() => getJobs(), []);
 

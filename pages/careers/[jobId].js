@@ -20,7 +20,7 @@ const Job = () => {
   const [currentJob, setCurrentJob] = useState(null);
   const router = useRouter();
   const jobId = +router.query.jobId;
-  let { t } = useTranslation("careers");
+  let { t } = useTranslation();
 
   useEffect(() => getJobs(), []);
 

@@ -26,6 +26,9 @@ const useStyles = makeStyles(() => ({
   check: {
     color: "#FFD42A",
   },
+  container: {
+    paddingTop: 1,
+  },
 }));
 
 const Affiliate = () => {
@@ -34,298 +37,300 @@ const Affiliate = () => {
 
   return (
     <div>
-      <Header title={t("common:affiliate-header")} />
-      <Typography
-        gutterBottom={10}
-        variant="h4"
-        component="h6"
-        align="center"
-        className={classes.textMiddle}
-      ></Typography>
+      <Grid className={classes.container}>
+        <Header title={t("common:affiliate-header")} />
+        <Typography
+          gutterBottom={10}
+          variant="h4"
+          component="h6"
+          align="center"
+          className={classes.textMiddle}
+        ></Typography>
 
-      <Box display={{ xs: "none", sm: "block" }}>
-        <Grid container spacing={2}>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src="/Integrator.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
+        <Box display={{ xs: "none", sm: "block" }}>
+          <Grid container spacing={2}>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <img
+                  src="/Integrator.png"
+                  width="50%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
+              <Grid item sm={4}>
+                <img
+                  src="/monitoring_center.png"
+                  width="45%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
+              <Grid item sm={4}>
+                <img
+                  src="/corporate_security.png"
+                  width="50%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub1")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub2")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub3")}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3} justify="center">
+              <Button
+                id="about section redirect"
+                text={t("common:btn-roi")}
+                href="/roi"
               />
             </Grid>
-            <Grid item sm={4}>
-              <img
-                src="/monitoring_center.png"
-                width="45%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
-            <Grid item sm={4}>
-              <img
-                src="/corporate_security.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
           </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub1")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub2")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub3")}
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-3")} />
-                </ListItem>
-              </List>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-3")} />
-                </ListItem>
-              </List>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-3")} />
-                </ListItem>
-              </List>
-            </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3} justify="center">
-            <Button
-              id="about section redirect"
-              text={t("common:btn-roi")}
-              href="/roi"
-            />
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
 
-      <Box display={{ xs: "block", sm: "none" }}>
-        <Grid container spacing={1}>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src="/Integrator.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
+        <Box display={{ xs: "block", sm: "none" }}>
+          <Grid container spacing={1}>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <img
+                  src="/Integrator.png"
+                  width="50%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub2")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub1-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
             </Grid>
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub2")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub1-item-3")} />
-                </ListItem>
-              </List>
-            </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src={"/monitoring_center.png"}
-                width="45%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <img
+                  src={"/monitoring_center.png"}
+                  width="45%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
 
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub1")}
-              </Typography>
-            </Grid>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub1")}
+                </Typography>
+              </Grid>
 
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub2-item-3")} />
-                </ListItem>
-              </List>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub2-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
             </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src="/corporate_security.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <img
+                  src="/corporate_security.png"
+                  width="50%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Grid>
+              <Grid item sm={4}>
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  component="h6"
+                  align="center"
+                >
+                  {t("common:affiliate-sub3")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3} justify="center">
+              <Button
+                id="roi section redirect"
+                text={t("common:btn-roi")}
+                href="/roi"
               />
             </Grid>
-            <Grid item sm={4}>
-              <Typography
-                gutterBottom
-                variant="h6"
-                component="h6"
-                align="center"
-              >
-                {t("common:affiliate-sub3")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-1")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-2")} />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <CheckIcon className={classes.check} />
-                  </ListItemAvatar>
-                  <ListItemText primary={t("common:affiliate-sub3-item-3")} />
-                </ListItem>
-              </List>
-            </Grid>
           </Grid>
-          <Grid container item sm={12} spacing={3} justify="center">
-            <Button
-              id="roi section redirect"
-              text={t("common:btn-roi")}
-              href="/roi"
-            />
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </Grid>
     </div>
   );
 };

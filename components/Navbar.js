@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   btnGroup: {
-    paddingLeft: 210,
+    paddingLeft: 180,
   },
   buttonStyles: {
     textTransform: "none",
@@ -143,7 +143,7 @@ const Navbar = (props) => {
                   <MenuIcon />
                 </IconButton>
               ) : (
-                <Grid container justify="center" className={classes.btnGroup}>
+                <Grid container justify="center" alignContent="end">
                   <Link href="/roi" passHref>
                     {/* ROI Calculator */}
                     <Button
@@ -292,9 +292,7 @@ const Navbar = (props) => {
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
-            <Link href='/{t("common:lang")}' passHref>
-              {/* Careers */}
-              {/* Handle this */}
+            <Link href="/" locale={router.locale === "en-US" ? "de" : "en-US"}>
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Deutsch" />
               </ListItem>
