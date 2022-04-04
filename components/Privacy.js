@@ -184,15 +184,6 @@ const Privacy = () => {
         <Grid container spacing={1}>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
-              <img
-                src="/Integrator.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
-            <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
                 {t("common:privacy-sub-1")}
               </Typography>
@@ -217,16 +208,6 @@ const Privacy = () => {
             </Grid>
           </Grid>
           <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src={"/monitoring_center.png"}
-                width="45%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
-
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
                 {t("common:privacy-sub-2")}

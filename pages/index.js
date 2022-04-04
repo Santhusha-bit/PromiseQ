@@ -10,47 +10,97 @@ import Contact from "components/Contact";
 import HowItWorks from "components/HowItWorks";
 import FreeTrial from "components/FreeTrial";
 import Affiliate from "components/Affiliate";
+import Privacy from "components/Privacy";
+import { useTranslation } from "react-i18next";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
     minHeight: "40vh",
     paddingBottom: theme.spacing(6),
   },
+  free: {
+    minHeight: "40vh",
+    paddingBottom: theme.spacing(6),
+    paddingTop: 18,
+  },
   sectionColor: {
     minHeight: "40vh",
     paddingBottom: theme.spacing(6),
     paddingTop: "1rem",
-    backgroundColor: "#ffd42a0d",
+    backgroundColor: "white",
   },
   logoSection: {
     padding: "10% 3% 10% 3%",
   },
+  btnOutline: {
+    marginRight: 120,
+    color: "black",
+    backgroundColor: "white",
+    outline: "3px solid #FFD42A",
+    "&:hover": {
+      outline: "3px solid #EBC327",
+      backgroundColor: "transparent",
+    },
+  },
+  fullBox: {
+    paddingTop: 220,
+    marginBottom: 110,
+    paddingBottom: theme.spacing(6),
+  },
+  text: {
+    paddingTop: 30,
+    paddingBottom: 30,
+  },
+  btn: {
+    marginRight: 10,
+  },
 }));
+
 export default function Home() {
   const classes = useStyles();
+  let { t } = useTranslation();
+
   return (
     <>
-      <section id="home" className={classes.sectionStyle}>
+      <section id="home" className={classes.fullBox}>
         <Container maxWidth="lg">
-          <Box marginTop={15}>
-            <Grid container justify="center" spacing={3}>
-              <Grid item xs={12} sm={12} md={5}>
-                <TextLayout
-                  textHeading="Easily eliminate 99% of false alarms."
-                  textParagraph="promiseQ utilizes machine learning recognition and human verification to provide accurate and fast decisions on alarm detections."
-                />
-                <Button
-                  id="home section redirect"
-                  text="Learn More!"
-                  href="/#contact"
-                />
+          <Grid container justify="center" spacing={3}>
+            <Grid item xs={12} sm={12} md={5}>
+              <Typography gutterBottom variant="h3">
+                {t("common:home-header")}
+              </Typography>
+              <Grid item className={classes.text}>
+                <Typography gutterBottom variant="body1">
+                  <Box fontWeight="fontWeightBold" display="inline">
+                    {t("common:home-text-1")}{" "}
+                  </Box>
+                  {t("common:home-text-2")} <br />
+                  {t("common:home-text-3")} <br />
+                  {t("common:home-text-4")}
+                </Typography>
               </Grid>
-              <Grid item xs={12} sm={12} md={1}></Grid>
-              <Grid item xs={12} sm={12} md={6}>
-                <ImageLayout imageRef="/hero_image.jpg" desc="AI" />
+              <Grid item xs={12} sm={12} md={12} className={classes.btn}>
+                <Grid item xs={12} sm={12}>
+                  <Button
+                    id="about section redirect"
+                    text={t("common:btn-book")}
+                    href="/booking"
+                    className={classes.btn}
+                  />
+                  <Button
+                    id="contact section redirect"
+                    text={t("common:btn-trial")}
+                    href="/contact"
+                    className={classes.btnOutline}
+                  />
+                </Grid>
               </Grid>
             </Grid>
-          </Box>
+            <Grid item xs={12} sm={12} md={7}>
+              <ImageLayout imageRef="/hero_image.jpg" desc="AI" />
+            </Grid>
+          </Grid>
         </Container>
       </section>
       <section id="solution" className={classes.sectionStyle}>
@@ -69,20 +119,18 @@ export default function Home() {
           </Box>
         </Container>
       </section>
-      <section id="howItWorks" className={classes.sectionColor}>
+      <Container id="about" maxWidth="lg">
+        <Box>
+          <About />
+        </Box>
+      </Container>
+      {/* <section id="howItWorks" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
             <HowItWorks />
           </Box>
         </Container>
-      </section>
-      <section id="freeTrial" className={classes.sectionStyle}>
-        <Container maxWidth="lg">
-          <Box>
-            <FreeTrial />
-          </Box>
-        </Container>
-      </section>
+      </section> */}
       <section id="affiliate" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
@@ -90,11 +138,21 @@ export default function Home() {
           </Box>
         </Container>
       </section>
-      <Container maxWidth="lg">
-        <Box>
-          <About />
-        </Box>
-      </Container>
+      <section id="freeTrial" className={classes.free}>
+        <Container maxWidth="lg">
+          <Box>
+            <FreeTrial />
+          </Box>
+        </Container>
+      </section>
+
+      <section id="privacy" className={classes.sectionColor}>
+        <Container maxWidth="lg">
+          <Box>
+            <Privacy />
+          </Box>
+        </Container>
+      </section>
       <section id="contact" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
