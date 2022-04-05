@@ -1,4 +1,3 @@
-import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
 import { Grid, Box, Container } from "@material-ui/core";
 import VideoLayout from "components/VideoLayout";
@@ -7,12 +6,11 @@ import Button from "components/Button";
 import CompanyLogo from "components/CompanyLogo";
 import About from "components/About";
 import Contact from "components/Contact";
-import HowItWorks from "components/HowItWorks";
 import FreeTrial from "components/FreeTrial";
 import Affiliate from "components/Affiliate";
 import Privacy from "components/Privacy";
-import { useTranslation } from "react-i18next";
 import { Typography } from "@material-ui/core";
+import useTranslation from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
@@ -44,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   fullBox: {
-    paddingTop: 220,
-    marginBottom: 110,
+    paddingTop: 200,
+    marginBottom: 25,
     paddingBottom: theme.spacing(6),
   },
   text: {
@@ -53,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
   },
   btn: {
-    margin: "10 auto",
+    margin: "20 auto",
   },
 }));
 
@@ -71,7 +69,7 @@ export default function Home() {
                 {t("common:home-header")}
               </Typography>
               <Grid item className={classes.text}>
-                <Typography gutterBottom variant="h6">
+                <Typography gutterBottom variant="body1">
                   <Box fontWeight="fontWeightBold" display="inline">
                     {t("common:home-text-1")}{" "}
                   </Box>
@@ -124,13 +122,6 @@ export default function Home() {
           <About />
         </Box>
       </Container>
-      {/* <section id="howItWorks" className={classes.sectionColor}>
-        <Container maxWidth="lg">
-          <Box>
-            <HowItWorks />
-          </Box>
-        </Container>
-      </section> */}
       <section id="affiliate" className={classes.sectionColor}>
         <Container maxWidth="lg">
           <Box>
