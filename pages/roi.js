@@ -6,7 +6,17 @@ import Button from "components/Button";
 import ImageLayout from "@components/ImageLayout";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["roi", "common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 const useStyles = makeStyles(() => ({
   labelText: {

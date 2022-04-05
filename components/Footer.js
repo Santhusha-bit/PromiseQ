@@ -18,7 +18,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Button from "components/Button";
 import { TextField } from "@material-ui/core";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -186,11 +186,7 @@ const Footer = () => {
               </Grid>
               <Grid container>
                 <Grid item xs={12} sm={12}>
-                  <TextField
-                    id="demo-helper-text-misaligned-no-helper"
-                    label="Your e-mail"
-                    fullWidth="30"
-                  />
+                  <TextField id="email" label="Your e-mail" fullWidth="30" />
                   <Box className={classes.check}>
                     <Checkbox color="yellow" className={classes.checkbox} />
                     <Typography display="inline" className={classes.checkText}>

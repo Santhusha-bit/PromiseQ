@@ -13,7 +13,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["careers", "common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 const useStyles = makeStyles((theme) => ({
   fullBox: {

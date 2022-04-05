@@ -1,9 +1,7 @@
-const nextTranslate = require('next-translate')
+const { i18n } = require("./next-i18next.config");
 
 module.exports = {
-	trailingSlash: true,
-};
-
-module.exports = {
-	...nextTranslate(),
+  reactStrictMode: true,
+  i18n,
+  trailingSlash: true,
 };

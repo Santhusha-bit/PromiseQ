@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
 import Header from "./Header";
 
 const useStyles = makeStyles(() => ({

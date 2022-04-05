@@ -16,7 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Box, Container } from "@material-ui/core";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -189,10 +189,7 @@ const Navbar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link
-                    href="/"
-                    locale={router.locale === "en-US" ? "de" : "en-US"}
-                  >
+                  <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
                     <Button
                       id="lang navigation button"
                       className={classes.btn}
@@ -211,7 +208,7 @@ const Navbar = (props) => {
           <Grid container spacing={3} className={classes.ribbon}>
             <Container textAlign="center">
               <Grid item xs={12}>
-                <Grid container item xs={12} md={6}>
+                <Grid container item xs={12} md={8}>
                   <Link href="/#home" passHref>
                     <Typography
                       className={classes.textStyles}
@@ -285,7 +282,7 @@ const Navbar = (props) => {
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
-            <Link href="/" locale={router.locale === "en-US" ? "de" : "en-US"}>
+            <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Deutsch" />
               </ListItem>

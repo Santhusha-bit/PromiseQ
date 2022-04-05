@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography, Hidden } from "@material-ui/core";
 import Button from "components/Button";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-i18next";
 
 const useStyles = makeStyles((theme) => ({
   topic: {

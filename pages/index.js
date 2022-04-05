@@ -10,7 +10,17 @@ import FreeTrial from "components/FreeTrial";
 import Affiliate from "components/Affiliate";
 import Privacy from "components/Privacy";
 import { Typography } from "@material-ui/core";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 
 const useStyles = makeStyles((theme) => ({
   sectionStyle: {
