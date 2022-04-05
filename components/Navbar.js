@@ -70,15 +70,15 @@ const useStyles = makeStyles((theme) => ({
   ribbon: {
     backgroundColor: "#F6F6F6",
     marginTop: 15,
-    paddingLeft: 195,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingRight: 750,
+    paddingTop: 15,
+    paddingBottom: 15,
   },
   textStyles: {
     cursor: "pointer",
-    margin: "auto",
     fontSize: 13,
+    textAlign: "left",
+    margin: 0,
+    marginRight: 46,
     "&:hover": {
       color: theme.palette.primary.main,
     },
@@ -207,61 +207,54 @@ const Navbar = (props) => {
               )}
             </Toolbar>
           </Container>
-          <Grid
-            container
-            spacing={3}
-            justify="center"
-            className={classes.ribbon}
-          >
-            <Grid item xs={12}>
-              <Grid container item xs={12}>
-                <Link href="/#home" passHref>
-                  <Typography
-                    className={classes.textStyles}
-                    variant="caption"
-                    color="inherit"
-                  >
-                    {t("common:ribbon-item-1")}
-                  </Typography>
-                </Link>
-                <Link href="/#about" passHref>
-                  <Typography
-                    className={classes.textStyles}
-                    variant="caption"
-                    color="inherit"
-                  >
-                    {t("common:ribbon-item-2")}
-                  </Typography>
-                </Link>
-                <Link href="/#affiliate" passHref>
-                  <Typography
-                    className={classes.textStyles}
-                    variant="caption"
-                    color="inherit"
-                  >
-                    {t("common:ribbon-item-3")}
-                  </Typography>
-                </Link>
-                <Link href="/#freeTrial" passHref>
-                  <Typography
-                    variant="caption"
-                    color="inherit"
-                    className={classes.textStyles}
-                  >
-                    {t("common:ribbon-item-4")}
-                  </Typography>
-                </Link>
-                <Link href="/#privacy" passHref>
-                  <Typography
-                    variant="caption"
-                    color="inherit"
-                    className={classes.textStyles}
-                  >
-                    {t("common:ribbon-item-5")}
-                  </Typography>
-                </Link>
+
+          <Grid container spacing={3} className={classes.ribbon}>
+            <Container textAlign="center">
+              <Grid item xs={12}>
+                <Grid container item xs={12} md={6}>
+                  <Link href="/#home" passHref>
+                    <Typography
+                      className={classes.textStyles}
+                      variant="caption"
+                    >
+                      {t("common:ribbon-item-1")}
+                    </Typography>
+                  </Link>
+                  <Link href="/#about" passHref>
+                    <Typography
+                      className={classes.textStyles}
+                      variant="caption"
+                    >
+                      {t("common:ribbon-item-2")}
+                    </Typography>
+                  </Link>
+                  <Link href="/#affiliate" passHref>
+                    <Typography
+                      className={classes.textStyles}
+                      variant="caption"
+                    >
+                      {t("common:ribbon-item-3")}
+                    </Typography>
+                  </Link>
+                  <Link href="/#freeTrial" passHref>
+                    <Typography
+                      variant="caption"
+                      className={classes.textStyles}
+                    >
+                      {t("common:ribbon-item-4")}
+                    </Typography>
+                  </Link>
+                  <Link href="/#privacy" passHref>
+                    <Typography
+                      variant="caption"
+                      className={classes.textStyles}
+                    >
+                      {t("common:ribbon-item-5")}
+                    </Typography>
+                  </Link>
+                </Grid>
               </Grid>
-            </Grid>
+            </Container>
           </Grid>
         </AppBar>
       </ElevationScroll>

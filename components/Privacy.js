@@ -37,6 +37,9 @@ const useStyles = makeStyles(() => ({
     display: "block",
     margin: "0 auto",
   },
+  container: {
+    textAlign: "center",
+  },
 }));
 
 const Privacy = () => {
@@ -45,140 +48,145 @@ const Privacy = () => {
 
   return (
     <div>
-      <Header title={t("common:privacy-header-1")} />
-      <Typography
-        variant="h5"
-        component="h6"
-        align="center"
-        className={classes.textMiddle}
-      >
-        {t("common:privacy-header-2")}
-      </Typography>
+      <Grid className={classes.container}>
+        <Header title={t("common:privacy-header-1")} align="center" />
+        <Typography
+          variant="h5"
+          component="h6"
+          align="center"
+          className={classes.textMiddle}
+        >
+          {t("common:privacy-header-2")}
+        </Typography>
 
-      <Box display={{ xs: "none", sm: "block" }}>
-        <Grid container spacing={2}>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src="/data_protection.png"
-                width="40%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img_1}
-              />
-            </Grid>
-            <Grid item sm={4}>
-              <img
-                src="/data_transfer.png"
-                width="50%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img_2}
-              />
-            </Grid>
-            <Grid item sm={4}>
-              <img
-                src="/insurance_protection.png"
-                width="45%"
-                height="auto"
-                object-fit="fill"
-                className={classes.img_3}
-              />
-            </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-1")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-2")}
-              </Typography>
-            </Grid>
-            <Grid item sm={4}>
-              <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-3")}
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    align="center"
-                    primary={t("common:privacy-sub-1-text")}
-                  />
-                </ListItem>
-                <Link href="https://www.dataguard.de/">
-                  <img
-                    src="/data_guard.png"
-                    width="17%"
-                    height="auto"
-                    object-fit="fill"
-                    className={classes.img}
-                  />
-                </Link>
-              </List>
-            </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    align="center"
-                    primary={t("common:privacy-sub-2-text")}
-                  />
-                </ListItem>
+        <Box display={{ xs: "none", sm: "block" }}>
+          <Grid container spacing={2}>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
                 <img
-                  src="/VdS.png"
-                  width="17%"
+                  src="/data_protection.png"
+                  width="40%"
                   height="auto"
                   object-fit="fill"
-                  className={classes.img}
+                  className={classes.img_1}
                 />
-              </List>
+              </Grid>
+              <Grid item sm={4}>
+                <img
+                  src="/data_transfer.png"
+                  width="50%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img_2}
+                />
+              </Grid>
+              <Grid item sm={4}>
+                <img
+                  src="/insurance_protection.png"
+                  width="45%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img_3}
+                />
+              </Grid>
             </Grid>
-            <Grid item sm={4}>
-              <List>
-                <ListItem>
-                  <ListItemText
-                    align="center"
-                    primary={t("common:privacy-sub-3-text")}
-                  />
-                </ListItem>
-                <ListItem>
-                  <Link href="https://www.bdj.de/atlas/">
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <Typography variant="h6" component="h6" align="center">
+                  {t("common:privacy-sub-1")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <Typography variant="h6" component="h6" align="center">
+                  {t("common:privacy-sub-2")}
+                </Typography>
+              </Grid>
+              <Grid item sm={4}>
+                <Typography variant="h6" component="h6" align="center">
+                  {t("common:privacy-sub-3")}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3}>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemText
+                      align="center"
+                      primary={t("common:privacy-sub-1-text")}
+                    />
+                  </ListItem>
+                  <Link href="https://www.dataguard.de/">
                     <img
-                      src="/atlas.png"
-                      width="40%"
+                      src="/data_guard.png"
+                      width="17%"
                       height="auto"
+                      textAlign="center"
                       object-fit="fill"
                       className={classes.img}
                     />
                   </Link>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemText
+                      align="center"
+                      primary={t("common:privacy-sub-2-text")}
+                    />
+                  </ListItem>
                   <img
-                    src="/mit.png"
-                    width="20%"
+                    src="/VdS.png"
+                    width="17%"
                     height="auto"
+                    textAlign="center"
                     object-fit="fill"
-                    align="left"
                     className={classes.img}
                   />
-                </ListItem>
-              </List>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemText
+                      align="center"
+                      primary={t("common:privacy-sub-3-text")}
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <Link href="https://www.bdj.de/atlas/">
+                      <img
+                        src="/atlas.png"
+                        width="40%"
+                        height="auto"
+                        object-fit="fill"
+                        textAlign="center"
+                        className={classes.img}
+                      />
+                    </Link>
+                    <img
+                      src="/mit.png"
+                      width="20%"
+                      height="auto"
+                      object-fit="fill"
+                      textAlign="center"
+                      className={classes.img}
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+            </Grid>
+            <Grid container item sm={12} spacing={3} justify="center">
+              <Button
+                id="about section redirect"
+                text="ROI calculator"
+                href="/roi"
+              />
             </Grid>
           </Grid>
-          <Grid container item sm={12} spacing={3} justify="center">
-            <Button
-              id="about section redirect"
-              text="ROI calculator"
-              href="/roi"
-            />
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </Grid>
 
       <Box display={{ xs: "block", sm: "none" }}>
         <Grid container spacing={1}>
@@ -201,7 +209,7 @@ const Privacy = () => {
                   width="17%"
                   height="auto"
                   object-fit="fill"
-                  align="left"
+                  textAlign="center"
                   className={classes.img}
                 />
               </List>
@@ -226,8 +234,8 @@ const Privacy = () => {
                   src="/VdS.png"
                   width="17%"
                   height="auto"
+                  textAlign="center"
                   object-fit="fill"
-                  align="left"
                   className={classes.img}
                 />
               </List>
@@ -238,6 +246,7 @@ const Privacy = () => {
               <img
                 src="/corporate_security.png"
                 width="50%"
+                textAlign="center"
                 height="auto"
                 object-fit="fill"
                 className={classes.img}
@@ -260,16 +269,16 @@ const Privacy = () => {
                   src="/atlas.png"
                   width="17%"
                   height="auto"
+                  textAlign="center"
                   object-fit="fill"
-                  align="left"
                   className={classes.img}
                 />
                 <img
                   src="/mit.png"
                   width="17%"
+                  textAlign="center"
                   height="auto"
                   object-fit="fill"
-                  align="left"
                   className={classes.img}
                 />
               </List>

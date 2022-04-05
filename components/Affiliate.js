@@ -28,6 +28,7 @@ const useStyles = makeStyles(() => ({
   },
   container: {
     paddingTop: 1,
+    textAlign: "center",
   },
 }));
 

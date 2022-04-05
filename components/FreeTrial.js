@@ -5,6 +5,7 @@ import Button from "components/Button";
 import HowItWorks from "./HowItWorks";
 import useTranslation from "next-translate/useTranslation";
 import Header from "./Header";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
@@ -12,7 +13,6 @@ const useStyles = makeStyles(() => ({
     marginTop: 60,
   },
   how1: {
-    paddingLeft: 40,
     paddingTop: 40,
   },
   how2: {
@@ -48,84 +48,90 @@ const FreeTrial = () => {
 
   return (
     <div>
-      <Header title={t("common:freetrial-header")} />
-
-      <Grid container spacing={2}>
-        <Grid container xs={12} sm={12} md={6} className={classes.trial}>
-          <Typography
-            gutterBottom={10}
-            variant="h5"
-            component="h6"
-            className={classes.textMiddle}
-          >
-            {t("common:trial-header-1")}
-          </Typography>
-          <Grid spacing={2} xs={12} sm={12} md={7}>
-            <Typography gutterBottom variant="h6" component="h6">
-              {t("common:trial-header-2")}
-            </Typography>
-            <Typography gutterBottom variant="body1" className={classes.main}>
-              {t("common:trial-text")}
-            </Typography>
-          </Grid>
-          <Grid spacing={2} xs={12} sm={12} md={12}>
-            <Grid
-              container
-              justify="center"
-              spacing={3}
-              className={classes.buttons}
+      <Container>
+        <Header title={t("common:freetrial-header")} />
+        <Grid container spacing={2}>
+          <Grid container xs={12} sm={12} md={6} className={classes.trial}>
+            <Typography
+              gutterBottom={10}
+              variant="h5"
+              component="h6"
+              className={classes.textMiddle}
             >
-              <Grid item xs={12} sm={12} md={6}>
-                <Button
-                  id="about section redirect"
-                  text={t("common:btn-book")}
-                  href="/booking"
-                  className={classes.btn}
-                />
-              </Grid>
-              <Grid item xs={12} sm={12} md={6}>
-                <Button
-                  id="contact section redirect"
-                  text={t("common:btn-trial")}
-                  href="/contact"
-                  className={classes.btnOutline}
-                />
+              {t("common:trial-header-1")}
+            </Typography>
+            <Grid spacing={2} xs={12} sm={12} md={7}>
+              <Typography gutterBottom variant="h6" component="h6">
+                {t("common:trial-header-2")}
+              </Typography>
+              <Typography gutterBottom variant="body1" className={classes.main}>
+                {t("common:trial-text")}
+              </Typography>
+            </Grid>
+            <Grid spacing={2} xs={12} sm={12} md={12}>
+              <Grid
+                container
+                justify="center"
+                spacing={3}
+                className={classes.buttons}
+              >
+                <Grid item xs={12} sm={12} md={6}>
+                  <Button
+                    id="about section redirect"
+                    text={t("common:btn-book")}
+                    href="/booking"
+                    className={classes.btn}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={12} md={6}>
+                  <Button
+                    id="contact section redirect"
+                    text={t("common:btn-trial")}
+                    href="/contact"
+                    className={classes.btnOutline}
+                  />
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid container xs={12} sm={12} md={6} className={classes.how1}>
-          <Typography variant="h6" component="h6">
-            {t("common:how-header")}{" "}
-            <Typography
-              variant="h6"
-              style={{ color: "#FFD42A" }}
-              display="inline"
-            >
-              {t("common:how-header-item-1")}{" "}
+
+          <Grid container xs={12} sm={12} md={6} className={classes.how1}>
+            <Typography variant="h6" component="h6">
+              {t("common:how-header")}{" "}
+              <Typography
+                variant="h6"
+                style={{ color: "#FFD42A" }}
+                display="inline"
+              >
+                {t("common:how-header-item-1")}{" "}
+              </Typography>
             </Typography>
-          </Typography>
-          <Typography gutterBottom variant="body1" className={classes.content}>
-            {t("common:how-text-1")}
-          </Typography>
-          <Typography variant="h6" component="h6" className={classes.how2}>
-            {t("common:how-header")}{" "}
             <Typography
-              variant="h6"
-              style={{ color: "#FFD42A" }}
-              display="inline"
+              gutterBottom
+              variant="body1"
+              className={classes.content}
             >
-              {t("common:how-header-item-2")}{" "}
+              {t("common:how-text-1")}
             </Typography>
-          </Typography>
-          <Typography variant="body1" className={classes.content}>
-            {t("common:how-text-2")}
-          </Typography>
-          <Typography gutterBottom variant="body1">
-            {t("common:how-text-3")}
-          </Typography>
-        </Grid>
-      </Grid>
+            <Typography variant="h6" component="h6" className={classes.how2}>
+              {t("common:how-header")}{" "}
+              <Typography
+                variant="h6"
+                style={{ color: "#FFD42A" }}
+                display="inline"
+              >
+                {t("common:how-header-item-2")}{" "}
+              </Typography>
+            </Typography>
+            <Typography variant="body1" className={classes.content}>
+              {t("common:how-text-2")}
+            </Typography>
+            <Typography gutterBottom variant="body1">
+              {t("common:how-text-3")}
+            </Typography>
+          </Grid>
+        </Grid>{" "}
+      </Container>
     </div>
   );
 };

@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
   },
   btn: {
-    marginRight: 10,
+    margin: "10 auto",
   },
 }));
 
@@ -71,7 +71,7 @@ export default function Home() {
                 {t("common:home-header")}
               </Typography>
               <Grid item className={classes.text}>
-                <Typography gutterBottom variant="body1">
+                <Typography gutterBottom variant="h6">
                   <Box fontWeight="fontWeightBold" display="inline">
                     {t("common:home-text-1")}{" "}
                   </Box>
