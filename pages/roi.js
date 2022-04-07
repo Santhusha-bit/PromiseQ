@@ -1,4 +1,5 @@
 import Grid from "@material-ui/core/Grid";
+import { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -8,6 +9,7 @@ import { List, ListItem, ListItemText } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import router from "next/router";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -61,6 +63,21 @@ const useStyles = makeStyles(() => ({
 const ROI = () => {
   let { t } = useTranslation("roi");
   const classes = useStyles();
+  const [volumePerMonth, setVolumePerMonth] = useState();
+  const [operatorCount, setOperatorCount] = useState();
+  const [numberOfCameras, setNumberOfCameras] = useState();
+  const PROMISEQ_COST_PER_CAMERA = 5;
+  const OPERATOR_SALARY = 25;
+
+  const calculateROI = () => {
+    let price =
+      OPERATOR_SALARY * parseInt(operatorCount) -
+      parseInt(numberOfCameras) * PROMISEQ_COST_PER_CAMERA;
+
+    localStorage.setItem("price", price);
+
+    router.push('/response')
+  };
 
   return (
     <div>
@@ -129,6 +146,7 @@ const ROI = () => {
               id="alarmVolume"
               label={t("roi:write")}
               className={classes.textField}
+              onChange={(e) => setVolumePerMonth(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
@@ -138,6 +156,7 @@ const ROI = () => {
               id="operatorCount"
               label={t("roi:write")}
               className={classes.textField}
+              onChange={(e) => setOperatorCount(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
@@ -147,6 +166,7 @@ const ROI = () => {
               id="numOfCameras"
               label={t("roi:write")}
               className={classes.textField}
+              onChange={(e) => setNumberOfCameras(e.target.value)}
             />
           </Grid>
 
@@ -162,7 +182,7 @@ const ROI = () => {
           <Button
             id="roi section redirect"
             text={t("roi:btn-calc")}
-            href="/response"
+            onClick={calculateROI}
           />
         </Grid>
       </Container>

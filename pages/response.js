@@ -155,7 +155,7 @@ const Response = () => {
                   <br />
                 </Box>
                 <Typography className={classes.deal} variant="h3">
-                  {t("response:response-sub-2-text-3")}
+                  {localStorage.getItem('price')}
                 </Typography>
                 <br />
                 <Typography className={classes.month} variant="h6">
