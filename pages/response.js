@@ -1,6 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
+import { useEffect, useState } from "react";
 import ImageLayout from "@components/ImageLayout";
 import { TextField, Typography, Box, Container } from "@material-ui/core";
 import { useTranslation } from "next-i18next";
@@ -79,6 +80,11 @@ const useStyles = makeStyles(() => ({
 const Response = () => {
   let { t } = useTranslation("response");
   const classes = useStyles();
+  const [price, setPrice] = useState(0)
+
+  useEffect(() => {
+    setPrice(localStorage.getItem("price"));
+  }, []);
 
   return (
     <div>
@@ -155,7 +161,7 @@ const Response = () => {
                   <br />
                 </Box>
                 <Typography className={classes.deal} variant="h3">
-                  {localStorage.getItem('price')}
+                  {price}
                 </Typography>
                 <br />
                 <Typography className={classes.month} variant="h6">
