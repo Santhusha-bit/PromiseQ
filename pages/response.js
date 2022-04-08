@@ -80,7 +80,7 @@ const useStyles = makeStyles(() => ({
 const Response = () => {
   let { t } = useTranslation("response");
   const classes = useStyles();
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState(0);
 
   useEffect(() => {
     setPrice(localStorage.getItem("price"));
@@ -161,7 +161,7 @@ const Response = () => {
                   <br />
                 </Box>
                 <Typography className={classes.deal} variant="h3">
-                  {price}
+                  {price} $
                 </Typography>
                 <br />
                 <Typography className={classes.month} variant="h6">
