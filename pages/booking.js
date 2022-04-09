@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 import React from "react";
 import Helmet from "react-helmet";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }) {

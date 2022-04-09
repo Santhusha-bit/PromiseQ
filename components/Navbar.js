@@ -16,7 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Box, Container } from "@material-ui/core";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {

@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
 import Button from "components/Button";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {

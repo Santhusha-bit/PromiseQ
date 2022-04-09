@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import CheckIcon from "@material-ui/icons/Check";
 import ImageLayout from "components/ImageLayout";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 import Header from "./Header";
 
 const useStyles = makeStyles(() => ({

@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import HubspotForm from "react-hubspot-form";
 import { Container } from "@material-ui/core";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }) {

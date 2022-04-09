@@ -11,7 +11,7 @@ import Affiliate from "components/Affiliate";
 import Privacy from "components/Privacy";
 import { Typography } from "@material-ui/core";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 
 export async function getStaticProps({ locale }) {
   return {

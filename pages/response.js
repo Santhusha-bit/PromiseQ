@@ -4,7 +4,7 @@ import Button from "components/Button";
 import { useEffect, useState } from "react";
 import ImageLayout from "@components/ImageLayout";
 import { TextField, Typography, Box, Container } from "@material-ui/core";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }) {

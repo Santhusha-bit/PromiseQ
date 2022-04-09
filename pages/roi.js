@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import ImageLayout from "@components/ImageLayout";
 import { TextField } from "@material-ui/core";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import router from "next/router";
 
@@ -75,7 +75,7 @@ const ROI = () => {
 
     localStorage.setItem("price", price);
 
-    router.push('/response')
+    router.push("/response");
   };
 
   return (

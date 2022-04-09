@@ -3,20 +3,14 @@ import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  Divider,
-  IconButton,
-  Checkbox,
-  Box,
-} from "@material-ui/core";
+import { Grid, Divider, IconButton, Checkbox, Box } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Button from "components/Button";
 import { TextField } from "@material-ui/core";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   root: {
