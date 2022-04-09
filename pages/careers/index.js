@@ -11,8 +11,7 @@ import JobList from "components/JobList";
 import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 

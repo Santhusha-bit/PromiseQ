@@ -8,7 +8,6 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import firebase from "lib/initFirebase";
-import { useTranslation } from "react-i18next";
 import { appWithTranslation } from "next-i18next";
 
 export async function getStaticProps({ locale }) {

@@ -5,7 +5,6 @@ import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import ImageLayout from "@components/ImageLayout";
-import { List, ListItem, ListItemText } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
