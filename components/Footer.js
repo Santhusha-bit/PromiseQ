@@ -10,7 +10,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Button from "components/Button";
 import { TextField } from "@material-ui/core";
-import { useTranslation } from "next-translate/useTranslation";
+import useTranslation  from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   root: {

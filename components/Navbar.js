@@ -16,7 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Box, Container } from "@material-ui/core";
-import { useTranslation } from "next-translate/useTranslation";
+import useTranslation  from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -106,7 +106,7 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
-  let { t } = useTranslation();
+  let { t } = useTranslation('common');
   const classes = useStyles();
   const router = useRouter();
   const [open, setOpen] = useState(false);

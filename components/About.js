@@ -1,11 +1,9 @@
-import Header from "components/Header";
-import TextLayout from "components/TextLayout";
 import ImageLayout from "components/ImageLayout";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography, Hidden } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 import Button from "components/Button";
-import { useTranslation } from "next-translate/useTranslation";
+import useTranslation  from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   topic: {

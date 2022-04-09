@@ -4,17 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import HubspotForm from "react-hubspot-form";
 import { Container } from "@material-ui/core";
-import { useTranslation } from "next-translate/useTranslation";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["contact", "common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+import useTranslation from 'next-translate/useTranslation';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {

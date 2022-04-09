@@ -12,17 +12,7 @@ import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useTranslation } from "next-translate/useTranslation";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["careers", "common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+import useTranslation from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   fullBox: {

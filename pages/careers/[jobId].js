@@ -12,17 +12,7 @@ import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-translate/useTranslation";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-export async function getServerSideProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["careers", "common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+import useTranslation from "next-translate/useTranslation";
 
 const Job = () => {
   const [isLoading, setIsLoading] = useState(false);

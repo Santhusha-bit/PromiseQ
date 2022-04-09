@@ -8,16 +8,6 @@ import Meta from "components/Meta";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import firebase from "lib/initFirebase";
-import { appWithTranslation } from "next-i18next";
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
 
 function MyApp(props) {
   const { Component, pageProps } = props;
@@ -52,4 +42,4 @@ MyApp.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export default appWithTranslation(MyApp);
+export default MyApp;

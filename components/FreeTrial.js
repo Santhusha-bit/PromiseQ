@@ -2,7 +2,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
-import { useTranslation } from "next-translate/useTranslation";
+import useTranslation  from "next-translate/useTranslation";
 import Header from "./Header";
 import { Container } from "@material-ui/core";
 
