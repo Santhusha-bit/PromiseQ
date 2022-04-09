@@ -10,8 +10,8 @@ import FreeTrial from "components/FreeTrial";
 import Affiliate from "components/Affiliate";
 import Privacy from "components/Privacy";
 import { Typography } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export async function getStaticProps({ locale }) {
   return {

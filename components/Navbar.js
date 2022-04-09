@@ -16,7 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Box, Container } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -143,7 +143,7 @@ const Navbar = (props) => {
                   <MenuIcon />
                 </IconButton>
               ) : (
-                <Grid container justify="center" alignContent="end">
+                <Grid container justify="center">
                   <Link href="/roi" passHref>
                     {/* ROI Calculator */}
                     <Button
@@ -206,7 +206,7 @@ const Navbar = (props) => {
           </Container>
 
           <Grid container spacing={3} className={classes.ribbon}>
-            <Container textAlign="center">
+            <Container>
               <Grid item xs={12}>
                 <Grid container item xs={12} md={8}>
                   <Link href="/#home" passHref>
