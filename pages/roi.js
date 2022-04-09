@@ -172,6 +172,7 @@ const ROI = () => {
             id="roi section redirect"
             text={t("roi:btn-calc")}
             onClick={calculateROI}
+            disabled={!volumePerMonth || !operatorCount || !numberOfCameras}
           />
         </Grid>
       </Container>
