@@ -209,7 +209,7 @@ const JobDescription = ({ job, setCurrentJob }) => {
                   We are looking forward to getting to know you!
                 </Typography>
                 <Typography>
-                  Please drop us a note at:{" "}
+                  Email your CV to{" "}
                   <a href="mailto:webmaster@example.com">
                     application@promiseq.com
                   </a>
