@@ -47,14 +47,14 @@ const Privacy = () => {
   return (
     <div>
       <Grid className={classes.container}>
-        <Header title={t("common:privacy-header-1")} align="center" />
+        <Header title="Datenschutz & Sicherheit" align="center" />
         <Typography
           variant="h5"
           component="h6"
           align="center"
           className={classes.textMiddle}
         >
-          {t("common:privacy-header-2")}
+          Wir konzipieren unsere Produkte & Prozesse nach höchsten Datenschutz - und Marktstandards!
         </Typography>
 
         <Box display={{ xs: "none", sm: "block" }}>
@@ -91,17 +91,17 @@ const Privacy = () => {
             <Grid container item sm={12} spacing={3}>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  {t("common:privacy-sub-1")}
+                  Höchster Datenschutz
                 </Typography>
               </Grid>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  {t("common:privacy-sub-2")}
+                  Datentransfer VDS-Konform
                 </Typography>
               </Grid>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  {t("common:privacy-sub-3")}
+                  Höchster Versicherungschutz
                 </Typography>
               </Grid>
             </Grid>
@@ -111,7 +111,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary={t("common:privacy-sub-1-text")}
+                      primary="Nach intensiven DSGVO Audits mit unserem Partner und DSB DataGuard, arbeiten wir streng nach dem privacy by design Konzept. Ihre Daten sind sicher!"
                     />
                   </ListItem>
                   <Link href="https://www.dataguard.de/">
@@ -131,7 +131,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary={t("common:privacy-sub-2-text")}
+                      primary="Wir liefern Ihnen alle notwendigen Zeitstempel und Signalinformationen als Metadaten mit, damit Sie Ihre Zertifizierungsanforderungen mit Leichtigkeit erfüllen."
                     />
                   </ListItem>
                   <img
@@ -149,7 +149,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary={t("common:privacy-sub-3-text")}
+                      primary="Einmalig im Bereich Videoanalyse: Das exklusive promiseQ Threat Detect Gesamtpaket gewährt Ihnen 100%igen Versicherungsschutz, deutlich über dem empfohlenen BDSW Mindeststandard liegt."
                     />
                   </ListItem>
                   <ListItem>
@@ -191,7 +191,7 @@ const Privacy = () => {
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-1")}
+                Höchster Datenschutz
               </Typography>
             </Grid>
             <Grid item sm={4}>
@@ -199,7 +199,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary={t("common:privacy-sub-1-text")}
+                    primary="Nach intensiven DSGVO Audits mit unserem Partner und DSB DataGuard, arbeiten wir streng nach dem privacy by design Konzept. Ihre Daten sind sicher!"
                   />
                 </ListItem>
                 <img
@@ -216,7 +216,7 @@ const Privacy = () => {
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-2")}
+                Datentransfer VDS-Konform
               </Typography>
             </Grid>
 
@@ -225,7 +225,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary={t("common:privacy-sub-2-text")}
+                    primary="Wir liefern Ihnen alle notwendigen Zeitstempel und Signalinformationen als Metadaten mit, damit Sie Ihre Zertifizierungsanforderungen mit Leichtigkeit erfüllen."
                   />
                 </ListItem>
                 <img
@@ -252,7 +252,7 @@ const Privacy = () => {
             </Grid>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                {t("common:privacy-sub-3")}
+                Höchster Versicherungschutz
               </Typography>
             </Grid>
             <Grid item sm={4}>
@@ -260,7 +260,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary={t("common:privacy-sub-3-text")}
+                    primary="Einmalig im Bereich Videoanalyse: Das exklusive promiseQ Threat Detect Gesamtpaket gewährt Ihnen 100%igen Versicherungsschutz, deutlich über dem empfohlenen BDSW Mindeststandard liegt."
                   />
                 </ListItem>
                 <img
@@ -281,13 +281,6 @@ const Privacy = () => {
                 />
               </List>
             </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3} justify="center">
-            <Button
-              id="about section redirect"
-              text="ROI calculator"
-              href="/roi"
-            />
           </Grid>
         </Grid>
       </Box>

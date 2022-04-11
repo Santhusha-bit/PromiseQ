@@ -42,12 +42,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Booking = () => {
-  let { t } = useTranslation("booking");
   const classes = useStyles();
   return (
     <>
       <Container className={classes.header}>
-        <Header title={t("booking:book-header")} />
+        <Header title="Termin buchen" />
         <div
           class="meetings-iframe-container"
           data-src="https://on.promiseq.com/meetings/tolga-ermis/meeting-with-promiseq-founders?embed=true"

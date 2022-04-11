@@ -64,29 +64,29 @@ export default function Home() {
           <Grid container justify="center" spacing={3}>
             <Grid item xs={12} sm={12} md={5}>
               <Typography gutterBottom variant="h3">
-                {t("common:home-header")}
+              Sie eliminieren mit promiseQ mehr als 95% Ihrer Falschalarme
               </Typography>
               <Grid item className={classes.text}>
                 <Typography gutterBottom variant="body1">
                   <Box fontWeight="fontWeightBold" display="inline">
-                    {t("common:home-text-1")}{" "}
+                  promiseQ{" "}
                   </Box>
-                  {t("common:home-text-2")} <br />
-                  {t("common:home-text-3")} <br />
-                  {t("common:home-text-4")}
+                  ist keine normale Videoanalytik! <br />
+                  Wir liefern die einzigartige Symbiose von modernster KI & <br />
+                  Crowdworkern über eine globale Plattform.
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={12} md={12} className={classes.btn}>
                 <Grid item xs={12} sm={12}>
                   <Button
                     id="about section redirect"
-                    text="Book a meeting"
+                    text="Termin buchen"
                     href="/booking"
                     className={classes.btn}
                   />
                   <Button
                     id="contact section redirect"
-                    text="Free Trial"
+                    text="Kostenloser Test"
                     href="/contact"
                     className={classes.btnOutline}
                   />

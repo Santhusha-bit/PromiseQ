@@ -43,7 +43,6 @@ const useStyles = makeStyles(() => ({
 
 const Privacy = () => {
   const classes = useStyles();
-
   return (
     <div>
       <Grid className={classes.container}>
@@ -112,7 +111,10 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="After intensive DSGVO audits with our partner and  DSB DataGuard, we work strictly according to the privacy by design concept. Your data is safe!"
+                      primary="After intensive DSGVO audits with our partner 
+and DSB DataGuard, we work strictly 
+according to the privacy by design concept. 
+Your data is safe!"
                     />
                   </ListItem>
                   <Link href="https://www.dataguard.de/">
@@ -132,7 +134,9 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="We provide you with all the necessary time stamps  and signal information as metadata to help you meet your certification for e.g. DIN EN  50518 requirements with ease."
+                      primary="We provide you with all the necessary time stamps 
+and signal information as metadata to help you 
+meet your certification for e.g. DIN EN 50518 requirements with ease."
                     />
                   </ListItem>
                   <img
@@ -150,7 +154,11 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="Unique in the video analytics industry: The exclusive  promiseQ Threat Detect total package grants you 100% insurance protection, significantly  above the recommended industry standards."
+                      primary="Unique in the video analytics industry: 
+The exclusive promiseQ Threat Detect total 
+package grants you 100% insurance protection, 
+significantly above the recommended 
+industry standards."
                     />
                   </ListItem>
                   <ListItem>
@@ -200,7 +208,10 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="After intensive DSGVO audits with our partner and  DSB DataGuard, we work strictly according to the privacy by design concept. Your data is safe!"
+                    primary="After intensive DSGVO audits with our partner 
+and DSB DataGuard, we work strictly 
+according to the privacy by design concept. 
+Your data is safe!"
                   />
                 </ListItem>
                 <img
@@ -226,7 +237,9 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="We provide you with all the necessary time stamps  and signal information as metadata to help you meet your certification for e.g. DIN EN  50518 requirements with ease."
+                    primary="We provide you with all the necessary time stamps 
+and signal information as metadata to help you 
+meet your certification for e.g. DIN EN 50518 requirements with ease."
                   />
                 </ListItem>
                 <img
@@ -261,7 +274,11 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="Unique in the video analytics industry: The exclusive  promiseQ Threat Detect total package grants you 100% insurance protection, significantly  above the recommended industry standards."
+                    primary="Unique in the video analytics industry: 
+The exclusive promiseQ Threat Detect total 
+package grants you 100% insurance protection, 
+significantly above the recommended 
+industry standards."
                   />
                 </ListItem>
                 <img
@@ -282,13 +299,6 @@ const Privacy = () => {
                 />
               </List>
             </Grid>
-          </Grid>
-          <Grid container item sm={12} spacing={3} justify="center">
-            <Button
-              id="about section redirect"
-              text="ROI calculator"
-              href="/roi"
-            />
           </Grid>
         </Grid>
       </Box>

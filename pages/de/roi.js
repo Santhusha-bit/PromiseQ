@@ -50,7 +50,6 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ROI = () => {
-  let { t } = useTranslation("roi");
   const classes = useStyles();
   const [volumePerMonth, setVolumePerMonth] = useState();
   const [operatorCount, setOperatorCount] = useState();
@@ -77,7 +76,7 @@ const ROI = () => {
         align="center"
         className={classes.textMiddle}
       >
-        {t("roi:roi-header")}
+        ROI Rechner
       </Typography>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
@@ -90,32 +89,33 @@ const ROI = () => {
             className={classes.firstBox}
           >
             <Typography variant="h5" className={classes.first}>
-              {t("roi:roi-sub-1-text-1")} <br />
-              {t("roi:roi-sub-1-text-2")}{" "}
+              Finden Sie heraus wieviel Sie <br />
+              mit{" "}
               <Typography
                 variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
                 {" "}
-                {t("roi:roi-sub-1-text-3")}
+                promiseQ!
               </Typography>{" "}
-              {t("roi:roi-sub-1-text-2B")}
+              sparen können!
             </Typography>
             <Typography variant="h6" className={classes.second}>
-              {t("roi:roi-sub-1-text-4")}
+              Nutzen Sie unseren ROI-Rechner, um in wenigen
               <br />
-              {t("roi:roi-sub-1-text-5")}
-              <br /> {t("roi:roi-sub-1-text-6")}
+              Schritten herauszufinden, wie viel Zeit und Geld
+              <br /> Sie mit promiseQ monatlich sparen können:
             </Typography>
             <Typography variant="body" className={classes.third}>
-              {t("roi:roi-sub-1-text-7")}
+              1. Geben Sie die Anzahl der monatlichen Alarme und Anzahl der
+              Kameras an
               <br />
-
-              {t("roi:roi-sub-1-text-8")}
+              2. Geben Sie das durchschn. Gehalt und die Anzahl der
+              Leitstellenmitarbeiter ein
               <br />
-
-              {t("roi:roi-sub-1-text-9")}
+              3. Ermitteln Sie Einsparungen und Wachstumspotenziale für Ihr
+              Unternehmen!
             </Typography>
           </Grid>
           <Grid
@@ -129,31 +129,31 @@ const ROI = () => {
             className={classes.middleBox}
           >
             <Typography className={classes.labelText}>
-              {t("roi:roi-sub-2-text-1")}
+              Alarme pro Monat
             </Typography>
             <TextField
               id="alarmVolume"
-              label={t("roi:write")}
+              label="Eine Zahl schreiben"
               className={classes.textField}
               onChange={(e) => setVolumePerMonth(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
-              {t("roi:roi-sub-2-text-2")}
+              Anzahl Mitarbeiter pro Schicht
             </Typography>
             <TextField
               id="operatorCount"
-              label={t("roi:write")}
+              label="Eine Zahl schreiben"
               className={classes.textField}
               onChange={(e) => setOperatorCount(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
-              {t("roi:roi-sub-2-text-3")}
+              Anzahl der Kameras
             </Typography>
             <TextField
               id="numOfCameras"
-              label={t("roi:write")}
+              label="Eine Zahl schreiben"
               className={classes.textField}
               onChange={(e) => setNumberOfCameras(e.target.value)}
             />

@@ -105,7 +105,6 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
-  let { t } = useTranslation("common");
   const classes = useStyles();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -151,7 +150,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {t("common:nav-item-1")}
+                      ROI Rechner
                     </Button>
                   </Link>
                   <Link href="/booking" passHref>
@@ -162,7 +161,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {t("common:nav-item-2")}
+                      Termin buchen
                     </Button>
                   </Link>
                   <Link href="/contact" passHref>
@@ -173,7 +172,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {t("common:nav-item-3")}
+                      Kontaktieren Sie uns
                     </Button>
                   </Link>
                   <Link href="/careers" passHref>
@@ -184,7 +183,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {t("common:nav-item-4")}
+                      Jobs
                     </Button>
                   </Link>
 
@@ -192,11 +191,10 @@ const Navbar = (props) => {
                     <Button
                       id="lang navigation button"
                       className={classes.btn}
-                      onClick={t("common:lang")}
                       component="a"
                       variant="contained"
                     >
-                      {t("common:nav-item-5")}
+                      English
                     </Button>
                   </Link>
                 </Grid>
@@ -213,7 +211,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      {t("common:ribbon-item-1")}
+                      Home
                     </Typography>
                   </Link>
                   <Link href="/#about" passHref>
@@ -221,7 +219,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      {t("common:ribbon-item-2")}
+                      Über uns
                     </Typography>
                   </Link>
                   <Link href="/#affiliate" passHref>
@@ -229,7 +227,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      {t("common:ribbon-item-3")}
+                      Kostenloser Test
                     </Typography>
                   </Link>
                   <Link href="/#freeTrial" passHref>
@@ -237,7 +235,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      {t("common:ribbon-item-4")}
+                      Ihre Vorteile
                     </Typography>
                   </Link>
                   <Link href="/#privacy" passHref>
@@ -245,7 +243,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      {t("common:ribbon-item-5")}
+                      Datenschutz & Sicherheit
                     </Typography>
                   </Link>
                 </Grid>
@@ -260,30 +258,30 @@ const Navbar = (props) => {
             <Link href="/roi" passHref>
               {/* ROI Calculator */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="ROI calculator" />
+                <ListItemText primary="ROI Rechner" />
               </ListItem>
             </Link>
             <Link href="/booking" passHref>
               {/* Book a meeting */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Book a meeting" />
+                <ListItemText primary="Termin buchen" />
               </ListItem>
             </Link>
             <Link href="/contact" passHref>
               {/* Contact us */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Contact us" />
+                <ListItemText primary="Kontaktieren Sie uns" />
               </ListItem>
             </Link>
             <Link href="/careers" passHref>
               {/* Careers */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Careers" />
+                <ListItemText primary="Jobs" />
               </ListItem>
             </Link>
             <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="Deutsch" />
+                <ListItemText primary="English" />
               </ListItem>
             </Link>
           </List>

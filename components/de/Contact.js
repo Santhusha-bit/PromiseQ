@@ -43,31 +43,31 @@ const Contact = () => {
 
   return (
     <>
-      <Header title={t("common:contact-header")} />
+      <Header title="Kontaktieren Sie uns" />
       <Grid container gutterBottom xs={12} sm={12} align="center">
         <Grid container gutterBottom xs={12} sm={2}></Grid>
         <Grid container gutterBottom xs={12} sm={8}>
           <Grid container xs={12} sm={12} className={classes.main}>
             <Typography gutterBottom={10} variant="h5" component="h6">
-              {t("common:contact-text-1")}
-              <br /> {t("common:contact-text-2")}
-              <br /> {t("common:contact-text-3")}
+              Wenn Sie Fragen haben, können Sie uns per E-Mail kontaktieren
+              <br /> oder einen individuellen Termin vereinbaren,
+              <br /> bei dem Sie auch mehr über promiseQ erfahren können.
               <br />
-              {t("common:contact-text-4")}
+              Wir freuen uns darauf, Sie kennenzulernen!
             </Typography>
           </Grid>
           <Grid container justify="center" spacing={3} className={classes.btn}>
             <Grid item xs={12} sm={12} md={4} align="center">
               <Button
                 id="booking section redirect"
-                text="Book a meeting"
+                text="Termin buchen"
                 href="/booking"
               />
             </Grid>
             <Grid item xs={12} sm={12} md={4} align="center">
               <Button
                 id="about section redirect"
-                text="Get in Touch"
+                text="Kontaktieren Sie uns"
                 href="/contact"
                 className={classes.btnOutline}
               />

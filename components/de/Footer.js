@@ -73,7 +73,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  {t("common:footer-sub-1-item-1")}
+                  Vertreten durch:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -88,7 +88,7 @@ const Footer = () => {
                 color="inherit"
                 className={classes.title}
               >
-                {t("common:footer-sub-1-item-2")}
+                Folgen Sie uns:
                 <Divider className={classes.topic} />
               </Typography>
 
@@ -126,7 +126,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  {t("common:footer-sub-2")}
+                  Standort & Kontakte:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -170,7 +170,8 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  {t("common:footer-sub-3-item-1")}
+                  "footer-sub-3-item-1": "Erhalten Sie Nachrichten und
+                  Updates:",
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -180,12 +181,13 @@ const Footer = () => {
                   <Box className={classes.check}>
                     <Checkbox color="yellow" className={classes.checkbox} />
                     <Typography display="inline" className={classes.checkText}>
-                      {t("common:footer-sub-3-item-2")}
+                      Ich bin mit der Verarbeitung meiner persönlichen Daten
+                      einverstanden
                     </Typography>
                   </Box>
                   <Button
                     id="about section redirect"
-                    text={t("common:footer-sub-3-item-3")}
+                    text="Anmelden"
                     href="/contact"
                   />
                 </Grid>

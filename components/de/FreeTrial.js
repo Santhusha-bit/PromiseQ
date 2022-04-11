@@ -47,7 +47,7 @@ const FreeTrial = () => {
   return (
     <div>
       <Container>
-        <Header title={t("common:freetrial-header")} />
+        <Header title="Kostenloser Test" />
         <Grid container spacing={2}>
           <Grid container xs={12} sm={12} md={6} className={classes.trial}>
             <Typography
@@ -56,14 +56,18 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              {t("common:trial-header-1")}
+              Fortschrittlichste KI & Crowdworker Symbiose mit dem Versprechen,
+              die Kosten für Ihre Notrufleistelle um mehr als die Hälfte zu
+              reduzieren!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
-                {t("common:trial-header-2")}
+                Genießen Sie 30 Tage Seelenfrieden in Ihrer Notrufleitstelle!
               </Typography>
               <Typography gutterBottom variant="body1" className={classes.main}>
-                {t("common:trial-text")}
+                Sie setzen sich mit uns in Verbindung, und wir senden Ihnen eine
+                einfache Schritt-für-Schritt-Anleitung zur Installation und
+                Nutzung der Vorteile von und mit promiseQ.
               </Typography>
             </Grid>
             <Grid spacing={2} xs={12} sm={12} md={12}>
@@ -95,13 +99,13 @@ const FreeTrial = () => {
 
           <Grid container xs={12} sm={12} md={6} className={classes.how1}>
             <Typography variant="h6" component="h6">
-              {t("common:how-header")}{" "}
+              Wie promiseQ funktioniert{" "}
               <Typography
                 variant="h6"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                {t("common:how-header-item-1")}{" "}
+                - Fokus NSL{" "}
               </Typography>
             </Typography>
             <Typography
@@ -109,23 +113,34 @@ const FreeTrial = () => {
               variant="body1"
               className={classes.content}
             >
-              {t("common:how-text-1")}
+              promiseQ Threat Detect nutzt ihre Vorzeigetechnologie zur
+              Filterung von Falschalarmen, um die Anwesenheit von Menschen und
+              Fahrzeugen in Videoalarmen zu erkennen. Mithilfe von Deep-Learning
+              und Crowdworkern filtert die promiseQ Analytik mehr als 95 % der
+              Falschalarme bei allen Kameratypen erfolgreich heraus. Zusätzliche
+              Funktionen, wie Zeitplanung zur Scharfschaltung und Kamera Health
+              Checks, geben Ihnen die Möglichkeit, die Effizienz der
+              Videoüberwachung deutlich zu steigern.
             </Typography>
             <Typography variant="h6" component="h6" className={classes.how2}>
-              {t("common:how-header")}{" "}
+              Wie promiseQ funktioniert{" "}
               <Typography
                 variant="h6"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                {t("common:how-header-item-2")}{" "}
+                - Fokus VMS & AMS{" "}
               </Typography>
             </Typography>
             <Typography variant="body1" className={classes.content}>
-              {t("common:how-text-2")}
+              Sie nutzen die Vorteile von promiseQ Threat Detect über Ihre
+              gewählte VMS- oder Alarmmanagementplattform. promiseQ lässt sich
+              nahtlos in führende Systeme wie EBÜS, AMwin und Azena integrieren.
+              Weitere sind in Planung: z.B. Milestone, Genetec und Immix.
             </Typography>
             <Typography gutterBottom variant="body1">
-              {t("common:how-text-3")}
+              Sie wollen mit uns kollaborieren und promiseQ auf Ihrer Plattform
+              anbieten? Dann kontaktieren Sie uns!
             </Typography>
           </Grid>
         </Grid>{" "}

@@ -66,15 +66,10 @@ const About = () => {
 
             <Grid item xs={12} sm={12} md={12} className={classes.topic}>
               <Typography variant="h6" gutterBottom>
-                {t("common:about-header-1")}{" "}
-                <Typography
-                  variant="h6"
-                  style={{ color: "#FFD42A" }}
-                  display="inline"
-                >
-                  promise for humans{" "}
+                Unsere Story.{" "}
+                <Typography style={{ color: "#FFD42A" }} display="inline">
+                  Vom autonomen Fahren zu Security{" "}
                 </Typography>
-                in the loop
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} className={classes.para}>
@@ -87,39 +82,55 @@ const About = () => {
                   {" "}
                   Elias{" "}
                 </Box>
-                {t("common:about-text-1")}
+                haben jahrelang im Bereich des automatisierten Fahrens
+                gearbeitet. Während Elias erfolgreich Crowdsourcing basierte
+                Projekte für das Training der KI erforschte, hat Tolga an der
+                Entwicklung der kamerabsierten Spurhaltefunktionen von
+                Volkswagen und Daimler mitgewirkt.
               </Typography>
               <Typography gutterBottom variant="body1">
-                {t("common:about-text-2")}
+                Eines Tages sahen sie jedoch eine Chance künstliche Intelligenz
+                in Echtzeit mit automatisiertem menschlichem Eingreifen per
+                Crowdworking zu augmentieren. Nach umfangreichen
+                Marktforschungen entdeckten die beiden, dass Falschalarme im
+                Sicherheitsbereich in der Tat ein weit verbreitetes Problem
+                waren:
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  {t("common:about-text-3")}{" "}
+                  Mehr als 95 %{" "}
                 </Box>
-                {t("common:about-text-4")}
+                aller Alarme von Sicherheitskameras werden aus irrelevanten
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  {t("common:about-text-5")}{" "}
-                </Box>
-              </Typography>
-              <Typography gutterBottom variant="body1">
-                {t("common:about-text-6")}
-                <Box fontWeight="fontWeightBold" display="inline">
-                  {" "}
-                  {t("common:about-text-7")}{" "}
+                  Gründen ausgelöst.{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">
-                {t("common:about-text-8")}
+                Die Idee, Sicherheit durch Crowdworking zu komplementieren, ist
+                durchaus etwas verrückt. In einer Welt voll besetzter
+                Leitstellen und ersten Anläufen der Automatisierung, mag die
+                Idee des Crowdworking für Security völlig neu sein. Wir denken
+                Alarmbearbeitung und Sicherheit neu. Henry Ford sagte “Wenn ich
+                die Leute gefragt hätte was sie wollen, hätten sie schnellere
+                Pferde gesagt”. Setzen Sie nicht auf schnellere Pferde, setzen
+                Sie auf
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  {t("common:about-text-9")}{" "}
+                  promiseQ.{" "}
+                </Box>
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                Die Leitstelle der Zukunft ist
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  dezentral und autonom!{" "}
                 </Box>
               </Typography>
             </Grid>
             <Grid container sm={12} justify="center">
               <Button
                 id="about section redirect"
-                text="Get in Touch"
+                text="Kontaktieren Sie uns"
                 href="/contact"
               />
             </Grid>
