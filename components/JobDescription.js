@@ -204,41 +204,16 @@ const JobDescription = ({ job, setCurrentJob }) => {
                     </List>
                   </>
                 ) : null}
-                <Typography className={classes.bold}>
+                <br />
+                <Typography>
                   We are looking forward to getting to know you!
                 </Typography>
-                <Typography className={classes.bold}>
-                  Please drop us a note at:
+                <Typography>
+                  Please drop us a note at:{" "}
+                  <a href="mailto:webmaster@example.com">
+                    application@promiseq.com
+                  </a>
                 </Typography>
-                <Grid container justify="center" spacing={8}>
-                  <Grid item>
-                    <Grid>
-                      <Typography variant="caption" color="inherit">
-                        promiseQ GmbH
-                      </Typography>
-                    </Grid>
-                    <Grid>
-                      <Typography variant="caption" color="inherit">
-                        c/o The Drivery GmbH
-                      </Typography>
-                    </Grid>
-                    <Grid>
-                      <Typography variant="caption" color="inherit">
-                        Mariendorfer Damm 1
-                      </Typography>
-                    </Grid>
-                    <Grid>
-                      <Typography variant="caption" color="inherit">
-                        12099 Berlin
-                      </Typography>
-                    </Grid>
-                    <Grid>
-                      <Typography variant="caption" color="inherit">
-                        application@promiseq.com
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </Grid>
                 <Grid container justify="flex-end">
                   <Grid item>
                     <Button

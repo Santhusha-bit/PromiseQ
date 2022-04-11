@@ -11,7 +11,6 @@ import JobList from "components/JobList";
 import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 
 const careers = () => {
   const [isLoading, setIsLoading] = useState(false);
