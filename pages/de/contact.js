@@ -1,8 +1,10 @@
 import Header from "components/Header";
+import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import HubspotForm from "react-hubspot-form";
 import { Container } from "@material-ui/core";
-import React from "react";
-import Helmet from "react-helmet";
+import useTranslation from 'next-translate/useTranslation';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -41,25 +43,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Booking = () => {
+const Contact = () => {
+  let { t } = useTranslation("contact");
   const classes = useStyles();
+
   return (
     <>
       <Container className={classes.header}>
-        <Header title="Book a meeting" />
-        <div
-          class="meetings-iframe-container"
-          data-src="https://on.promiseq.com/meetings/tolga-ermis/meeting-with-promiseq-founders?embed=true"
-        ></div>
-        <Helmet>
-          <script
-            type="text/javascript"
-            src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"
-          ></script>
-        </Helmet>
+        <Header title={t("contact:contact-header")} />
+        <Paper className={classes.formContainer}>
+          <Typography variant="subtitle1" gutterBottom>
+            Do you have any questions? Please do not hesitate to contact us
+            directly.
+          </Typography>
+          <HubspotForm
+            portalId="9094398"
+            formId="219adb3f-b43c-4b02-babc-13467c28a98d"
+            onSubmit={() => console.log("SUCCESS")}
+            onReady={(form) => console.log("Form ready!")}
+            loading={<div>Loading...</div>}
+          />
+        </Paper>
       </Container>
     </>
   );
 };
 
-export default Booking;
+export default Contact;

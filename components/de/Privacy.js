@@ -47,15 +47,14 @@ const Privacy = () => {
   return (
     <div>
       <Grid className={classes.container}>
-        <Header title="Privacy & Security" align="center" />
+        <Header title={t("common:privacy-header-1")} align="center" />
         <Typography
           variant="h5"
           component="h6"
           align="center"
           className={classes.textMiddle}
         >
-          We design our products & processes according to the highest data
-          protection and market standards!
+          {t("common:privacy-header-2")}
         </Typography>
 
         <Box display={{ xs: "none", sm: "block" }}>
@@ -92,17 +91,17 @@ const Privacy = () => {
             <Grid container item sm={12} spacing={3}>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  Highest data protection
+                  {t("common:privacy-sub-1")}
                 </Typography>
               </Grid>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  Data transfer VDS & DIN EN compliant
+                  {t("common:privacy-sub-2")}
                 </Typography>
               </Grid>
               <Grid item sm={4}>
                 <Typography variant="h6" component="h6" align="center">
-                  Highest insurance protection
+                  {t("common:privacy-sub-3")}
                 </Typography>
               </Grid>
             </Grid>
@@ -112,7 +111,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="After intensive DSGVO audits with our partner and  DSB DataGuard, we work strictly according to the privacy by design concept. Your data is safe!"
+                      primary={t("common:privacy-sub-1-text")}
                     />
                   </ListItem>
                   <Link href="https://www.dataguard.de/">
@@ -132,7 +131,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="We provide you with all the necessary time stamps  and signal information as metadata to help you meet your certification for e.g. DIN EN  50518 requirements with ease."
+                      primary={t("common:privacy-sub-2-text")}
                     />
                   </ListItem>
                   <img
@@ -150,7 +149,7 @@ const Privacy = () => {
                   <ListItem>
                     <ListItemText
                       align="center"
-                      primary="Unique in the video analytics industry: The exclusive  promiseQ Threat Detect total package grants you 100% insurance protection, significantly  above the recommended industry standards."
+                      primary={t("common:privacy-sub-3-text")}
                     />
                   </ListItem>
                   <ListItem>
@@ -192,7 +191,7 @@ const Privacy = () => {
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                Highest data protection
+                {t("common:privacy-sub-1")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
@@ -200,7 +199,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="After intensive DSGVO audits with our partner and  DSB DataGuard, we work strictly according to the privacy by design concept. Your data is safe!"
+                    primary={t("common:privacy-sub-1-text")}
                   />
                 </ListItem>
                 <img
@@ -217,7 +216,7 @@ const Privacy = () => {
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                Data transfer VDS & DIN EN compliant
+                {t("common:privacy-sub-2")}
               </Typography>
             </Grid>
 
@@ -226,7 +225,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="We provide you with all the necessary time stamps  and signal information as metadata to help you meet your certification for e.g. DIN EN  50518 requirements with ease."
+                    primary={t("common:privacy-sub-2-text")}
                   />
                 </ListItem>
                 <img
@@ -253,7 +252,7 @@ const Privacy = () => {
             </Grid>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                Highest insurance protection
+                {t("common:privacy-sub-3")}
               </Typography>
             </Grid>
             <Grid item sm={4}>
@@ -261,7 +260,7 @@ const Privacy = () => {
                 <ListItem>
                   <ListItemText
                     align="center"
-                    primary="Unique in the video analytics industry: The exclusive  promiseQ Threat Detect total package grants you 100% insurance protection, significantly  above the recommended industry standards."
+                    primary={t("common:privacy-sub-3-text")}
                   />
                 </ListItem>
                 <img

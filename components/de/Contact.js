@@ -43,17 +43,17 @@ const Contact = () => {
 
   return (
     <>
-      <Header title="Contact Us" />
+      <Header title={t("common:contact-header")} />
       <Grid container gutterBottom xs={12} sm={12} align="center">
         <Grid container gutterBottom xs={12} sm={2}></Grid>
         <Grid container gutterBottom xs={12} sm={8}>
           <Grid container xs={12} sm={12} className={classes.main}>
             <Typography gutterBottom={10} variant="h5" component="h6">
-              If you have any questions, you can contact us by e-mail
-              <br /> or make an individual appointment,
-              <br /> where you can also learn more about promiseQ.
+              {t("common:contact-text-1")}
+              <br /> {t("common:contact-text-2")}
+              <br /> {t("common:contact-text-3")}
               <br />
-              We look forward to meeting you!
+              {t("common:contact-text-4")}
             </Typography>
           </Grid>
           <Grid container justify="center" spacing={3} className={classes.btn}>

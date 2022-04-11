@@ -12,7 +12,6 @@ import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import useTranslation from "next-translate/useTranslation";
 
 const Job = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +19,6 @@ const Job = () => {
   const [currentJob, setCurrentJob] = useState(null);
   const router = useRouter();
   const jobId = +router.query.jobId;
-  let { t } = useTranslation();
 
   useEffect(() => getJobs(), []);
 
@@ -48,7 +46,7 @@ const Job = () => {
         <Box marginTop={currentJob === null ? 15 : 5}>
           <Meta title="Careers" />
           {!isLoading && currentJob === null && (
-            <Header title={t("careers:careers-header")} />
+            <Header title="Join Our Team" />
           )}
           <section id="current_jobs" style={{ minHeight: "70vh" }}>
             {!isLoading && currentJob === null && (

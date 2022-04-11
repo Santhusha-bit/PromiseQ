@@ -66,7 +66,7 @@ const About = () => {
 
             <Grid item xs={12} sm={12} md={12} className={classes.topic}>
               <Typography variant="h6" gutterBottom>
-                Our story. Where we saw{" "}
+                {t("common:about-header-1")}{" "}
                 <Typography
                   variant="h6"
                   style={{ color: "#FFD42A" }}
@@ -87,45 +87,32 @@ const About = () => {
                   {" "}
                   Elias{" "}
                 </Box>
-                have worked in the field of automated driving for years. While
-                Elias successfully explored crowdsourcing-based projects for AI
-                training, Tolga helped develop Volkswagen's and Daimler's
-                camera-based lane keeping functions.
+                {t("common:about-text-1")}
               </Typography>
               <Typography gutterBottom variant="body1">
-                One day, however, they saw an opportunity to augment artificial
-                intelligence in real time with automated human intervention via
-                crowdworking. After extensive market research, the pair
-                discovered that false alarms were indeed a widespread problem in
-                the security sector:
+                {t("common:about-text-2")}
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  More than 95% of{" "}
+                  {t("common:about-text-3")}{" "}
                 </Box>
-                all security camera alarms are
+                {t("common:about-text-4")}
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  triggered for irrelevant reasons.{" "}
+                  {t("common:about-text-5")}{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">
-                The idea of complementing security with crowdworking is
-                definitely a bit crazy. In a world of fully staffed control
-                centers and first attempts at automation, the idea of
-                crowdworking for security may be completely out of the box. We
-                are rethinking alarm processing and security. Henry Ford said
-                'If I had asked people what they wanted, they would have said
-                faster horses'. Don't bet on faster horses, bet on"
+                {t("common:about-text-6")}
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  promiseQ.{" "}
+                  {t("common:about-text-7")}{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">
-                The control center of the future is
+                {t("common:about-text-8")}
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  decentralized and autonomous!{" "}
+                  {t("common:about-text-9")}{" "}
                 </Box>
               </Typography>
             </Grid>

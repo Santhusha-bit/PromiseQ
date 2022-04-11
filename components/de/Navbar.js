@@ -105,6 +105,7 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
+  let { t } = useTranslation("common");
   const classes = useStyles();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -150,7 +151,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      ROI calculator
+                      {t("common:nav-item-1")}
                     </Button>
                   </Link>
                   <Link href="/booking" passHref>
@@ -161,7 +162,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Book a meeting
+                      {t("common:nav-item-2")}
                     </Button>
                   </Link>
                   <Link href="/contact" passHref>
@@ -172,7 +173,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Contact us
+                      {t("common:nav-item-3")}
                     </Button>
                   </Link>
                   <Link href="/careers" passHref>
@@ -183,7 +184,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Careers
+                      {t("common:nav-item-4")}
                     </Button>
                   </Link>
 
@@ -191,10 +192,11 @@ const Navbar = (props) => {
                     <Button
                       id="lang navigation button"
                       className={classes.btn}
+                      onClick={t("common:lang")}
                       component="a"
                       variant="contained"
                     >
-                      Deutsch
+                      {t("common:nav-item-5")}
                     </Button>
                   </Link>
                 </Grid>
@@ -211,7 +213,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      Home
+                      {t("common:ribbon-item-1")}
                     </Typography>
                   </Link>
                   <Link href="/#about" passHref>
@@ -219,7 +221,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      About us
+                      {t("common:ribbon-item-2")}
                     </Typography>
                   </Link>
                   <Link href="/#affiliate" passHref>
@@ -227,7 +229,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      Affiliate Program
+                      {t("common:ribbon-item-3")}
                     </Typography>
                   </Link>
                   <Link href="/#freeTrial" passHref>
@@ -235,7 +237,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      Free Trail
+                      {t("common:ribbon-item-4")}
                     </Typography>
                   </Link>
                   <Link href="/#privacy" passHref>
@@ -243,7 +245,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      Privacy & Security
+                      {t("common:ribbon-item-5")}
                     </Typography>
                   </Link>
                 </Grid>

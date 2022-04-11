@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import HubspotForm from "react-hubspot-form";
 import { Container } from "@material-ui/core";
-import useTranslation from 'next-translate/useTranslation';
 
 const useStyles = makeStyles((theme) => ({
   formContainer: {
@@ -44,13 +43,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = () => {
-  let { t } = useTranslation("contact");
   const classes = useStyles();
 
   return (
     <>
       <Container className={classes.header}>
-        <Header title={t("contact:contact-header")} />
+        <Header title="Contact Us" />
         <Paper className={classes.formContainer}>
           <Typography variant="subtitle1" gutterBottom>
             Do you have any questions? Please do not hesitate to contact us

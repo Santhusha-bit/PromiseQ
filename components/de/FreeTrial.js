@@ -47,7 +47,7 @@ const FreeTrial = () => {
   return (
     <div>
       <Container>
-        <Header title="Free Trial" />
+        <Header title={t("common:freetrial-header")} />
         <Grid container spacing={2}>
           <Grid container xs={12} sm={12} md={6} className={classes.trial}>
             <Typography
@@ -56,17 +56,14 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Most advanced AI & crowdworker symbiosis with the promise to
-              reduce your operator costs by more than half!
+              {t("common:trial-header-1")}
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
-                Enjoy 30 days of peace of mind in your security operating
-                center!
+                {t("common:trial-header-2")}
               </Typography>
               <Typography gutterBottom variant="body1" className={classes.main}>
-                You contact us and we will send you a simple step-by-step guide
-                on how to install and use the benefits of and with promiseQ.
+                {t("common:trial-text")}
               </Typography>
             </Grid>
             <Grid spacing={2} xs={12} sm={12} md={12}>
@@ -98,13 +95,13 @@ const FreeTrial = () => {
 
           <Grid container xs={12} sm={12} md={6} className={classes.how1}>
             <Typography variant="h6" component="h6">
-              How promiseQ{" "}
+              {t("common:how-header")}{" "}
               <Typography
                 variant="h6"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                works - Focus SOC{" "}
+                {t("common:how-header-item-1")}{" "}
               </Typography>
             </Typography>
             <Typography
@@ -112,33 +109,23 @@ const FreeTrial = () => {
               variant="body1"
               className={classes.content}
             >
-              promiseQ Threat Detect uses its flagship false alarm filtering
-              technology to detect the presence of threats in video alarms.
-              Using deep learning and crowdworkers, promiseQ analytics
-              successfully filter out more than 95% of false alarms across all
-              camera types. Additional features, such as timing for activation
-              and camera health checks, give you the opportunity to
-              significantly increase the efficiency of video surveillance.
+              {t("common:how-text-1")}
             </Typography>
             <Typography variant="h6" component="h6" className={classes.how2}>
-              How promiseQ{" "}
+              {t("common:how-header")}{" "}
               <Typography
                 variant="h6"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                connects - Focus VMS & AMS & CMS{" "}
+                {t("common:how-header-item-2")}{" "}
               </Typography>
             </Typography>
             <Typography variant="body1" className={classes.content}>
-              Take advantage of promiseQ Threat Detect through your chosen VMS
-              or alarm management platform. promiseQ integrates seamlessly with
-              leading systems such as EBÜS, AMwin and Azena and others, e.g.
-              Milestone, Genetec and Immix.
+              {t("common:how-text-2")}
             </Typography>
             <Typography gutterBottom variant="body1">
-              Want to collaborate with promiseQ? Then don’t hesitate to contact
-              us!
+              {t("common:how-text-3")}
             </Typography>
           </Grid>
         </Grid>{" "}

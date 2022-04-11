@@ -64,16 +64,16 @@ export default function Home() {
           <Grid container justify="center" spacing={3}>
             <Grid item xs={12} sm={12} md={5}>
               <Typography gutterBottom variant="h3">
-                Easily eliminate more than 95% of false alarms
+                {t("common:home-header")}
               </Typography>
               <Grid item className={classes.text}>
                 <Typography gutterBottom variant="body1">
                   <Box fontWeight="fontWeightBold" display="inline">
-                    promiseQ{" "}
+                    {t("common:home-text-1")}{" "}
                   </Box>
-                  is no ordinary video analytics! <br />
-                  We deliver the unique symbiosis of state-of-the-art AI <br />&
-                  certified crowdworkers via a global platform.
+                  {t("common:home-text-2")} <br />
+                  {t("common:home-text-3")} <br />
+                  {t("common:home-text-4")}
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={12} md={12} className={classes.btn}>

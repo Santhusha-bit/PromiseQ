@@ -67,6 +67,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Response = () => {
+  let { t } = useTranslation("response");
   const classes = useStyles();
   const [price, setPrice] = useState(0);
 
@@ -83,7 +84,7 @@ const Response = () => {
         align="center"
         className={classes.textMiddle}
       >
-        ROI Calculator
+        {t("response:response-header")}
       </Typography>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
@@ -98,7 +99,7 @@ const Response = () => {
             className={classes.firstBox}
           >
             <Typography className={classes.labelText}>
-              Alarm volume per month
+              {t("response:response-sub-1-text-1")}
             </Typography>
             <TextField
               id="demo-helper-text-misaligned-no-helper"
@@ -107,7 +108,7 @@ const Response = () => {
             />
 
             <Typography className={classes.labelText}>
-              Operator count in SOC per shift
+              {t("response:response-sub-1-text-2")}
             </Typography>
             <TextField
               id="demo-helper-text-misaligned-no-helper"
@@ -116,7 +117,7 @@ const Response = () => {
             />
 
             <Typography className={classes.labelText}>
-              Number of cameras
+              {t("response:response-sub-1-text-3")}
             </Typography>
             <TextField
               id="demo-helper-text-misaligned-no-helper"
@@ -143,9 +144,9 @@ const Response = () => {
             <Grid item className={classes.decision}>
               <Typography className={classes.caption} variant="h3">
                 <Box fontWeight="fontWeightMedium" fontSize={30}>
-                  With promiseQ
+                  {t("response:response-sub-2-text-1")}
                   <br />
-                  you save:
+                  {t("response:response-sub-2-text-2")}
                   <br />
                 </Box>
                 <Typography className={classes.deal} variant="h3">
@@ -153,21 +154,21 @@ const Response = () => {
                 </Typography>
                 <br />
                 <Typography className={classes.month} variant="h6">
-                  per month
+                  {t("response:response-sub-2-text-4")}
                 </Typography>
               </Typography>
               <Typography variant="p" className={classes.caption}>
-                To learn more,{" "}
+                {t("response:response-sub-2-text-5")}{" "}
                 <Box fontWeight="fontWeightMedium" display="inline">
-                  book a meeting{" "}
+                  {t("response:response-sub-2-text-6")}{" "}
                 </Box>
-                with us and we will provide you with{" "}
+                {t("response:response-sub-2-text-7")}{" "}
                 <Box fontWeight="fontWeightMedium" display="inline">
-                  new and effective AI technologies{" "}
-                </Box>
-                and give you{" "}
+                  {t("response:response-sub-2-text-8")}{" "}
+                </Box>{" "}
+                {t("response:response-sub-2-text-9")}
                 <Box fontWeight="fontWeightMedium" display="inline">
-                  free-thirty-day trial!{" "}
+                  {t("response:response-sub-2-text-10")}{" "}
                 </Box>
               </Typography>
             </Grid>
@@ -181,7 +182,7 @@ const Response = () => {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="booking section redirect"
-                    text="Book a meeting"
+                    text={t("response:btn-book")}
                     href="/booking"
                     className={classes.btn}
                   />
@@ -189,7 +190,7 @@ const Response = () => {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="contact section redirect"
-                    text="Get in Touch"
+                    text={t("response:btn-touch")}
                     href="/contact"
                     className={classes.btnOutline}
                   />

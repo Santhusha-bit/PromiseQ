@@ -73,7 +73,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Managing Directors:
+                  {t("common:footer-sub-1-item-1")}
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -88,7 +88,7 @@ const Footer = () => {
                 color="inherit"
                 className={classes.title}
               >
-                Follow us:
+                {t("common:footer-sub-1-item-2")}
                 <Divider className={classes.topic} />
               </Typography>
 
@@ -126,7 +126,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Location & Contact:
+                  {t("common:footer-sub-2")}
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -170,7 +170,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Receive news and updates:
+                  {t("common:footer-sub-3-item-1")}
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -180,12 +180,12 @@ const Footer = () => {
                   <Box className={classes.check}>
                     <Checkbox color="yellow" className={classes.checkbox} />
                     <Typography display="inline" className={classes.checkText}>
-                      I consent to the processing of my personal data
+                      {t("common:footer-sub-3-item-2")}
                     </Typography>
                   </Box>
                   <Button
                     id="about section redirect"
-                    text="Subscribe"
+                    text={t("common:footer-sub-3-item-3")}
                     href="/contact"
                   />
                 </Grid>

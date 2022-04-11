@@ -50,6 +50,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ROI = () => {
+  let { t } = useTranslation("roi");
   const classes = useStyles();
   const [volumePerMonth, setVolumePerMonth] = useState();
   const [operatorCount, setOperatorCount] = useState();
@@ -76,7 +77,7 @@ const ROI = () => {
         align="center"
         className={classes.textMiddle}
       >
-        ROI Calculator
+        {t("roi:roi-header")}
       </Typography>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
@@ -89,29 +90,32 @@ const ROI = () => {
             className={classes.firstBox}
           >
             <Typography variant="h5" className={classes.first}>
-              See how much you <br />
-              save with{" "}
+              {t("roi:roi-sub-1-text-1")} <br />
+              {t("roi:roi-sub-1-text-2")}{" "}
               <Typography
                 variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
                 {" "}
-                promiseQ!
+                {t("roi:roi-sub-1-text-3")}
               </Typography>{" "}
+              {t("roi:roi-sub-1-text-2B")}
             </Typography>
             <Typography variant="h6" className={classes.second}>
-              Use our ROI calculator to figure out how much time
+              {t("roi:roi-sub-1-text-4")}
               <br />
-              and money you can save monthly with
-              <br /> promiseQ in a few simple steps:
+              {t("roi:roi-sub-1-text-5")}
+              <br /> {t("roi:roi-sub-1-text-6")}
             </Typography>
             <Typography variant="body" className={classes.third}>
-              1. Number of monthly alarms and cameras
+              {t("roi:roi-sub-1-text-7")}
               <br />
-              2. Input the operator salary and number of operators
+
+              {t("roi:roi-sub-1-text-8")}
               <br />
-              3. Find out savings and growth potential for your business!
+
+              {t("roi:roi-sub-1-text-9")}
             </Typography>
           </Grid>
           <Grid
@@ -125,31 +129,31 @@ const ROI = () => {
             className={classes.middleBox}
           >
             <Typography className={classes.labelText}>
-              Alarm volume per month
+              {t("roi:roi-sub-2-text-1")}
             </Typography>
             <TextField
               id="alarmVolume"
-              label="Write a number"
+              label={t("roi:write")}
               className={classes.textField}
               onChange={(e) => setVolumePerMonth(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
-              Operator count in SOC per shift
+              {t("roi:roi-sub-2-text-2")}
             </Typography>
             <TextField
               id="operatorCount"
-              label="Write a number"
+              label={t("roi:write")}
               className={classes.textField}
               onChange={(e) => setOperatorCount(e.target.value)}
             />
 
             <Typography className={classes.labelText}>
-              Number of cameras
+              {t("roi:roi-sub-2-text-3")}
             </Typography>
             <TextField
               id="numOfCameras"
-              label="Write a number"
+              label={t("roi:write")}
               className={classes.textField}
               onChange={(e) => setNumberOfCameras(e.target.value)}
             />

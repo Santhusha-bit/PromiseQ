@@ -12,7 +12,6 @@ import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import useTranslation from "next-translate/useTranslation";
 
 const useStyles = makeStyles((theme) => ({
   fullBox: {
@@ -26,7 +25,6 @@ const careers = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState(null);
-  let { t } = useTranslation();
 
   useEffect(() => getJobs(), []);
 
@@ -48,9 +46,7 @@ const careers = () => {
       <Container maxWidth="lg" className={classes.fullBox}>
         <Box marginTop={currentJob === null ? 15 : 5}>
           <Meta title="Careers" />
-          {currentJob === null && (
-            <Header title={t("careers:careers-header")} />
-          )}
+          {currentJob === null && <Header title="Join Our Team" />}
           <section id="current_jobs" style={{ minHeight: "60vh" }}>
             {currentJob === null && (
               <Grid>

@@ -38,7 +38,7 @@ const Affiliate = () => {
   return (
     <div>
       <Grid className={classes.container}>
-        <Header title="Affiliate Program" />
+        <Header title={t("common:affiliate-header")} />
         <Typography
           gutterBottom={10}
           variant="h4"
@@ -120,41 +120,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Use latest technology to increase customer satisfaction" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-1")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Automated optimization, updates, health checks of your cameras" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-2")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="More capable SLAs & Improve overall loss prevention standards" />
-                  </ListItem>
-                </List>
-              </Grid>
-              <Grid item sm={4}>
-                <List>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Increased motivation in security operating center and reduction of attention errors." />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText primary="95% less burden on your operators with false alarms and more time for handling real alarms" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Reduction of the intervention time for real alarms" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-3")} />
                   </ListItem>
                 </List>
               </Grid>
@@ -164,19 +142,41 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Reduce your own false alarm management costs" />
+                    <ListItemText primary={t("common:affiliate-sub2-item-1")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Benefit from the constantly improving promiseQ Threat Detect" />
+                    <ListItemText primary={t("common:affiliate-sub2-item-2")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="More camera connections and customers without fixed costs due to additional personnel" />
+                    <ListItemText primary={t("common:affiliate-sub2-item-3")} />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-1")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-2")} />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText primary={t("common:affiliate-sub3-item-3")} />
                   </ListItem>
                 </List>
               </Grid>
@@ -220,19 +220,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Use latest technology to increase customer satisfaction" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-1")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Automated optimization, updates, health checks of your cameras" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-2")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="More capable SLAs & Improve overall loss prevention standards" />
+                    <ListItemText primary={t("common:affiliate-sub1-item-3")} />
                   </ListItem>
                 </List>
               </Grid>
@@ -266,19 +266,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Increased motivation in security operating center and reduction of attention errors." />
+                    <ListItemText primary={t("common:affiliate-sub2-item-1")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="95% less burden on your operators with false alarms and more time for handling real alarms" />
+                    <ListItemText primary={t("common:affiliate-sub2-item-2")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Reduction of the intervention time for real alarms" />
+                    <ListItemText primary={t("common:affiliate-sub2-item-3")} />
                   </ListItem>
                 </List>
               </Grid>
@@ -310,19 +310,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Reduce your own false alarm management costs" />
+                    <ListItemText primary={t("common:affiliate-sub3-item-1")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="Benefit from the constantly improving promiseQ Threat Detect" />
+                    <ListItemText primary={t("common:affiliate-sub3-item-2")} />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check} />
                     </ListItemAvatar>
-                    <ListItemText primary="More camera connections and customers without fixed costs due to additional personnel" />
+                    <ListItemText primary={t("common:affiliate-sub3-item-3")} />
                   </ListItem>
                 </List>
               </Grid>
