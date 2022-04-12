@@ -132,7 +132,7 @@ const About = () => {
             <Grid container sm={12} justify="center">
               <Button
                 id="about section redirect"
-                text={t("common:btn-touch")}
+                text="Get in Touch"
                 href="/contact"
               />
             </Grid>

@@ -105,6 +105,15 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
+  const [selected, setSelected] = useState("");
+
+  const languageSwitch = () => {
+    selected === ""
+      ? localStorage.setSelected("de", selected)
+      : localStorage.setSelected("de", selected);
+    router.push(selected);
+  };
+
   const classes = useStyles();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -142,7 +151,7 @@ const Navbar = (props) => {
                 </IconButton>
               ) : (
                 <Grid container justify="center">
-                  <Link href="/roi" passHref>
+                  <Link href="/de/roi" passHref>
                     {/* ROI Calculator */}
                     <Button
                       id="roi navigation button"
@@ -153,7 +162,7 @@ const Navbar = (props) => {
                       ROI calculator
                     </Button>
                   </Link>
-                  <Link href="/booking" passHref>
+                  <Link href="/de/booking" passHref>
                     {/* Book a meeting */}
                     <Button
                       id="booking navigation button"
@@ -164,7 +173,7 @@ const Navbar = (props) => {
                       Book a meeting
                     </Button>
                   </Link>
-                  <Link href="/contact" passHref>
+                  <Link href="/de/contact" passHref>
                     {/* Contact us */}
                     <Button
                       id="contact navigation button"
@@ -175,7 +184,7 @@ const Navbar = (props) => {
                       Contact us
                     </Button>
                   </Link>
-                  <Link href="/careers" passHref>
+                  <Link href="/de/careers" passHref>
                     {/* Careers */}
                     <Button
                       id="career navigation button"
@@ -187,12 +196,13 @@ const Navbar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
+                  <Link href="/" passHref>
                     <Button
                       id="lang navigation button"
                       className={classes.btn}
                       component="a"
                       variant="contained"
+                      onChange={languageSwitch}
                     >
                       Deutsch
                     </Button>
@@ -255,31 +265,31 @@ const Navbar = (props) => {
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className={classes.drawer}>
           <List component="nav" aria-label="navigation">
-            <Link href="/roi" passHref>
+            <Link href="/de/roi" passHref>
               {/* ROI Calculator */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="ROI calculator" />
               </ListItem>
             </Link>
-            <Link href="/booking" passHref>
+            <Link href="/de/booking" passHref>
               {/* Book a meeting */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Book a meeting" />
               </ListItem>
             </Link>
-            <Link href="/contact" passHref>
+            <Link href="/de/contact" passHref>
               {/* Contact us */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Contact us" />
               </ListItem>
             </Link>
-            <Link href="/careers" passHref>
+            <Link href="/de/careers" passHref>
               {/* Careers */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
-            <Link href="/" locale={router.locale === "en" ? "de" : "en"}>
+            <Link href="/" onClick={languageSwitch}>
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Deutsch" />
               </ListItem>
