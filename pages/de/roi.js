@@ -64,7 +64,7 @@ const ROI = () => {
 
     localStorage.setItem("price", price);
 
-    router.push("/response");
+    router.push("/de/response");
   };
 
   return (

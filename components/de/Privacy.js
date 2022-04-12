@@ -54,7 +54,8 @@ const Privacy = () => {
           align="center"
           className={classes.textMiddle}
         >
-          Wir konzipieren unsere Produkte & Prozesse nach höchsten Datenschutz - und Marktstandards!
+          Wir konzipieren unsere Produkte & Prozesse nach höchsten Datenschutz -
+          und Marktstandards!
         </Typography>
 
         <Box display={{ xs: "none", sm: "block" }}>
@@ -174,13 +175,6 @@ const Privacy = () => {
                   </ListItem>
                 </List>
               </Grid>
-            </Grid>
-            <Grid container item sm={12} spacing={3} justify="center">
-              <Button
-                id="about section redirect"
-                text="ROI calculator"
-                href="/roi"
-              />
             </Grid>
           </Grid>
         </Box>

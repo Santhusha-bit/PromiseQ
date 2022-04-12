@@ -117,11 +117,11 @@ const Navbar = (props) => {
     if (isLangEnglish) {
       localStorage.setItem("lang", "de");
       router.push("/de");
-      setIsLangEnglish(false)
+      setIsLangEnglish(false);
     } else {
       localStorage.setItem("lang", "eng");
       router.push("/");
-      setIsLangEnglish(true)
+      setIsLangEnglish(true);
     }
   };
 
@@ -170,7 +170,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {isLangEnglish ? "ROI calculator" : "maru krpn"}
+                      {isLangEnglish ? "ROI calculator" : "ROI Rechner"}
                     </Button>
                   </Link>
                   <Link href={`${prefix}booking`} passHref>
@@ -181,7 +181,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {isLangEnglish ? "Book a meeting" : "maru krpn"}
+                      {isLangEnglish ? "Book a meeting" : "Termin buchen"}
                     </Button>
                   </Link>
                   <Link href={`${prefix}contact`} passHref>
@@ -192,7 +192,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {isLangEnglish ? "Contact us" : "maru krpn"}
+                      {isLangEnglish ? "Contact us" : "Kontaktieren Sie uns"}
                     </Button>
                   </Link>
                   <Link href={`${prefix}careers`} passHref>
@@ -203,7 +203,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {isLangEnglish ? "Careers" : "maru krpn"}
+                      {isLangEnglish ? "Careers" : "Jobs"}
                     </Button>
                   </Link>
 
@@ -229,7 +229,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      Home
+                      {isLangEnglish ? "Home" : "Home"}
                     </Typography>
                   </Link>
                   <Link href="/#about" passHref>
@@ -237,7 +237,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      About us
+                      {isLangEnglish ? "About us" : "Über uns"}
                     </Typography>
                   </Link>
                   <Link href="/#affiliate" passHref>
@@ -245,7 +245,7 @@ const Navbar = (props) => {
                       className={classes.textStyles}
                       variant="caption"
                     >
-                      Affiliate Program
+                      {isLangEnglish ? "Affiliate Program" : "Kostenloser Test"}
                     </Typography>
                   </Link>
                   <Link href="/#freeTrial" passHref>
@@ -253,7 +253,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      Free Trail
+                      {isLangEnglish ? "Free Trail" : "Ihre Vorteile"}
                     </Typography>
                   </Link>
                   <Link href="/#privacy" passHref>
@@ -261,7 +261,9 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      Privacy & Security
+                      {isLangEnglish
+                        ? "Privacy & Security"
+                        : "Datenschutz & Sicherheit"}
                     </Typography>
                   </Link>
                 </Grid>

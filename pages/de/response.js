@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
 import { useEffect, useState } from "react";
 import ImageLayout from "@components/ImageLayout";
-import { TextField, Typography, Box, Container } from "@material-ui/core";
+import { TextField, Typography, Box, Container, Link } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   labelText: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     marginTop: -30,
   },
   textMiddle: {
-    marginBottom: 60,
+    marginBottom: 0,
     marginTop: 190,
   },
   main: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
     marginRight: 60,
   },
   btnOutline: {
-    marginRight: 100,
+    marginRight: 10,
     color: "black",
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   buttons: {
-    marginLeft: 50,
+    marginLeft: 30,
   },
   fullBox: {
     padding: 25,
@@ -85,6 +85,34 @@ const Response = () => {
       >
         ROI Rechner
       </Typography>
+      <Container>
+        <Typography
+          variant="h5"
+          component="h6"
+          align="left"
+          style={{ color: "#D2D2D2" }}
+        >
+          ROI Rechner <br />
+        </Typography>
+
+        <Link href="/de/roi" style={{ textDecoration: "none" }}>
+          <Typography
+            variant="h4"
+            style={{ color: "#FFD42A" }}
+            display="inline"
+          >
+            ⇐
+          </Typography>
+          <Typography
+            variant="h5"
+            style={{ color: "#FFD42A" }}
+            display="inline"
+          >
+            {"   "}
+            Zurück gehen
+          </Typography>
+        </Link>
+      </Container>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
           <Grid
@@ -171,13 +199,8 @@ const Response = () => {
                 </Box>
               </Typography>
             </Grid>
-            <Grid spacing={2} xs={12} sm={12} md={12}>
-              <Grid
-                container
-                justify="center"
-                spacing={2}
-                className={classes.buttons}
-              >
+            <Grid xs={12} sm={12} md={12}>
+              <Grid container justify="center" className={classes.buttons}>
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="booking section redirect"

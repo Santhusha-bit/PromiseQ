@@ -184,13 +184,6 @@ industry standards."
                 </List>
               </Grid>
             </Grid>
-            <Grid container item sm={12} spacing={3} justify="center">
-              <Button
-                id="about section redirect"
-                text="ROI calculator"
-                href="/roi"
-              />
-            </Grid>
           </Grid>
         </Box>
       </Grid>

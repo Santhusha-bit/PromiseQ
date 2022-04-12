@@ -56,7 +56,7 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Fortschrittlichste KI & Crowdworker Symbiose mit dem Versprechen,
+              Fortschrittlichste KI & Crowdworker Symbiose <br/> mit dem Versprechen,
               die Kosten für Ihre Notrufleistelle um mehr als die Hälfte zu
               reduzieren!
             </Typography>

@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingBottom: 0,
     paddingTop: 50,
-    paddingRight: 70,
-    paddingLeft: 70,
+    paddingRight: 30,
+    paddingLeft: 30,
     fontWeight: "fontWeightMedium",
   },
   btn: {

@@ -4,6 +4,7 @@ import Button from "components/Button";
 import { useEffect, useState } from "react";
 import ImageLayout from "@components/ImageLayout";
 import { TextField, Typography, Box, Container } from "@material-ui/core";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   labelText: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles(() => ({
     marginTop: -30,
   },
   textMiddle: {
-    marginBottom: 60,
+    marginBottom: 0,
     marginTop: 190,
   },
   main: {
@@ -85,6 +86,36 @@ const Response = () => {
       >
         ROI Calculator
       </Typography>
+
+      <Container>
+        <Typography
+          variant="h5"
+          component="h6"
+          align="left"
+          style={{ color: "#D2D2D2" }}
+        >
+          ROI Calculator <br />
+        </Typography>
+
+        <Link href="/roi" style={{ textDecoration: "none" }}>
+          <Typography
+            variant="h4"
+            style={{ color: "#FFD42A" }}
+            display="inline"
+          >
+            ⇐
+          </Typography>
+          <Typography
+            variant="h5"
+            style={{ color: "#FFD42A" }}
+            display="inline"
+          >
+            {"   "}
+            Go back
+          </Typography>
+        </Link>
+      </Container>
+
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
           <Grid

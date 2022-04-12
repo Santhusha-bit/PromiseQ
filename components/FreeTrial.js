@@ -56,8 +56,8 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Most advanced AI & crowdworker symbiosis with the promise to
-              reduce your operator costs by more than half!
+              Most advanced AI & crowdworker symbiosis <br/> with the promise to
+              reduce your operator<br/> costs by more than half!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
