@@ -8,7 +8,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -105,13 +105,21 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
-  const [selected, setSelected] = useState("");
+  const [isLangEnglish, setIsLangEnglish] = useState(true);
+  const prefix = isLangEnglish ? "/" : "/de/";
+
+  useEffect(() => {
+    setIsLangEnglish(localStorage.getItem("lang") === "eng");
+  }, []);
 
   const languageSwitch = () => {
-    selected === ""
-      ? localStorage.setSelected("de", selected)
-      : localStorage.setSelected("de", selected);
-    router.push(selected);
+    if (isLangEnglish) {
+      localStorage.setItem("lang", "de");
+      router.push("/de");
+    } else {
+      localStorage.setItem("lang", "eng");
+      router.push("/");
+    }
   };
 
   const classes = useStyles();
@@ -151,7 +159,7 @@ const Navbar = (props) => {
                 </IconButton>
               ) : (
                 <Grid container justify="center">
-                  <Link href="/de/roi" passHref>
+                  <Link href={`${prefix}roi`} passHref>
                     {/* ROI Calculator */}
                     <Button
                       id="roi navigation button"
@@ -159,10 +167,10 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      ROI calculator
+                      {isLangEnglish ? "ROI calculator" : "maru krpn"}
                     </Button>
                   </Link>
-                  <Link href="/de/booking" passHref>
+                  <Link href={`${prefix}booking`} passHref>
                     {/* Book a meeting */}
                     <Button
                       id="booking navigation button"
@@ -170,10 +178,10 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Book a meeting
+                      {isLangEnglish ? "Book a meeting" : "maru krpn"}
                     </Button>
                   </Link>
-                  <Link href="/de/contact" passHref>
+                  <Link href={`${prefix}contact`} passHref>
                     {/* Contact us */}
                     <Button
                       id="contact navigation button"
@@ -181,10 +189,10 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Contact us
+                      {isLangEnglish ? "Contact us" : "maru krpn"}
                     </Button>
                   </Link>
-                  <Link href="/de/careers" passHref>
+                  <Link href={`${prefix}careers`} passHref>
                     {/* Careers */}
                     <Button
                       id="career navigation button"
@@ -192,21 +200,18 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      Careers
+                      {isLangEnglish ? "Careers" : "maru krpn"}
                     </Button>
                   </Link>
 
-                  <Link href="/" passHref>
-                    <Button
-                      id="lang navigation button"
-                      className={classes.btn}
-                      component="a"
-                      variant="contained"
-                      onChange={languageSwitch}
-                    >
-                      Deutsch
-                    </Button>
-                  </Link>
+                  <Button
+                    id="lang navigation button"
+                    className={classes.btn}
+                    variant="contained"
+                    onClick={languageSwitch}
+                  >
+                    {isLangEnglish ? "Deutsch" : "English"}
+                  </Button>
                 </Grid>
               )}
             </Toolbar>

@@ -2,13 +2,13 @@ import ImageLayout from "components/ImageLayout";
 import { Grid, Box, Container } from "@material-ui/core";
 import VideoLayout from "components/VideoLayout";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "components/Button";
-import CompanyLogo from "components/CompanyLogo";
-import About from "components/About";
-import Contact from "components/Contact";
-import FreeTrial from "components/FreeTrial";
-import Affiliate from "components/Affiliate";
-import Privacy from "components/Privacy";
+import Button from "components/de/Button";
+import CompanyLogo from "components/de/CompanyLogo";
+import About from "components/de/About";
+import Contact from "components/de/Contact";
+import FreeTrial from "components/de/FreeTrial";
+import Affiliate from "components/de/Affiliate";
+import Privacy from "components/de/Privacy";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
