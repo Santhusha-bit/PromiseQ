@@ -43,11 +43,11 @@ const companies = [
   },
   {
     imagePath: "/data_guard.png",
-    description: "Data guard Logo",
+    description: "Data guard Logo 1",
   },
   {
     imagePath: "/made.png",
-    description: "Data guard Logo",
+    description: "Data guard Logo 2",
   },
 ];
 const CompanyLogo = () => {

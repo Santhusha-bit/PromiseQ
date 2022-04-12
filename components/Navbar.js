@@ -109,16 +109,19 @@ const Navbar = (props) => {
   const prefix = isLangEnglish ? "/" : "/de/";
 
   useEffect(() => {
-    setIsLangEnglish(localStorage.getItem("lang") === "eng");
+    localStorage.getItem("lang") &&
+      setIsLangEnglish(localStorage.getItem("lang") === "eng");
   }, []);
 
   const languageSwitch = () => {
     if (isLangEnglish) {
       localStorage.setItem("lang", "de");
       router.push("/de");
+      setIsLangEnglish(false)
     } else {
       localStorage.setItem("lang", "eng");
       router.push("/");
+      setIsLangEnglish(true)
     }
   };
 
