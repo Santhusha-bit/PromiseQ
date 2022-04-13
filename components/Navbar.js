@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 13,
     textAlign: "left",
     margin: 0,
-    marginRight: 46,
+    paddingRight: 45,
     "&:hover": {
       color: theme.palette.primary.main,
     },
@@ -220,7 +220,7 @@ const Navbar = (props) => {
             </Toolbar>
           </Container>
 
-          <Grid container spacing={3} className={classes.ribbon}>
+          <Grid container className={classes.ribbon}>
             <Container>
               <Grid item xs={12}>
                 <Grid container item xs={12} md={8}>
