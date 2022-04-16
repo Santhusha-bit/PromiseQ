@@ -116,11 +116,11 @@ const Navbar = (props) => {
   const languageSwitch = () => {
     if (isLangEnglish) {
       localStorage.setItem("lang", "de");
-      router.push("/de");
+      router.push("/de").then(()=> router.reload());
       setIsLangEnglish(false);
     } else {
       localStorage.setItem("lang", "eng");
-      router.push("/");
+      router.push("/").then(()=> router.reload());;
       setIsLangEnglish(true);
     }
   };

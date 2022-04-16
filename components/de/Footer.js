@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = () => {
+const FooterInDE = () => {
   const classes = useStyles();
   const year = new Date();
   return (
@@ -242,4 +242,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterInDE;
