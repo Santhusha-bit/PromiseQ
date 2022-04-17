@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -10,6 +10,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Button from "components/Button";
 import { TextField } from "@material-ui/core";
+import FooterInDE from "./de/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,9 +60,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Footer = () => {
+  const [isLangEnglish, setIsLangEnglish] = useState(true);
+
+  useEffect(() => {
+    localStorage.getItem("lang") &&
+      setIsLangEnglish(localStorage.getItem("lang") === "eng");
+  }, []);
+
   const classes = useStyles();
   const year = new Date();
-  return (
+  return isLangEnglish ? (
     <>
       <footer className={classes.root}>
         <Container>
@@ -237,6 +245,8 @@ const Footer = () => {
         </Container>
       </footer>
     </>
+  ) : (
+    <FooterInDE />
   );
 };
 
