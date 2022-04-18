@@ -12,10 +12,11 @@ import router from "next/router";
 const useStyles = makeStyles(() => ({
   labelText: {
     fontSize: 20,
-    marginBottom: -20,
+    marginBottom: 20,
   },
   textField: {
     marginTop: -30,
+    marginBottom: 20,
   },
   textMiddle: {
     marginBottom: 60,
@@ -29,7 +30,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: 30,
   },
   img: {
-    marginLeft: 54,
+    marginLeft: 10,
     paddingLeft: 10,
   },
   buttons: {
@@ -42,10 +43,13 @@ const useStyles = makeStyles(() => ({
     paddingTop: 25,
   },
   middleBox: {
-    marginLeft: -30,
+    marginBottom: 20,
+    marginLeft: 10,
+    paddingTop: 20,
   },
   firstBox: {
     paddingLeft: 20,
+    marginBottom: 20,
   },
 }));
 
