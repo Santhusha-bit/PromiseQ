@@ -201,7 +201,7 @@ const FooterInDE = () => {
           <Grid container spacing={3} justify="center" className={classes.bar}>
             <Grid item xs={12}>
               <Grid container item xs={12}>
-                <Link href="/privacy" passHref>
+                <Link href="/impressum" passHref>
                   <Typography
                     className={classes.textStyles}
                     variant="caption"

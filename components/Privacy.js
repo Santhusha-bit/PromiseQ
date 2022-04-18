@@ -32,12 +32,22 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
     marginBottom: 20,
   },
-  img: {
-    display: "block",
-    margin: "0 auto",
-  },
   container: {
     textAlign: "center",
+  },
+  img1: {
+    display: "block",
+    margin: "0 auto",
+    marginTop: 40,
+  },
+  img2: {
+    display: "block",
+    margin: "0 auto",
+    marginTop: 15,
+  },
+  img3: {
+    display: "block",
+    margin: "0 auto",
   },
 }));
 
@@ -119,12 +129,12 @@ Your data is safe!"
                   </ListItem>
                   <Link href="https://www.dataguard.de/">
                     <img
-                      src="/data_guard.png"
+                      src="/data_guards.png"
                       width="17%"
                       height="auto"
                       textAlign="center"
                       object-fit="fill"
-                      className={classes.img}
+                      className={classes.img1}
                     />
                   </Link>
                 </List>
@@ -139,14 +149,16 @@ and signal information as metadata to help you
 meet your certification for e.g. DIN EN 50518 requirements with ease."
                     />
                   </ListItem>
-                  <img
-                    src="/VdS.png"
-                    width="17%"
-                    height="auto"
-                    textAlign="center"
-                    object-fit="fill"
-                    className={classes.img}
-                  />
+                  <Link href="https://vds.de/kompetenzen/security/infothek/fachinformationen">
+                    <img
+                      src="/VdS.png"
+                      width="17%"
+                      height="auto"
+                      textAlign="center"
+                      object-fit="fill"
+                      className={classes.img2}
+                    />
+                  </Link>
                 </List>
               </Grid>
               <Grid item sm={4}>
@@ -169,7 +181,7 @@ industry standards."
                         height="auto"
                         object-fit="fill"
                         textAlign="center"
-                        className={classes.img}
+                        className={classes.img3}
                       />
                     </Link>
                     <img
@@ -178,7 +190,7 @@ industry standards."
                       height="auto"
                       object-fit="fill"
                       textAlign="center"
-                      className={classes.img}
+                      className={classes.img3}
                     />
                   </ListItem>
                 </List>
@@ -208,12 +220,12 @@ Your data is safe!"
                   />
                 </ListItem>
                 <img
-                  src="/data_guard.png"
+                  src="/data_guards.png"
                   width="17%"
                   height="auto"
                   object-fit="fill"
                   textAlign="center"
-                  className={classes.img}
+                  className={classes.img1}
                 />
               </List>
             </Grid>
@@ -235,14 +247,16 @@ and signal information as metadata to help you
 meet your certification for e.g. DIN EN 50518 requirements with ease."
                   />
                 </ListItem>
-                <img
-                  src="/VdS.png"
-                  width="17%"
-                  height="auto"
-                  textAlign="center"
-                  object-fit="fill"
-                  className={classes.img}
-                />
+                <Link href="https://vds.de/kompetenzen/security/infothek/fachinformationen">
+                  <img
+                    src="/VdS.png"
+                    width="17%"
+                    height="auto"
+                    textAlign="center"
+                    object-fit="fill"
+                    className={classes.img2}
+                  />
+                </Link>
               </List>
             </Grid>
           </Grid>
@@ -280,7 +294,7 @@ industry standards."
                   height="auto"
                   textAlign="center"
                   object-fit="fill"
-                  className={classes.img}
+                  className={classes.img3}
                 />
                 <img
                   src="/mit.png"
@@ -288,7 +302,7 @@ industry standards."
                   textAlign="center"
                   height="auto"
                   object-fit="fill"
-                  className={classes.img}
+                  className={classes.img3}
                 />
               </List>
             </Grid>

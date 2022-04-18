@@ -65,11 +65,15 @@ const About = () => {
             </Grid>
 
             <Grid item xs={12} sm={12} md={12} className={classes.topic}>
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h6" display="inline" gutterBottom>
                 Unsere Story.{" "}
-                <Typography style={{ color: "#FFD42A" }} display="inline">
-                  Vom autonomen Fahren zu Security{" "}
-                </Typography>
+              </Typography>
+              <Typography
+                style={{ color: "#FFD42A" }}
+                variant="h5"
+                display="inline"
+              >
+                Vom autonomen Fahren zu Security{" "}
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} className={classes.para}>

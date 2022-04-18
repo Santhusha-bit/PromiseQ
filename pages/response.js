@@ -70,9 +70,14 @@ const useStyles = makeStyles(() => ({
 const Response = () => {
   const classes = useStyles();
   const [price, setPrice] = useState(0);
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     setPrice(localStorage.getItem("price"));
+  }, []);
+
+  useEffect(() => {
+    setTime(localStorage.getItem("time"));
   }, []);
 
   return (
@@ -179,6 +184,9 @@ const Response = () => {
                   you save:
                   <br />
                 </Box>
+                <Typography className={classes.deal} variant="h3">
+                  {time} hours
+                </Typography>
                 <Typography className={classes.deal} variant="h3">
                   {price} $
                 </Typography>

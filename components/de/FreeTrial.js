@@ -39,6 +39,11 @@ const useStyles = makeStyles(() => ({
   content: {
     marginTop: 25,
   },
+  img: {
+    marginTop: 10,
+    display: "block",
+    margin: "0 auto",
+  },
 }));
 
 const FreeTrial = () => {
@@ -56,9 +61,9 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Fortschrittlichste KI & Crowdworker Symbiose <br/> mit dem Versprechen,
-              die Kosten für Ihre Notrufleistelle um mehr als die Hälfte zu
-              reduzieren!
+              Fortschrittlichste KI & Crowdworker Symbiose <br /> mit dem
+              Versprechen, die Kosten für Ihre Notrufleistelle um mehr als die
+              Hälfte zu reduzieren!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
@@ -101,7 +106,7 @@ const FreeTrial = () => {
             <Typography variant="h6" component="h6">
               Wie promiseQ funktioniert{" "}
               <Typography
-                variant="h6"
+                variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
@@ -125,7 +130,7 @@ const FreeTrial = () => {
             <Typography variant="h6" component="h6" className={classes.how2}>
               Wie promiseQ funktioniert{" "}
               <Typography
-                variant="h6"
+                variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
@@ -142,6 +147,14 @@ const FreeTrial = () => {
               Sie wollen mit uns kollaborieren und promiseQ auf Ihrer Plattform
               anbieten? Dann kontaktieren Sie uns!
             </Typography>
+            <img
+              src="/ebus.png"
+              width="17%"
+              height="auto"
+              textAlign="center"
+              object-fit="fill"
+              className={classes.img}
+            />
           </Grid>
         </Grid>{" "}
       </Container>

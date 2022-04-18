@@ -68,7 +68,7 @@ const About = () => {
               <Typography variant="h6" gutterBottom>
                 Our story. Where we saw{" "}
                 <Typography
-                  variant="h6"
+                  variant="h5"
                   style={{ color: "#FFD42A" }}
                   display="inline"
                 >

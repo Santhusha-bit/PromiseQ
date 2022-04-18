@@ -32,12 +32,22 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
     marginBottom: 20,
   },
-  img: {
-    display: "block",
-    margin: "0 auto",
-  },
   container: {
     textAlign: "center",
+  },
+  img1: {
+    display: "block",
+    margin: "0 auto",
+    marginTop: 40,
+  },
+  img2: {
+    display: "block",
+    margin: "0 auto",
+    marginTop: 15,
+  },
+  img3: {
+    display: "block",
+    margin: "0 auto",
   },
 }));
 
@@ -122,7 +132,7 @@ const Privacy = () => {
                       height="auto"
                       textAlign="center"
                       object-fit="fill"
-                      className={classes.img}
+                      className={classes.img1}
                     />
                   </Link>
                 </List>
@@ -135,14 +145,16 @@ const Privacy = () => {
                       primary="Wir liefern Ihnen alle notwendigen Zeitstempel und Signalinformationen als Metadaten mit, damit Sie Ihre Zertifizierungsanforderungen mit Leichtigkeit erfüllen."
                     />
                   </ListItem>
-                  <img
-                    src="/VdS.png"
-                    width="17%"
-                    height="auto"
-                    textAlign="center"
-                    object-fit="fill"
-                    className={classes.img}
-                  />
+                  <Link href="https://vds.de/kompetenzen/security/infothek/fachinformationen">
+                    <img
+                      src="/VdS.png"
+                      width="17%"
+                      height="auto"
+                      textAlign="center"
+                      object-fit="fill"
+                      className={classes.img2}
+                    />
+                  </Link>
                 </List>
               </Grid>
               <Grid item sm={4}>
@@ -161,7 +173,7 @@ const Privacy = () => {
                         height="auto"
                         object-fit="fill"
                         textAlign="center"
-                        className={classes.img}
+                        className={classes.img3}
                       />
                     </Link>
                     <img
@@ -202,7 +214,7 @@ const Privacy = () => {
                   height="auto"
                   object-fit="fill"
                   textAlign="center"
-                  className={classes.img}
+                  className={classes.img1}
                 />
               </List>
             </Grid>
@@ -222,14 +234,16 @@ const Privacy = () => {
                     primary="Wir liefern Ihnen alle notwendigen Zeitstempel und Signalinformationen als Metadaten mit, damit Sie Ihre Zertifizierungsanforderungen mit Leichtigkeit erfüllen."
                   />
                 </ListItem>
-                <img
-                  src="/VdS.png"
-                  width="17%"
-                  height="auto"
-                  textAlign="center"
-                  object-fit="fill"
-                  className={classes.img}
-                />
+                <Link href="https://vds.de/kompetenzen/security/infothek/fachinformationen">
+                  <img
+                    src="/VdS.png"
+                    width="17%"
+                    height="auto"
+                    textAlign="center"
+                    object-fit="fill"
+                    className={classes.img2}
+                  />
+                </Link>
               </List>
             </Grid>
           </Grid>
@@ -263,7 +277,7 @@ const Privacy = () => {
                   height="auto"
                   textAlign="center"
                   object-fit="fill"
-                  className={classes.img}
+                  className={classes.img3}
                 />
                 <img
                   src="/mit.png"

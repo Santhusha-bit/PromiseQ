@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     paddingTop: 40,
   },
   how2: {
-    paddingTop: 70,
+    paddingTop: 50,
   },
   main: {
     marginTop: 30,
@@ -39,6 +39,11 @@ const useStyles = makeStyles(() => ({
   content: {
     marginTop: 25,
   },
+  img: {
+    marginTop: 10,
+    display: "block",
+    margin: "0 auto",
+  },
 }));
 
 const FreeTrial = () => {
@@ -56,8 +61,9 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Most advanced AI & crowdworker symbiosis <br/> with the promise to
-              reduce your operator<br/> costs by more than half!
+              Most advanced AI & crowdworker symbiosis <br /> with the promise
+              to reduce your operator
+              <br /> costs by more than half!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
@@ -100,7 +106,7 @@ const FreeTrial = () => {
             <Typography variant="h6" component="h6">
               How promiseQ{" "}
               <Typography
-                variant="h6"
+                variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
@@ -123,7 +129,7 @@ const FreeTrial = () => {
             <Typography variant="h6" component="h6" className={classes.how2}>
               How promiseQ{" "}
               <Typography
-                variant="h6"
+                variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
@@ -140,6 +146,14 @@ const FreeTrial = () => {
               Want to collaborate with promiseQ? Then don’t hesitate to contact
               us!
             </Typography>
+            <img
+              src="/ebus.png"
+              width="17%"
+              height="auto"
+              textAlign="center"
+              object-fit="fill"
+              className={classes.img}
+            />
           </Grid>
         </Grid>{" "}
       </Container>

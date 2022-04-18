@@ -60,13 +60,22 @@ const ROI = () => {
   const [numberOfCameras, setNumberOfCameras] = useState();
   const PROMISEQ_COST_PER_CAMERA = 5;
   const OPERATOR_SALARY = 25;
+  const FALSE_ALARM_REDUCTION = 95;
+  const ALARM_PER_MINUTE = 3;
 
   const calculateROI = () => {
+    let time =
+      ((FALSE_ALARM_REDUCTION / 100) * parseInt(volumePerMonth)) /
+      (ALARM_PER_MINUTE * 60);
+    time = time.toFixed(2);
+
     let price =
-      OPERATOR_SALARY * parseInt(operatorCount) -
+      OPERATOR_SALARY * time -
       parseInt(numberOfCameras) * PROMISEQ_COST_PER_CAMERA;
+    price = price.toFixed(0);
 
     localStorage.setItem("price", price);
+    localStorage.setItem("time", time);
 
     router.push("/de/response");
   };
@@ -112,17 +121,13 @@ const ROI = () => {
               <br /> Sie mit promiseQ monatlich sparen können:
             </Typography>
             <Typography variant="body" className={classes.third}>
-              1. Geben Sie die Anzahl der monatlichen Alarme und Anzahl der
+              1. Geben Sie die Anzahl der monatlichen Alarme und
+              <br /> Anzahl der Kameras an
               <br />
-              Kameras an
+              2. Geben Sie die Anzahl der Leitstellenmitarbeiter ein
               <br />
-              2. Geben Sie das durchschn. Gehalt und die Anzahl der
-              <br />
-              Leitstellenmitarbeiter ein
-              <br />
-              3. Ermitteln Sie Einsparungen und Wachstumspotenziale für Ihr
-              <br />
-              Unternehmen!
+              3. Ermitteln Sie Einsparungen und Wachstumspotenziale
+              <br /> für Ihr Unternehmen!
             </Typography>
           </Grid>
           <Grid

@@ -330,7 +330,7 @@ const Affiliate = () => {
             <Grid container item sm={12} spacing={3} justify="center">
               <Button
                 id="roi section redirect"
-                text="ROI calculator"
+                text="ROI Calculator"
                 href="/roi"
               />
             </Grid>

@@ -170,7 +170,7 @@ const Navbar = (props) => {
                       disableRipple
                       component="a"
                     >
-                      {isLangEnglish ? "ROI calculator" : "ROI Rechner"}
+                      {isLangEnglish ? "ROI Calculator" : "ROI Rechner"}
                     </Button>
                   </Link>
                   <Link href={`${prefix}booking`} passHref>
@@ -278,7 +278,7 @@ const Navbar = (props) => {
             <Link href="/de/roi" passHref>
               {/* ROI Calculator */}
               <ListItem button component="a" className={classes.buttonStyles}>
-                <ListItemText primary="ROI calculator" />
+                <ListItemText primary="ROI Calculator" />
               </ListItem>
             </Link>
             <Link href="/de/booking" passHref>

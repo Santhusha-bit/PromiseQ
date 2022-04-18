@@ -60,13 +60,22 @@ const ROI = () => {
   const [numberOfCameras, setNumberOfCameras] = useState();
   const PROMISEQ_COST_PER_CAMERA = 5;
   const OPERATOR_SALARY = 25;
+  const FALSE_ALARM_REDUCTION = 95;
+  const ALARM_PER_MINUTE = 3;
 
   const calculateROI = () => {
+    let time =
+      ((FALSE_ALARM_REDUCTION / 100) * parseInt(volumePerMonth)) /
+      (ALARM_PER_MINUTE * 60);
+    time = time.toFixed(2);
+
     let price =
-      OPERATOR_SALARY * parseInt(operatorCount) -
+      OPERATOR_SALARY * time -
       parseInt(numberOfCameras) * PROMISEQ_COST_PER_CAMERA;
+    price = price.toFixed(0);
 
     localStorage.setItem("price", price);
+    localStorage.setItem("time", time);
 
     router.push("/response");
   };
@@ -105,7 +114,7 @@ const ROI = () => {
               </Typography>{" "}
             </Typography>
             <Typography variant="h6" className={classes.second}>
-              Use our ROI calculator to figure out how much time
+              Use our ROI Calculator to figure out how much time
               <br />
               and money you can save monthly with
               <br /> promiseQ in a few simple steps:
@@ -113,7 +122,7 @@ const ROI = () => {
             <Typography variant="body" className={classes.third}>
               1. Number of monthly alarms and cameras
               <br />
-              2. Input the operator salary and number of operators
+              2. Input number of operators
               <br />
               3. Find out savings and growth potential for your business!
             </Typography>
