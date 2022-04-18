@@ -54,7 +54,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: -10,
   },
   checkText: {
-    fontSize: 14,
+    fontSize: 12,
+    paddingLeft: 4,
   },
 }));
 
@@ -170,8 +171,7 @@ const FooterInDE = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  "footer-sub-3-item-1": "Erhalten Sie Nachrichten und
-                  Updates:",
+                  Erhalten Sie Nachrichten und Updates:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>

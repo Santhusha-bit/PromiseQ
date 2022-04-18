@@ -116,11 +116,11 @@ const Navbar = (props) => {
   const languageSwitch = () => {
     if (isLangEnglish) {
       localStorage.setItem("lang", "de");
-      router.push("/de").then(()=> router.reload());
+      router.push("/de").then(() => router.reload());
       setIsLangEnglish(false);
     } else {
       localStorage.setItem("lang", "eng");
-      router.push("/").then(()=> router.reload());;
+      router.push("/").then(() => router.reload());
       setIsLangEnglish(true);
     }
   };
@@ -300,7 +300,7 @@ const Navbar = (props) => {
               </ListItem>
             </Link>
             <Link href="/" onClick={languageSwitch}>
-              <ListItem button component="a" className={classes.buttonStyles}>
+              <ListItem button component="a" className={classes.btn}>
                 <ListItemText primary="Deutsch" />
               </ListItem>
             </Link>

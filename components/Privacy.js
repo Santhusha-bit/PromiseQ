@@ -220,7 +220,7 @@ Your data is safe!"
           </Grid>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
-              <Typography variant="h6" component="h6" align="center">
+              <Typography variant="h6" component="h6">
                 Data transfer VDS & DIN EN compliant
               </Typography>
             </Grid>
