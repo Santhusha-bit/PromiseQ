@@ -86,7 +86,7 @@ const FreeTrial = () => {
                   <Button
                     id="about section redirect"
                     text="Book a meeting"
-                    href="/booking"
+                    href="/de/booking"
                     className={classes.btn}
                   />
                 </Grid>
@@ -94,7 +94,7 @@ const FreeTrial = () => {
                   <Button
                     id="contact section redirect"
                     text="Free Trial"
-                    href="/contact"
+                    href="/de/contact"
                     className={classes.btnOutline}
                   />
                 </Grid>

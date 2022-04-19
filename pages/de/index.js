@@ -81,13 +81,13 @@ export default function Home() {
                   <Button
                     id="about section redirect"
                     text="Termin buchen"
-                    href="/booking"
+                    href="/de/booking"
                     className={classes.btn}
                   />
                   <Button
                     id="contact section redirect"
                     text="Kostenloser Test"
-                    href="/contact"
+                    href="/de/contact"
                     className={classes.btnOutline}
                   />
                 </Grid>

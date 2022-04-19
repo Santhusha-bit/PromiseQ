@@ -224,7 +224,7 @@ const Navbar = (props) => {
             <Container>
               <Grid item xs={12}>
                 <Grid container item xs={12} md={8}>
-                  <Link href="/#home" passHref>
+                  <Link href={`${prefix}#home`} passHref>
                     <Typography
                       className={classes.textStyles}
                       variant="caption"
@@ -232,7 +232,7 @@ const Navbar = (props) => {
                       {isLangEnglish ? "Home" : "Home"}
                     </Typography>
                   </Link>
-                  <Link href="/#about" passHref>
+                  <Link href={`${prefix}#about`} passHref>
                     <Typography
                       className={classes.textStyles}
                       variant="caption"
@@ -240,7 +240,7 @@ const Navbar = (props) => {
                       {isLangEnglish ? "About us" : "Über uns"}
                     </Typography>
                   </Link>
-                  <Link href="/#affiliate" passHref>
+                  <Link href={`${prefix}#affiliate`} passHref>
                     <Typography
                       className={classes.textStyles}
                       variant="caption"
@@ -248,7 +248,7 @@ const Navbar = (props) => {
                       {isLangEnglish ? "Affiliate Program" : "Kostenloser Test"}
                     </Typography>
                   </Link>
-                  <Link href="/#freeTrial" passHref>
+                  <Link href={`${prefix}#freeTrial`} passHref>
                     <Typography
                       variant="caption"
                       className={classes.textStyles}
@@ -256,7 +256,7 @@ const Navbar = (props) => {
                       {isLangEnglish ? "Free Trial" : "Ihre Vorteile"}
                     </Typography>
                   </Link>
-                  <Link href="/#privacy" passHref>
+                  <Link href={`${prefix}#privacy`} passHref>
                     <Typography
                       variant="caption"
                       className={classes.textStyles}
@@ -275,31 +275,31 @@ const Navbar = (props) => {
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className={classes.drawer}>
           <List component="nav" aria-label="navigation">
-            <Link href="/de/roi" passHref>
+            <Link href={`${prefix}roi`} passHref>
               {/* ROI Calculator */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="ROI Calculator" />
               </ListItem>
             </Link>
-            <Link href="/de/booking" passHref>
+            <Link href={`${prefix}booking`} passHref>
               {/* Book a meeting */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Book a meeting" />
               </ListItem>
             </Link>
-            <Link href="/de/contact" passHref>
+            <Link href={`${prefix}contact`} passHref>
               {/* Contact us */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Contact us" />
               </ListItem>
             </Link>
-            <Link href="/de/careers" passHref>
+            <Link href={`${prefix}careers`} passHref>
               {/* Careers */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Careers" />
               </ListItem>
             </Link>
-            <Link href="/" onClick={languageSwitch}>
+            <Link href={`${prefix}`} onClick={languageSwitch}>
               <ListItem button component="a" className={classes.btn}>
                 <ListItemText primary="Deutsch" />
               </ListItem>
