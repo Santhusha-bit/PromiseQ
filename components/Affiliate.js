@@ -86,8 +86,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  You will revolutionize your security offering to better
-                  protect your customers
+                  Revolutionize your security offering to better protect your
+                  customers
                 </Typography>
               </Grid>
               <Grid item sm={4}>
@@ -108,8 +108,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  You increase your margins with promiseQ as part of your
-                  solution portfolio
+                  Increase your margins with promiseQ as part of your solution
+                  portfolio
                 </Typography>
               </Grid>
             </Grid>
@@ -255,8 +255,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  You will revolutionize your security offering to better
-                  protect your customers
+                  Revolutionize your security offering to better protect your
+                  customers
                 </Typography>
               </Grid>
 
@@ -300,8 +300,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  You increase your margins with promiseQ as part of your
-                  solution portfolio
+                  Increase your margins with promiseQ as part of your solution
+                  portfolio
                 </Typography>
               </Grid>
               <Grid item sm={4}>

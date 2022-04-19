@@ -71,7 +71,8 @@ export default function Home() {
                   <Box fontWeight="fontWeightBold" display="inline">
                     promiseQ{" "}
                   </Box>
-                  is no ordinary video analytics! <br />
+                  promiseQ is no ordinary video analytics security provider.{" "}
+                  <br />
                   We deliver the unique symbiosis of state-of-the-art AI <br />&
                   certified crowdworkers via a global platform.
                 </Typography>

@@ -8,11 +8,11 @@ import { TextField, Typography, Box, Container, Link } from "@material-ui/core";
 const useStyles = makeStyles(() => ({
   labelText: {
     fontSize: 20,
-    marginBottom: -30,
-    paddingRight: 70,
+    marginBottom: -10,
   },
   textField: {
-    marginTop: -30,
+    marginTop: 0,
+    marginBottom: 30,
   },
   textMiddle: {
     marginBottom: 0,
@@ -21,15 +21,9 @@ const useStyles = makeStyles(() => ({
   main: {
     marginTop: 30,
   },
-  img: {
-    marginLeft: 4,
-    paddingLeft: 10,
-  },
-  btn: {
-    marginRight: 60,
-  },
   btnOutline: {
-    marginRight: 10,
+    marginTop: 10,
+    marginBottom: 10,
     color: "black",
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
@@ -38,21 +32,18 @@ const useStyles = makeStyles(() => ({
       backgroundColor: "transparent",
     },
   },
-  buttons: {
-    marginLeft: 30,
-  },
   fullBox: {
     padding: 25,
-    marginTop: 50,
-    marginBottom: 50,
+    marginTop: 0,
+    marginBottom: 0,
   },
   thirdBox: {
     paddingLeft: 40,
     textAlign: "center",
   },
-  decision: {
-    outlineWidth: 4,
-    outlineColor: "black",
+  btn: {
+    marginTop: 10,
+    marginBottom: 10,
   },
   deal: {
     marginTop: 20,
@@ -63,6 +54,12 @@ const useStyles = makeStyles(() => ({
   },
   caption: {
     fontSize: 17,
+  },
+  img: {
+    display: "block",
+    margin: "0 auto",
+    padding: 0,
+    marginBottom: 40,
   },
 }));
 
@@ -119,15 +116,14 @@ const Response = () => {
         </Link>
       </Container>
       <Container className={classes.fullBox}>
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid
             container
             variant="h6"
             component="h6"
-            spacing={2}
             xs={12}
-            sm={12}
-            md={4}
+            sm={6}
+            md={3}
             className={classes.firstBox}
           >
             <Typography className={classes.labelText}>
@@ -158,11 +154,13 @@ const Response = () => {
             />
           </Grid>
 
-          <Grid container xs={12} sm={12} md={3} className={classes.img}>
+          <Grid container xs={12} sm={6} md={4} className={classes.img}>
             <ImageLayout
               imageRef="/roi.png"
               desc="ROI Calculating"
               width="100%"
+              height="auto"
+              object-fit="fill"
             />
           </Grid>
           <Grid
@@ -182,7 +180,7 @@ const Response = () => {
                   <br />
                 </Box>
                 <Typography className={classes.deal} variant="h3">
-                  {time} hours
+                  {time} hrs
                 </Typography>
                 <Typography className={classes.deal} variant="h3">
                   {price} $
@@ -209,8 +207,8 @@ const Response = () => {
               </Typography>
             </Grid>
             <Grid xs={12} sm={12} md={12}>
-              <Grid container justify="center" className={classes.buttons}>
-                <Grid item xs={12} sm={12} md={6}>
+              <Grid container justify="center">
+                <Grid item xs={12} sm={6} md={6}>
                   <Button
                     id="booking section redirect"
                     text="Termin buchen"
@@ -218,7 +216,7 @@ const Response = () => {
                     className={classes.btn}
                   />
                 </Grid>
-                <Grid item xs={12} sm={12} md={6}>
+                <Grid item xs={12} sm={6} md={6}>
                   <Button
                     id="contact section redirect"
                     text="Kontaktieren Sie uns"

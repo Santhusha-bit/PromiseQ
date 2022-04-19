@@ -29,10 +29,6 @@ const useStyles = makeStyles(() => ({
     marginTop: 0,
     marginBottom: 30,
   },
-  img: {
-    marginLeft: 10,
-    paddingLeft: 10,
-  },
   buttons: {
     marginTop: 50,
   },
@@ -41,15 +37,20 @@ const useStyles = makeStyles(() => ({
   },
   fullBox: {
     paddingTop: 25,
+    marginBottom: 70,
   },
   middleBox: {
     marginBottom: 20,
-    marginLeft: 10,
+    marginLeft: 0,
     paddingTop: 20,
   },
   firstBox: {
     paddingLeft: 20,
     marginBottom: 20,
+  },
+  calBtn: {
+    display: "block",
+    margin: "0 auto",
   },
 }));
 
@@ -93,14 +94,7 @@ const ROI = () => {
       </Typography>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
-          <Grid
-            container
-            spacing={2}
-            xs={12}
-            sm={12}
-            md={6}
-            className={classes.firstBox}
-          >
+          <Grid container xs={12} sm={12} md={6} className={classes.firstBox}>
             <Typography variant="h5" className={classes.first}>
               Finden Sie heraus wieviel Sie <br />
               mit{" "}
@@ -134,9 +128,8 @@ const ROI = () => {
             container
             variant="h6"
             component="h6"
-            spacing={2}
             xs={12}
-            sm={12}
+            sm={6}
             md={3}
             className={classes.middleBox}
           >
@@ -149,7 +142,6 @@ const ROI = () => {
               className={classes.textField}
               onChange={(e) => setVolumePerMonth(e.target.value)}
             />
-
             <Typography className={classes.labelText}>
               Anzahl Mitarbeiter pro Schicht
             </Typography>
@@ -159,7 +151,6 @@ const ROI = () => {
               className={classes.textField}
               onChange={(e) => setOperatorCount(e.target.value)}
             />
-
             <Typography className={classes.labelText}>
               Anzahl der Kameras
             </Typography>
@@ -169,23 +160,26 @@ const ROI = () => {
               className={classes.textField}
               onChange={(e) => setNumberOfCameras(e.target.value)}
             />
+            <Grid container sm={12} justify="center" className={classes.btn}>
+              <Button
+                id="roi section redirect"
+                text="Calculate"
+                className={classes.calBtn}
+                onClick={calculateROI}
+                disabled={!volumePerMonth || !operatorCount || !numberOfCameras}
+              />
+            </Grid>
           </Grid>
 
-          <Grid container xs={12} sm={12} md={3} className={classes.img}>
+          <Grid container xs={12} sm={5} md={3} className={classes.img}>
             <ImageLayout
               imageRef="/roi.png"
               desc="ROI Calculating"
               width="100%"
+              height="auto"
+              object-fit="fill"
             />
           </Grid>
-        </Grid>
-        <Grid container sm={12} justify="center" className={classes.btn}>
-          <Button
-            id="roi section redirect"
-            text="Calculate"
-            onClick={calculateROI}
-            disabled={!volumePerMonth || !operatorCount || !numberOfCameras}
-          />
         </Grid>
       </Container>
     </div>

@@ -253,7 +253,7 @@ const Navbar = (props) => {
                       variant="caption"
                       className={classes.textStyles}
                     >
-                      {isLangEnglish ? "Free Trail" : "Ihre Vorteile"}
+                      {isLangEnglish ? "Free Trial" : "Ihre Vorteile"}
                     </Typography>
                   </Link>
                   <Link href="/#privacy" passHref>

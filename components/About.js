@@ -93,11 +93,10 @@ const About = () => {
                 camera-based lane keeping functions.
               </Typography>
               <Typography gutterBottom variant="body1">
-                One day, however, they saw an opportunity to augment artificial
-                intelligence in real time with automated human intervention via
-                crowdworking. After extensive market research, the pair
-                discovered that false alarms were indeed a widespread problem in
-                the security sector:
+                However, a family member’s experience with a nuisance alarm
+                system set them on a different path. After extensive research,
+                the pair discovered the true extent of the false alarm problem
+                in the security sector:
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
                   More than 95% of{" "}
@@ -105,27 +104,23 @@ const About = () => {
                 all security camera alarms are
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  triggered for irrelevant reasons.{" "}
+                  triggered for innocuous reasons.{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">
-                The idea of complementing security with crowdworking is
-                definitely a bit crazy. In a world of fully staffed control
-                centers and first attempts at automation, the idea of
-                crowdworking for security may be completely out of the box. We
-                are rethinking alarm processing and security. Henry Ford said
-                'If I had asked people what they wanted, they would have said
-                faster horses'. Don't bet on faster horses, bet on"
+                In a world of fully staffed control centers and first attempts
+                at automation, the idea of crowdworking for security may seem
+                extraordinary. But the control center of the future is
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  decentralized and autonomous.{" "}
+                </Box>
+                As a company, promiseQ is pushing to make this a reality. We are
+                reshaping alarm processing and security. So don't bet on the
+                past, be part of the future with
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
                   promiseQ.{" "}
-                </Box>
-              </Typography>
-              <Typography gutterBottom variant="body1">
-                The control center of the future is
-                <Box fontWeight="fontWeightBold" display="inline">
-                  {" "}
-                  decentralized and autonomous!{" "}
                 </Box>
               </Typography>
             </Grid>

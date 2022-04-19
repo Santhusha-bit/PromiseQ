@@ -41,6 +41,7 @@ const useStyles = makeStyles(() => ({
   },
   fullBox: {
     paddingTop: 25,
+    marginBottom: 70,
   },
   middleBox: {
     marginBottom: 20,
@@ -50,6 +51,10 @@ const useStyles = makeStyles(() => ({
   firstBox: {
     paddingLeft: 20,
     marginBottom: 20,
+  },
+  calBtn: {
+    display: "block",
+    margin: "0 auto",
   },
 }));
 
@@ -92,7 +97,7 @@ const ROI = () => {
         ROI Calculator
       </Typography>
       <Container className={classes.fullBox}>
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid
             container
             spacing={2}
@@ -133,7 +138,7 @@ const ROI = () => {
             component="h6"
             spacing={2}
             xs={12}
-            sm={12}
+            sm={6}
             md={3}
             className={classes.middleBox}
           >
@@ -166,23 +171,24 @@ const ROI = () => {
               className={classes.textField}
               onChange={(e) => setNumberOfCameras(e.target.value)}
             />
+            <Grid container sm={12} justify="center" className={classes.btn}>
+              <Button
+                id="roi section redirect"
+                text="Calculate"
+                className={classes.calBtn}
+                onClick={calculateROI}
+                disabled={!volumePerMonth || !operatorCount || !numberOfCameras}
+              />
+            </Grid>
           </Grid>
 
-          <Grid container xs={12} sm={12} md={3} className={classes.img}>
+          <Grid container xs={12} sm={5} md={3} className={classes.img}>
             <ImageLayout
               imageRef="/roi.png"
               desc="ROI Calculating"
               width="100%"
             />
           </Grid>
-        </Grid>
-        <Grid container sm={12} justify="center" className={classes.btn}>
-          <Button
-            id="roi section redirect"
-            text="Calculate"
-            onClick={calculateROI}
-            disabled={!volumePerMonth || !operatorCount || !numberOfCameras}
-          />
         </Grid>
       </Container>
     </div>
