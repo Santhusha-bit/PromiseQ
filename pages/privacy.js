@@ -4,7 +4,7 @@ import React from "react";
 const privacy = () => {
   return (
     <Container maxWidth="lg">
-      <Box marginTop={15}>
+      <Box marginTop={20} marginBottom={5}>
         <Grid container>
           <Grid item sm={12} md={12}>
             <h1>Datenschutzerklärung</h1>

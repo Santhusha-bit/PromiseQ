@@ -66,7 +66,7 @@ const About = () => {
 
             <Grid item xs={12} sm={12} md={12} className={classes.topic}>
               <Typography variant="h6" gutterBottom>
-                Our story. Where we saw{" "}
+                Our story. We found{" "}
                 <Typography
                   variant="h5"
                   style={{ color: "#FFD42A" }}

@@ -232,8 +232,8 @@ Your data is safe!"
           </Grid>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
-              <Typography variant="h6" component="h6">
-                Data transfer VDS & DIN EN compliant
+              <Typography variant="h6" component="h6" align="center">
+                Data transfer VDS & DIN EN compliant{" "}
               </Typography>
             </Grid>
 
@@ -261,16 +261,6 @@ meet your certification for e.g. DIN EN 50518 requirements with ease."
             </Grid>
           </Grid>
           <Grid container item sm={12} spacing={3}>
-            <Grid item sm={4}>
-              <img
-                src="/corporate_security.png"
-                width="50%"
-                textAlign="center"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
                 Highest insurance protection

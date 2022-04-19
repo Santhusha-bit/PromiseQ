@@ -149,7 +149,7 @@ const FreeTrial = () => {
             </Typography>
             <img
               src="/ebus.png"
-              width="17%"
+              width="25%"
               height="auto"
               textAlign="center"
               object-fit="fill"

@@ -182,7 +182,7 @@ const Privacy = () => {
                       height="auto"
                       object-fit="fill"
                       textAlign="center"
-                      className={classes.img}
+                      className={classes.img3}
                     />
                   </ListItem>
                 </List>
@@ -249,16 +249,6 @@ const Privacy = () => {
           </Grid>
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
-              <img
-                src="/corporate_security.png"
-                width="50%"
-                textAlign="center"
-                height="auto"
-                object-fit="fill"
-                className={classes.img}
-              />
-            </Grid>
-            <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
                 Höchster Versicherungschutz
               </Typography>
@@ -285,7 +275,7 @@ const Privacy = () => {
                   textAlign="center"
                   height="auto"
                   object-fit="fill"
-                  className={classes.img}
+                  className={classes.img3}
                 />
               </List>
             </Grid>

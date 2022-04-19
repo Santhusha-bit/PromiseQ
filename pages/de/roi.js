@@ -41,7 +41,8 @@ const useStyles = makeStyles(() => ({
   },
   middleBox: {
     marginBottom: 20,
-    marginLeft: 0,
+    marginLeft: 20,
+    marginRight: 15,
     paddingTop: 20,
   },
   firstBox: {
@@ -94,7 +95,7 @@ const ROI = () => {
       </Typography>
       <Container className={classes.fullBox}>
         <Grid container spacing={2}>
-          <Grid container xs={12} sm={12} md={6} className={classes.firstBox}>
+          <Grid container xs={12} sm={12} md={5} className={classes.firstBox}>
             <Typography variant="h5" className={classes.first}>
               Finden Sie heraus wieviel Sie <br />
               mit{" "}
@@ -128,6 +129,7 @@ const ROI = () => {
             container
             variant="h6"
             component="h6"
+            spacing={2}
             xs={12}
             sm={6}
             md={3}
