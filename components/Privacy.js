@@ -132,7 +132,7 @@ Your data is safe!"
                       src="/data_guards.png"
                       width="17%"
                       height="auto"
-                      textAlign="center"
+                      align="center"
                       object-fit="fill"
                       className={classes.img1}
                     />
@@ -154,7 +154,7 @@ meet your certification for e.g. DIN EN 50518 requirements with ease."
                       src="/VdS.png"
                       width="17%"
                       height="auto"
-                      textAlign="center"
+                      align="center"
                       object-fit="fill"
                       className={classes.img2}
                     />
@@ -180,7 +180,7 @@ industry standards."
                         width="40%"
                         height="auto"
                         object-fit="fill"
-                        textAlign="center"
+                        align="center"
                         className={classes.img3}
                       />
                     </Link>
@@ -189,7 +189,7 @@ industry standards."
                       width="20%"
                       height="auto"
                       object-fit="fill"
-                      textAlign="center"
+                      align="center"
                       className={classes.img3}
                     />
                   </ListItem>
@@ -268,7 +268,7 @@ meet your certification for e.g. DIN EN 50518 requirements with ease."
             </Grid>
             <Grid item sm={4}>
               <List>
-                <ListItem>
+                <ListItem align="center">
                   <ListItemText
                     align="center"
                     primary="Unique in the video analytics industry: 

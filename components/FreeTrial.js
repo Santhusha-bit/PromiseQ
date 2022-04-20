@@ -8,8 +8,8 @@ import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
-    marginBottom: 60,
-    marginTop: 60,
+    marginBottom: 75,
+    marginTop: 45,
   },
   how1: {
     paddingTop: 40,
@@ -18,23 +18,23 @@ const useStyles = makeStyles(() => ({
     paddingTop: 50,
   },
   main: {
-    marginTop: 30,
+    marginTop: 70,
+    marginBottom: 50,
   },
   btn: {
-    marginRight: 120,
+    marginBottom: 0,
   },
   btnOutline: {
-    marginRight: 120,
+    marginBottom: 0,
     color: "black",
+    paddingLeft: 35,
+    paddingRight: 35,
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
     "&:hover": {
       outline: "3px solid #EBC327",
       backgroundColor: "transparent",
     },
-  },
-  buttons: {
-    marginTop: 50,
   },
   content: {
     marginTop: 25,
@@ -76,12 +76,7 @@ const FreeTrial = () => {
               </Typography>
             </Grid>
             <Grid spacing={2} xs={12} sm={12} md={12}>
-              <Grid
-                container
-                justify="center"
-                spacing={3}
-                className={classes.buttons}
-              >
+              <Grid container justify="center">
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="about section redirect"

@@ -32,7 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   btnOutline: {
     marginRight: 120,
+    marginBottom: 0,
     color: "black",
+    paddingLeft: 35,
+    paddingRight: 35,
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
     "&:hover": {
@@ -51,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: "20 auto",
+    marginRight: 90,
+    marginBottom: 0,
   },
 }));
 
@@ -64,19 +69,20 @@ export default function Home() {
           <Grid container justify="center" spacing={3}>
             <Grid item xs={12} sm={12} md={5}>
               <Typography gutterBottom variant="h3">
-              Sie eliminieren mit promiseQ mehr als 95% Ihrer Falschalarme
+                Sie eliminieren mit promiseQ mehr als 95% Ihrer Falschalarme
               </Typography>
               <Grid item className={classes.text}>
                 <Typography gutterBottom variant="body1">
                   <Box fontWeight="fontWeightBold" display="inline">
-                  promiseQ{" "}
+                    promiseQ{" "}
                   </Box>
                   ist keine normale Videoanalytik! <br />
-                  Wir liefern die einzigartige Symbiose von modernster KI & <br />
+                  Wir liefern die einzigartige Symbiose von modernster KI &{" "}
+                  <br />
                   Crowdworkern über eine globale Plattform.
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={12} md={12} className={classes.btn}>
+              <Grid item xs={12} sm={12} md={12} justify="center">
                 <Grid item xs={12} sm={12}>
                   <Button
                     id="about section redirect"

@@ -32,7 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   btnOutline: {
     marginRight: 120,
+    marginBottom: 0,
     color: "black",
+    paddingLeft: 35,
+    paddingRight: 35,
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
     "&:hover": {
@@ -51,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: "20 auto",
+    marginRight: 90,
+    marginBottom: 0,
   },
 }));
 
@@ -71,13 +76,12 @@ export default function Home() {
                   <Box fontWeight="fontWeightBold" display="inline">
                     promiseQ{" "}
                   </Box>
-                  promiseQ is no ordinary video analytics security provider.{" "}
-                  <br />
+                  is no ordinary video analytics security provider. <br />
                   We deliver the unique symbiosis of state-of-the-art AI <br />&
                   certified crowdworkers via a global platform.
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={12} md={12} className={classes.btn}>
+              <Grid item xs={12} sm={12} md={12} justify="center">
                 <Grid item xs={12} sm={12}>
                   <Button
                     id="about section redirect"

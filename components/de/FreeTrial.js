@@ -8,8 +8,8 @@ import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
-    marginBottom: 60,
-    marginTop: 60,
+    marginBottom: 75,
+    marginTop: 45,
   },
   how1: {
     paddingTop: 40,
@@ -18,13 +18,16 @@ const useStyles = makeStyles(() => ({
     paddingTop: 70,
   },
   main: {
-    marginTop: 30,
+    marginTop: 70,
+    marginBottom: 50,
   },
   btn: {
     marginRight: 120,
   },
   btnOutline: {
     marginRight: 120,
+    paddingLeft: 35,
+    paddingRight: 35,
     color: "black",
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
