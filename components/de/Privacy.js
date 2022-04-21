@@ -166,24 +166,28 @@ const Privacy = () => {
                     />
                   </ListItem>
                   <ListItem>
-                    <Link href="https://www.bdj.de/atlas/">
+                    <Grid item md={6}>
+                      <Link href="https://www.bdj.de/atlas/">
+                        <img
+                          src="/atlas.png"
+                          width="60%"
+                          height="auto"
+                          object-fit="fill"
+                          textAlign="center"
+                          className={classes.img3}
+                        />
+                      </Link>
+                    </Grid>
+                    <Grid item md={6}>
                       <img
-                        src="/atlas.png"
+                        src="/mit.png"
                         width="40%"
                         height="auto"
                         object-fit="fill"
                         textAlign="center"
                         className={classes.img3}
                       />
-                    </Link>
-                    <img
-                      src="/mit.png"
-                      width="20%"
-                      height="auto"
-                      object-fit="fill"
-                      textAlign="center"
-                      className={classes.img3}
-                    />
+                    </Grid>
                   </ListItem>
                 </List>
               </Grid>
@@ -202,6 +206,13 @@ const Privacy = () => {
             </Grid>
             <Grid item sm={4}>
               <List>
+                <img
+                  src="/data_protection.png"
+                  width="40%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img_1}
+                />
                 <ListItem>
                   <ListItemText
                     align="center"
@@ -222,12 +233,19 @@ const Privacy = () => {
           <Grid container item sm={12} spacing={3}>
             <Grid item sm={4}>
               <Typography variant="h6" component="h6" align="center">
-                Datentransfer VDS-Konform
+                Datentransfer VDS-Konform{" "}
               </Typography>
             </Grid>
 
             <Grid item sm={4}>
               <List>
+                <img
+                  src="/data_transfer.png"
+                  width="40%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img_1}
+                />
                 <ListItem>
                   <ListItemText
                     align="center"
@@ -255,6 +273,13 @@ const Privacy = () => {
             </Grid>
             <Grid item sm={4}>
               <List>
+                <img
+                  src="/insurance_protection.png"
+                  width="40%"
+                  height="auto"
+                  object-fit="fill"
+                  className={classes.img_1}
+                />
                 <ListItem>
                   <ListItemText
                     align="center"
@@ -265,14 +290,14 @@ const Privacy = () => {
                   src="/atlas.png"
                   width="17%"
                   height="auto"
-                  textAlign="center"
+                  align="center"
                   object-fit="fill"
                   className={classes.img3}
                 />
                 <img
                   src="/mit.png"
                   width="17%"
-                  textAlign="center"
+                  align="center"
                   height="auto"
                   object-fit="fill"
                   className={classes.img3}

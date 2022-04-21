@@ -20,7 +20,7 @@ import { Typography, Box, Container } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     background: "#FFF",
-    padding: "5px 0px 5px 0px",
+    padding: "5px 0px 0px 0px",
   },
   drawer: {
     width: "250px",
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontSize: "large",
     align: "right",
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(5.6),
     "&:hover": {
       color: theme.palette.primary.main,
       backgroundColor: "transparent",
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontSize: "large",
     align: "right",
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(5.6),
     backgroundColor: "#FFD42A",
     "&:hover": {
       backgroundColor: "#EBC327",

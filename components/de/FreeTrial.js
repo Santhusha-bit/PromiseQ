@@ -8,24 +8,20 @@ import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
-    marginBottom: 75,
-    marginTop: 45,
+    marginBottom: 85,
+    marginTop: 35,
   },
-  how1: {
-    paddingTop: 40,
+  how: {
+    paddingTop: 27,
   },
   how2: {
-    paddingTop: 70,
+    paddingTop: 30,
   },
   main: {
-    marginTop: 70,
-    marginBottom: 50,
-  },
-  btn: {
-    marginRight: 120,
+    marginTop: 50,
+    marginBottom: 30,
   },
   btnOutline: {
-    marginRight: 120,
     paddingLeft: 35,
     paddingRight: 35,
     color: "black",
@@ -37,15 +33,16 @@ const useStyles = makeStyles(() => ({
     },
   },
   buttons: {
-    marginTop: 50,
+    marginTop: 0,
   },
   content: {
-    marginTop: 25,
+    marginTop: 15,
   },
   img: {
     marginTop: 10,
     display: "block",
     margin: "0 auto",
+    marginBottom: 30,
   },
 }));
 
@@ -64,8 +61,9 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Fortschrittlichste KI & Crowdworker Symbiose <br /> mit dem
-              Versprechen, die Kosten für Ihre Notrufleistelle um mehr als die
+              Fortschrittlichste KI & Crowdworker <br /> Symbiose mit dem
+              Versprechen, die
+              <br /> Kosten für Ihre Notrufleistelle um mehr <br /> als die
               Hälfte zu reduzieren!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
@@ -79,12 +77,7 @@ const FreeTrial = () => {
               </Typography>
             </Grid>
             <Grid spacing={2} xs={12} sm={12} md={12}>
-              <Grid
-                container
-                justify="center"
-                spacing={3}
-                className={classes.buttons}
-              >
+              <Grid container justify="center" className={classes.buttons}>
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="about section redirect"
@@ -105,7 +98,7 @@ const FreeTrial = () => {
             </Grid>
           </Grid>
 
-          <Grid container xs={12} sm={12} md={6} className={classes.how1}>
+          <Grid container xs={12} sm={12} md={6} className={classes.how}>
             <Typography variant="h6" component="h6">
               Wie promiseQ funktioniert{" "}
               <Typography

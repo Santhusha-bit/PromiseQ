@@ -24,10 +24,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 30,
     fontWeight: "fontWeightMedium",
   },
-  btn: {
-    paddingTop: 30,
-  },
   btnOutline: {
+    marginTop: 10,
+    marginBottom: 10,
     color: "black",
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
@@ -35,6 +34,13 @@ const useStyles = makeStyles((theme) => ({
       outline: "3px solid #EBC327",
       backgroundColor: "transparent",
     },
+  },
+  btn: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  buttons: {
+    marginTop: 40,
   },
 }));
 
@@ -56,12 +62,18 @@ const Contact = () => {
               Wir freuen uns darauf, Sie kennenzulernen!
             </Typography>
           </Grid>
-          <Grid container justify="center" spacing={3} className={classes.btn}>
+          <Grid
+            container
+            justify="center"
+            spacing={3}
+            className={classes.buttons}
+          >
             <Grid item xs={12} sm={12} md={4} align="center">
               <Button
                 id="booking section redirect"
                 text="Termin buchen"
                 href="/booking"
+                className={classes.btn}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={4} align="center">

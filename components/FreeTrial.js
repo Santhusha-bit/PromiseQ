@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     marginBottom: 75,
     marginTop: 45,
   },
-  how1: {
+  how: {
     paddingTop: 40,
   },
   how2: {
@@ -61,9 +61,8 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Most advanced AI & crowdworker symbiosis <br /> with the promise
-              to reduce your operator
-              <br /> costs by more than half!
+              Most advanced AI & crowdworker <br /> symbiosis with the promise
+              to reduce <br /> your operator costs by more than half!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
@@ -97,7 +96,7 @@ const FreeTrial = () => {
             </Grid>
           </Grid>
 
-          <Grid container xs={12} sm={12} md={6} className={classes.how1}>
+          <Grid container xs={12} sm={12} md={6} className={classes.how}>
             <Typography variant="h6" component="h6">
               How promiseQ{" "}
               <Typography

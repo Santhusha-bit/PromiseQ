@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "1rem",
     backgroundColor: "white",
   },
+  topic: {
+    fontSize: 39,
+  },
   logoSection: {
     padding: "10% 3% 10% 3%",
   },
@@ -36,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     paddingLeft: 35,
     paddingRight: 35,
+    boxShadow: "none",
     backgroundColor: "white",
     outline: "3px solid #FFD42A",
     "&:hover": {
@@ -56,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
     margin: "20 auto",
     marginRight: 90,
     marginBottom: 0,
+    boxShadow: "none",
+    outline: "3px solid #FFD42A",
+    "&:hover": {
+      outline: "3px solid #EBC327",
+    },
   },
 }));
 
@@ -68,7 +77,7 @@ export default function Home() {
         <Container maxWidth="lg">
           <Grid container justify="center" spacing={3}>
             <Grid item xs={12} sm={12} md={5}>
-              <Typography gutterBottom variant="h3">
+              <Typography gutterBottom variant="h4" className={classes.topic}>
                 Easily eliminate more than 95% of false alarms
               </Typography>
               <Grid item className={classes.text}>

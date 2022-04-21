@@ -33,6 +33,10 @@ const useStyles = makeStyles(() => ({
       backgroundColor: "transparent",
     },
   },
+  btn: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
   fullBox: {
     padding: 25,
     marginTop: 0,
@@ -42,10 +46,7 @@ const useStyles = makeStyles(() => ({
     paddingLeft: 40,
     textAlign: "center",
   },
-  btn: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
+
   deal: {
     marginTop: 20,
   },

@@ -44,11 +44,11 @@ const companies = [
   },
   {
     imagePath: "/data_guard.png",
-    description: "Data guard Logo 1",
+    description: "Data guard Logo",
   },
   {
     imagePath: "/made.png",
-    description: "Data guard Logo 2",
+    description: "Made in Germany Logo",
   },
 ];
 const CompanyLogo = () => {

@@ -174,24 +174,28 @@ industry standards."
                     />
                   </ListItem>
                   <ListItem>
-                    <Link href="https://www.bdj.de/atlas/">
+                    <Grid item md={6}>
+                      <Link href="https://www.bdj.de/atlas/">
+                        <img
+                          src="/atlas.png"
+                          width="60%"
+                          height="auto"
+                          object-fit="fill"
+                          align="center"
+                          className={classes.img3}
+                        />
+                      </Link>
+                    </Grid>
+                    <Grid item md={6}>
                       <img
-                        src="/atlas.png"
+                        src="/mit.png"
                         width="40%"
                         height="auto"
                         object-fit="fill"
                         align="center"
                         className={classes.img3}
                       />
-                    </Link>
-                    <img
-                      src="/mit.png"
-                      width="20%"
-                      height="auto"
-                      object-fit="fill"
-                      align="center"
-                      className={classes.img3}
-                    />
+                    </Grid>
                   </ListItem>
                 </List>
               </Grid>
@@ -282,14 +286,14 @@ industry standards."
                   src="/atlas.png"
                   width="17%"
                   height="auto"
-                  textAlign="center"
+                  align="center"
                   object-fit="fill"
                   className={classes.img3}
                 />
                 <img
                   src="/mit.png"
                   width="17%"
-                  textAlign="center"
+                  align="center"
                   height="auto"
                   object-fit="fill"
                   className={classes.img3}

@@ -38,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: 13,
   },
+  topics: {
+    marginTop: 27,
+    marginBottom: 27,
+  },
   topic: { marginTop: "0.3rem" },
   title: { marginBottom: "1rem", marginTop: "1rem" },
   locationIcon: { color: "#FFD42A", marginRight: 10 },
@@ -56,6 +60,10 @@ const useStyles = makeStyles((theme) => ({
   },
   checkText: {
     fontSize: 14,
+  },
+  items: {
+    marginTop: 20,
+    marginBottom: 20,
   },
 }));
 
@@ -86,7 +94,7 @@ const Footer = () => {
                 </Typography>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid item xs={12} className={classes.items}>
                 <Typography variant="caption" color="inherit">
                   Tolga Ermis <br /> Elias Kardel
                 </Typography>
@@ -138,7 +146,7 @@ const Footer = () => {
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
-              <Grid container className={classes.topic}>
+              <Grid container className={classes.topics}>
                 <Grid>
                   <LocationOnIcon
                     color="action"
@@ -156,7 +164,7 @@ const Footer = () => {
                 </Grid>
               </Grid>
 
-              <Grid container className={classes.title}>
+              <Grid container className={classes.topics}>
                 <Grid>
                   <EmailIcon
                     color="action"
