@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: 13,
   },
+  nonLinks: {
+    margin: "auto",
+    color: "white",
+    fontSize: 13,
+  },
   topics: {
     marginTop: 27,
     marginBottom: 27,
@@ -243,7 +248,7 @@ const Footer = () => {
                 <Typography
                   variant="caption"
                   color="inherit"
-                  className={classes.textStyles}
+                  className={classes.nonLinks}
                 >
                   © {year.getFullYear()} promiseQ Gmbh. All Rights Reserved.
                 </Typography>
