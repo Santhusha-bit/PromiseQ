@@ -1,7 +1,15 @@
 import { Grid, Container, Box } from "@material-ui/core";
 import React from "react";
+import { makeStyles } from "@material-ui/core";
 
-const impressum = () => {
+const useStyles = makeStyles(() => ({
+  lastText: {
+    marginBottom: 24,
+  },
+}));
+
+const Impressum = () => {
+  const classes = useStyles();
   return (
     <Container maxWidth="lg">
       <Box marginTop={20} marginBottom={5}>
@@ -20,7 +28,7 @@ const impressum = () => {
               Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
             </h2>
           </Grid>
-          <p>
+          <p className={classes.lastText}>
             Wir sind nicht bereit oder verpflichtet, an
             Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
             teilzunehmen.
@@ -31,4 +39,4 @@ const impressum = () => {
   );
 };
 
-export default impressum;
+export default Impressum;
