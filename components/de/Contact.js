@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingBottom: 0,
     paddingTop: 50,
-    paddingRight: 70,
-    paddingLeft: 70,
+    paddingRight: 30,
+    paddingLeft: 30,
     fontWeight: "fontWeightMedium",
   },
   btnOutline: {
@@ -50,24 +50,29 @@ const Contact = () => {
 
   return (
     <>
-      <Header title="Contact Us" />
+      <Header title="Kontaktieren Sie uns" />
       <Grid container gutterBottom xs={12} sm={12} align="center">
         <Grid container gutterBottom xs={12} sm={2}></Grid>
         <Grid container gutterBottom xs={12} sm={8}>
           <Grid container xs={12} sm={12} className={classes.main}>
             <Typography gutterBottom={10} variant="h5" component="h6">
-              If you have any questions, you can contact us by e-mail
-              <br /> or make an individual appointment,
-              <br /> where you can also learn more about promiseQ.
+              Wenn Sie Fragen haben, können Sie uns per E-Mail kontaktieren
+              <br /> oder einen individuellen Termin vereinbaren,
+              <br /> bei dem Sie auch mehr über promiseQ erfahren können.
               <br />
-              We look forward to meeting you!
+              Wir freuen uns darauf, Sie kennenzulernen!
             </Typography>
           </Grid>
-          <Grid container justify="center" className={classes.buttons}>
+          <Grid
+            container
+            justify="center"
+            spacing={3}
+            className={classes.buttons}
+          >
             <Grid item xs={12} sm={12} md={4} align="center">
               <Button
                 id="booking section redirect"
-                text="Book a meeting"
+                text="Termin buchen"
                 href="/booking"
                 className={classes.btn}
               />
@@ -75,7 +80,7 @@ const Contact = () => {
             <Grid item xs={12} sm={12} md={4} align="center">
               <Button
                 id="about section redirect"
-                text="Get in Touch"
+                text="Kontaktieren Sie uns"
                 href="/contact"
                 className={classes.btnOutline}
               />

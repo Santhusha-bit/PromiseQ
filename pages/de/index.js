@@ -2,13 +2,13 @@ import ImageLayout from "components/ImageLayout";
 import { Grid, Box, Container } from "@material-ui/core";
 import VideoLayout from "components/VideoLayout";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "components/Button";
-import CompanyLogo from "components/CompanyLogo";
-import About from "components/About";
-import Contact from "components/Contact";
-import FreeTrial from "components/FreeTrial";
-import Affiliate from "components/Affiliate";
-import Privacy from "components/Privacy";
+import Button from "components/de/Button";
+import CompanyLogo from "components/de/CompanyLogo";
+import About from "components/de/About";
+import Contact from "components/de/Contact";
+import FreeTrial from "components/de/FreeTrial";
+import Affiliate from "components/de/Affiliate";
+import Privacy from "components/de/Privacy";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,24 +28,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
   },
   topic: {
-    fontSize: 39,
+    fontSize: 30,
   },
   logoSection: {
     padding: "10% 3% 10% 3%",
   },
   btnOutline: {
-    marginRight: 120,
     marginBottom: 0,
     color: "black",
-    paddingLeft: 35,
-    paddingRight: 35,
     boxShadow: "none",
     backgroundColor: "white",
     border: "3px solid #FFD42A",
     borderRadius: 7,
     "&:hover": {
       border: "3px solid #EBC327",
-      borderRadius: 7,
       backgroundColor: "transparent",
     },
   },
@@ -60,14 +56,16 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: "20 auto",
-    marginRight: 80,
+    marginRight: 90,
     marginBottom: 0,
-    boxShadow: "none",
+    paddingLeft: 28,
+    paddingRight: 28,
     border: "3px solid #FFD42A",
     borderRadius: 7,
     "&:hover": {
       border: "3px solid #EBC327",
     },
+    boxShadow: "none",
   },
 }));
 
@@ -80,31 +78,32 @@ export default function Home() {
         <Container maxWidth="lg">
           <Grid container justify="center" spacing={3}>
             <Grid item xs={12} sm={12} md={5}>
-              <Typography gutterBottom variant="h4" className={classes.topic}>
-                Easily eliminate more than 95% of false alarms
+              <Typography gutterBottom variant="h3" className={classes.topic}>
+                Sie eliminieren mit promiseQ mehr als 95% Ihrer Falschalarme
               </Typography>
               <Grid item className={classes.text}>
                 <Typography gutterBottom variant="body1">
                   <Box fontWeight="fontWeightBold" display="inline">
                     promiseQ{" "}
                   </Box>
-                  is no ordinary video analytics security provider. <br />
-                  We deliver the unique symbiosis of state-of-the-art AI <br />&
-                  certified crowdworkers via a global platform.
+                  ist keine normale Videoanalytik! <br />
+                  Wir liefern die einzigartige Symbiose von modernster KI &{" "}
+                  <br />
+                  Crowdworkern über eine globale Plattform.
                 </Typography>
               </Grid>
               <Grid item xs={12} sm={12} md={12} justify="center">
                 <Grid item xs={12} sm={12}>
                   <Button
                     id="about section redirect"
-                    text="Book a meeting"
-                    href="/booking"
+                    text="Termin buchen"
+                    href="/de/booking"
                     className={classes.btn}
                   />
                   <Button
                     id="contact section redirect"
-                    text="Free Trial"
-                    href="/contact"
+                    text="Kostenloser Test"
+                    href="/de/contact"
                     className={classes.btnOutline}
                   />
                 </Grid>

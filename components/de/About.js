@@ -65,16 +65,15 @@ const About = () => {
             </Grid>
 
             <Grid item xs={12} sm={12} md={12} className={classes.topic}>
-              <Typography variant="h6" gutterBottom>
-                Our story. We found{" "}
-                <Typography
-                  variant="h5"
-                  style={{ color: "#FFD42A" }}
-                  display="inline"
-                >
-                  promise for humans{" "}
-                </Typography>
-                in the loop
+              <Typography variant="h6" display="inline" gutterBottom>
+                Unsere Story.{" "}
+              </Typography>
+              <Typography
+                style={{ color: "#FFD42A" }}
+                variant="h5"
+                display="inline"
+              >
+                Vom autonomen Fahren zu Security{" "}
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} className={classes.para}>
@@ -87,47 +86,55 @@ const About = () => {
                   {" "}
                   Elias{" "}
                 </Box>
-                have worked in the field of automated driving for years. While
-                Elias successfully explored crowdsourcing-based projects for AI
-                training, Tolga helped develop Volkswagen's and Daimler's
-                camera-based lane keeping functions.
+                haben jahrelang im Bereich des automatisierten Fahrens
+                gearbeitet. Während Elias erfolgreich Crowdsourcing basierte
+                Projekte für das Training der KI erforschte, hat Tolga an der
+                Entwicklung der kamerabsierten Spurhaltefunktionen von
+                Volkswagen und Daimler mitgewirkt.
               </Typography>
               <Typography gutterBottom variant="body1">
-                However, a family member’s experience with a nuisance alarm
-                system set them on a different path. After extensive research,
-                the pair discovered the true extent of the false alarm problem
-                in the security sector:
+                Eines Tages sahen sie jedoch eine Chance künstliche Intelligenz
+                in Echtzeit mit automatisiertem menschlichem Eingreifen per
+                Crowdworking zu augmentieren. Nach umfangreichen
+                Marktforschungen entdeckten die beiden, dass Falschalarme im
+                Sicherheitsbereich in der Tat ein weit verbreitetes Problem
+                waren:
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  More than 95% of{" "}
+                  Mehr als 95 %{" "}
                 </Box>
-                all security camera alarms are
+                aller Alarme von Sicherheitskameras werden aus irrelevanten
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
-                  triggered for innocuous reasons.{" "}
+                  Gründen ausgelöst.{" "}
                 </Box>
               </Typography>
               <Typography gutterBottom variant="body1">
-                In a world of fully staffed control centers and first attempts
-                at automation, the idea of crowdworking for security may seem
-                extraordinary. But the control center of the future is
-                <Box fontWeight="fontWeightBold" display="inline">
-                  {" "}
-                  decentralized and autonomous.{" "}
-                </Box>
-                As a company, promiseQ is pushing to make this a reality. We are
-                reshaping alarm processing and security. So don't bet on the
-                past, be part of the future with
+                Die Idee, Sicherheit durch Crowdworking zu komplementieren, ist
+                durchaus etwas verrückt. In einer Welt voll besetzter
+                Leitstellen und ersten Anläufen der Automatisierung, mag die
+                Idee des Crowdworking für Security völlig neu sein. Wir denken
+                Alarmbearbeitung und Sicherheit neu. Henry Ford sagte “Wenn ich
+                die Leute gefragt hätte was sie wollen, hätten sie schnellere
+                Pferde gesagt”. Setzen Sie nicht auf schnellere Pferde, setzen
+                Sie auf
                 <Box fontWeight="fontWeightBold" display="inline">
                   {" "}
                   promiseQ.{" "}
+                </Box>
+              </Typography>
+              <Typography gutterBottom variant="body1">
+                Die Leitstelle der Zukunft ist
+                <Box fontWeight="fontWeightBold" display="inline">
+                  {" "}
+                  dezentral und autonom!{" "}
                 </Box>
               </Typography>
             </Grid>
             <Grid container sm={12} justify="center">
               <Button
                 id="about section redirect"
-                text="Get in Touch"
+                text="Kontaktieren Sie uns"
                 href="/contact"
               />
             </Grid>

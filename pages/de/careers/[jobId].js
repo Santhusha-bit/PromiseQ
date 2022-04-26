@@ -11,22 +11,21 @@ import JobList from "components/JobList";
 import JobDescription from "components/JobDescription";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { useRouter } from "next/router";
 
-const useStyles = makeStyles((theme) => ({
-  fullBox: {
-    paddingTop: 70,
-    paddingBottom: 70,
-  },
-}));
-
-const careers = () => {
-  const classes = useStyles();
+const Job = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [currentJob, setCurrentJob] = useState(null);
+  const router = useRouter();
+  const jobId = +router.query.jobId;
 
   useEffect(() => getJobs(), []);
+
+  useEffect(
+    () => jobs.length && setCurrentJob(jobs.find((job) => job.jobId === jobId)),
+    [jobId, router, jobs]
+  );
 
   const getJobs = () => {
     setIsLoading(true);
@@ -43,15 +42,17 @@ const careers = () => {
 
   return (
     <>
-      <Container maxWidth="lg" className={classes.fullBox}>
+      <Container maxWidth="lg">
         <Box marginTop={currentJob === null ? 15 : 5}>
           <Meta title="Careers" />
-          {currentJob === null && <Header title="Join Our Team" />}
-          <section id="current_jobs" style={{ minHeight: "60vh" }}>
-            {currentJob === null && (
+          {!isLoading && currentJob === null && (
+            <Header title="Trete unserem Team bei" />
+          )}
+          <section id="current_jobs" style={{ minHeight: "70vh" }}>
+            {!isLoading && currentJob === null && (
               <Grid>
                 <Typography variant="h6" style={{ marginBottom: "30px" }}>
-                  Current job vacancies :
+                  Aktuelle Stellenangebote :
                 </Typography>
               </Grid>
             )}
@@ -80,4 +81,4 @@ const careers = () => {
   );
 };
 
-export default careers;
+export default Job;

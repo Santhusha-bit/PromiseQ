@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -10,7 +10,6 @@ import EmailIcon from "@material-ui/icons/Email";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Button from "components/Button";
 import { TextField } from "@material-ui/core";
-import FooterInDE from "./de/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
   checkText: {
     fontSize: 14,
+    //paddingLeft: 4,
   },
   items: {
     marginTop: 20,
@@ -72,17 +72,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Footer = () => {
-  const [isLangEnglish, setIsLangEnglish] = useState(true);
-
-  useEffect(() => {
-    localStorage.getItem("lang") &&
-      setIsLangEnglish(localStorage.getItem("lang") === "eng");
-  }, []);
-
+const FooterInDE = () => {
   const classes = useStyles();
   const year = new Date();
-  return isLangEnglish ? (
+  return (
     <>
       <footer className={classes.root}>
         <Container>
@@ -94,7 +87,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Managing Directors:
+                  Vertreten durch:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -109,7 +102,7 @@ const Footer = () => {
                 color="inherit"
                 className={classes.title}
               >
-                Follow us:
+                Folgen Sie uns:
                 <Divider className={classes.topic} />
               </Typography>
 
@@ -147,7 +140,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Location & Contact:
+                  Standort & Kontakte:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -191,7 +184,7 @@ const Footer = () => {
                   color="inherit"
                   className={classes.title}
                 >
-                  Receive news and updates:
+                  Erhalten Sie Nachrichten und Updates:
                   <Divider className={classes.topic} />
                 </Typography>
               </Grid>
@@ -201,12 +194,13 @@ const Footer = () => {
                   <Box className={classes.check}>
                     <Checkbox color="yellow" className={classes.checkbox} />
                     <Typography display="inline" className={classes.checkText}>
-                      I consent to the processing of my personal data
+                      Ich bin mit der Verarbeitung meiner persönlichen Daten
+                      einverstanden
                     </Typography>
                   </Box>
                   <Button
                     id="about section redirect"
-                    text="Subscribe"
+                    text="Anmelden"
                     href="/contact"
                   />
                 </Grid>
@@ -258,9 +252,7 @@ const Footer = () => {
         </Container>
       </footer>
     </>
-  ) : (
-    <FooterInDE />
   );
 };
 
-export default Footer;
+export default FooterInDE;
