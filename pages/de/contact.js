@@ -31,9 +31,10 @@ const useStyles = makeStyles((theme) => ({
   btnOutline: {
     color: "black",
     backgroundColor: "white",
-    outline: "3px solid #FFD42A",
+    border: "3px solid #FFD42A",
+    borderRadius: 7,
     "&:hover": {
-      outline: "3px solid #EBC327",
+      border: "3px solid #EBC327",
       backgroundColor: "transparent",
     },
   },

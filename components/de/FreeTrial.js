@@ -26,9 +26,10 @@ const useStyles = makeStyles(() => ({
     paddingRight: 35,
     color: "black",
     backgroundColor: "white",
-    outline: "3px solid #FFD42A",
+    border: "3px solid #FFD42A",
+    borderRadius: 7,
     "&:hover": {
-      outline: "3px solid #EBC327",
+      border: "3px solid #EBC327",
       backgroundColor: "transparent",
     },
   },

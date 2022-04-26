@@ -41,9 +41,11 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 35,
     boxShadow: "none",
     backgroundColor: "white",
-    outline: "3px solid #FFD42A",
+    border: "3px solid #FFD42A",
+    borderRadius: 7,
     "&:hover": {
-      outline: "3px solid #EBC327",
+      border: "3px solid #EBC327",
+      borderRadius: 7,
       backgroundColor: "transparent",
     },
   },
@@ -58,12 +60,13 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: "20 auto",
-    marginRight: 90,
+    marginRight: 80,
     marginBottom: 0,
     boxShadow: "none",
-    outline: "3px solid #FFD42A",
+    border: "3px solid #FFD42A",
+    borderRadius: 7,
     "&:hover": {
-      outline: "3px solid #EBC327",
+      border: "3px solid #EBC327",
     },
   },
 }));
