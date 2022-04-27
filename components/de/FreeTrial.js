@@ -2,6 +2,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/Button";
+import { Link } from "@material-ui/core";
 
 import Header from "./Header";
 import { Container } from "@material-ui/core";
@@ -40,10 +41,9 @@ const useStyles = makeStyles(() => ({
     marginTop: 15,
   },
   img: {
-    marginTop: 10,
     display: "block",
     margin: "0 auto",
-    marginBottom: 30,
+    marginBottom: 22,
   },
 }));
 
@@ -144,14 +144,18 @@ const FreeTrial = () => {
               Sie wollen mit uns kollaborieren und promiseQ auf Ihrer Plattform
               anbieten? Dann kontaktieren Sie uns!
             </Typography>
-            <img
-              src="/ebus.png"
-              width="25%"
-              height="auto"
-              textAlign="center"
-              object-fit="fill"
-              className={classes.img}
-            />
+            <Grid container md={12} style={{ justifyContent: "center" }}>
+              <Link href="https://www.ebues.de/">
+                <img
+                  src="/ebus.png"
+                  width="70%"
+                  height="auto"
+                  textAlign="center"
+                  object-fit="fill"
+                  className={classes.img}
+                />
+              </Link>
+            </Grid>
           </Grid>
         </Grid>{" "}
       </Container>
