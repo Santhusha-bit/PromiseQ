@@ -8,27 +8,23 @@ import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   textMiddle: {
-    marginBottom: 75,
-    marginTop: 45,
+    marginBottom: 85,
+    marginTop: 35,
   },
   how: {
-    paddingTop: 40,
+    paddingTop: 27,
   },
   how2: {
-    paddingTop: 50,
+    paddingTop: 30,
   },
   main: {
-    marginTop: 70,
-    marginBottom: 50,
-  },
-  btn: {
-    marginBottom: 0,
+    marginTop: 50,
+    marginBottom: 30,
   },
   btnOutline: {
-    marginBottom: 0,
-    color: "black",
     paddingLeft: 35,
     paddingRight: 35,
+    color: "black",
     backgroundColor: "white",
     border: "3px solid #FFD42A",
     borderRadius: 7,
@@ -37,13 +33,17 @@ const useStyles = makeStyles(() => ({
       backgroundColor: "transparent",
     },
   },
+  buttons: {
+    marginTop: 0,
+  },
   content: {
-    marginTop: 25,
+    marginTop: 15,
   },
   img: {
     marginTop: 10,
     display: "block",
     margin: "0 auto",
+    marginBottom: 30,
   },
 }));
 
@@ -53,7 +53,7 @@ const FreeTrial = () => {
   return (
     <div>
       <Container>
-        <Header title="Free Trial" />
+        <Header title="Kostenloser Test" />
         <Grid container spacing={2}>
           <Grid container xs={12} sm={12} md={6} className={classes.trial}>
             <Typography
@@ -62,26 +62,28 @@ const FreeTrial = () => {
               component="h6"
               className={classes.textMiddle}
             >
-              Most advanced AI & crowdworker <br /> symbiosis with the promise
-              to reduce <br /> your operator costs by more than half!
+              Fortschrittlichste KI & Crowdworker <br /> Symbiose mit dem
+              Versprechen, die
+              <br /> Kosten für Ihre Notrufleistelle um mehr <br /> als die
+              Hälfte zu reduzieren!
             </Typography>
             <Grid spacing={2} xs={12} sm={12} md={7}>
               <Typography gutterBottom variant="h6" component="h6">
-                Enjoy 30 days of peace of mind in your security operating
-                center!
+                Genießen Sie 30 Tage Seelenfrieden in Ihrer Notrufleitstelle!
               </Typography>
               <Typography gutterBottom variant="body1" className={classes.main}>
-                You contact us and we will send you a simple step-by-step guide
-                on how to install and use the benefits of and with promiseQ.
+                Sie setzen sich mit uns in Verbindung, und wir senden Ihnen eine
+                einfache Schritt-für-Schritt-Anleitung zur Installation und
+                Nutzung der Vorteile von und mit promiseQ.
               </Typography>
             </Grid>
             <Grid spacing={2} xs={12} sm={12} md={12}>
-              <Grid container justify="center">
+              <Grid container justify="center" className={classes.buttons}>
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="about section redirect"
                     text="Book a meeting"
-                    href="/booking"
+                    href="/de/booking"
                     className={classes.btn}
                   />
                 </Grid>
@@ -89,7 +91,7 @@ const FreeTrial = () => {
                   <Button
                     id="contact section redirect"
                     text="Free Trial"
-                    href="/contact"
+                    href="/de/contact"
                     className={classes.btnOutline}
                   />
                 </Grid>
@@ -99,13 +101,13 @@ const FreeTrial = () => {
 
           <Grid container xs={12} sm={12} md={6} className={classes.how}>
             <Typography variant="h6" component="h6">
-              How promiseQ{" "}
+              Wie promiseQ funktioniert{" "}
               <Typography
                 variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                works - Focus SOC{" "}
+                - Fokus NSL{" "}
               </Typography>
             </Typography>
             <Typography
@@ -113,33 +115,34 @@ const FreeTrial = () => {
               variant="body1"
               className={classes.content}
             >
-              promiseQ Threat Detect uses its flagship false alarm filtering
-              technology to detect the presence of threats in video alarms.
-              Using deep learning and crowdworkers, promiseQ analytics
-              successfully filter out more than 95% of false alarms across all
-              camera types. Additional features, such as timing for activation
-              and camera health checks, give you the opportunity to
-              significantly increase the efficiency of video surveillance.
+              promiseQ Threat Detect nutzt ihre Vorzeigetechnologie zur
+              Filterung von Falschalarmen, um die Anwesenheit von Menschen und
+              Fahrzeugen in Videoalarmen zu erkennen. Mithilfe von Deep-Learning
+              und Crowdworkern filtert die promiseQ Analytik mehr als 95 % der
+              Falschalarme bei allen Kameratypen erfolgreich heraus. Zusätzliche
+              Funktionen, wie Zeitplanung zur Scharfschaltung und Kamera Health
+              Checks, geben Ihnen die Möglichkeit, die Effizienz der
+              Videoüberwachung deutlich zu steigern.
             </Typography>
             <Typography variant="h6" component="h6" className={classes.how2}>
-              How promiseQ{" "}
+              Wie promiseQ funktioniert{" "}
               <Typography
                 variant="h5"
                 style={{ color: "#FFD42A" }}
                 display="inline"
               >
-                connects - Focus VMS & AMS & CMS{" "}
+                - Fokus VMS & AMS{" "}
               </Typography>
             </Typography>
             <Typography variant="body1" className={classes.content}>
-              Take advantage of promiseQ Threat Detect through your chosen VMS
-              or alarm management platform. promiseQ integrates seamlessly with
-              leading systems such as EBÜS, AMwin and Azena and others, e.g.
-              Milestone, Genetec and Immix.
+              Sie nutzen die Vorteile von promiseQ Threat Detect über Ihre
+              gewählte VMS- oder Alarmmanagementplattform. promiseQ lässt sich
+              nahtlos in führende Systeme wie EBÜS, AMwin und Azena integrieren.
+              Weitere sind in Planung: z.B. Milestone, Genetec und Immix.
             </Typography>
             <Typography gutterBottom variant="body1">
-              Want to collaborate with promiseQ? Then don’t hesitate to contact
-              us!
+              Sie wollen mit uns kollaborieren und promiseQ auf Ihrer Plattform
+              anbieten? Dann kontaktieren Sie uns!
             </Typography>
             <img
               src="/ebus.png"

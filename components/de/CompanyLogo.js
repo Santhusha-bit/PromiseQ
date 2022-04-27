@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   logo: {
     WebkitFilter: "grayscale(100%)",
-    justifyContent: "center",
     textAlign: "center",
+    justifyContent: "center",
     "&:hover": {
       WebkitFilter: "grayscale(0%)",
     },

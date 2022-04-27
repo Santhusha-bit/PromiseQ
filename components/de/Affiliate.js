@@ -47,7 +47,7 @@ const Affiliate = () => {
   return (
     <div>
       <Grid className={classes.container}>
-        <Header title="Affiliate Program" />
+        <Header title="Ihre Vorteile" />
         <Typography
           gutterBottom={10}
           variant="h4"
@@ -96,8 +96,8 @@ const Affiliate = () => {
                   align="center"
                   className={classes.topic}
                 >
-                  Revolutionize your security offering to better protect your
-                  customers
+                  Sie revolutionieren Ihr Sicherheitsangebot, um Ihre Kunden
+                  besser zu schützen
                 </Typography>
               </Grid>
               <Grid item sm={4}>
@@ -108,8 +108,8 @@ const Affiliate = () => {
                   align="center"
                   className={classes.topic}
                 >
-                  Increase the motivation and well-being of your operators.
-                  Proactive decisions in the event of real alarms
+                  Sie erhöhen die Motivation und das Wohlbefinden ihrer
+                  Operatoren. Proaktive Entscheidungen bei echten Alarmen
                 </Typography>
               </Grid>
               <Grid item sm={4}>
@@ -120,8 +120,8 @@ const Affiliate = () => {
                   align="center"
                   className={classes.topic}
                 >
-                  Increase your margins with promiseQ as part of your solution
-                  portfolio
+                  Sie steigern Ihre Margen mit promiseQ als Teil Ihres
+                  Lösungsportfolios
                 </Typography>
               </Grid>
             </Grid>
@@ -134,7 +134,7 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="Use latest technology to increase customer satisfaction"
+                      primary="Neueste Technologie und mehr Kundenzufriedenheit"
                     />
                   </ListItem>
                   <ListItem>
@@ -143,7 +143,7 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="Automated optimization, updates, health checks of your cameras"
+                      primary="Automatisierte Optimierung, Updates, Health Checks Ihrer Kameras "
                     />
                   </ListItem>
                   <ListItem>
@@ -152,38 +152,7 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="More capable SLAs & Improve overall loss prevention standards"
-                    />
-                  </ListItem>
-                </List>
-              </Grid>
-              <Grid item sm={4}>
-                <List>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText
-                      className={classes.points}
-                      primary="Increased motivation in security operating center and reduction of attention errors."
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText
-                      className={classes.points}
-                      primary="95% less burden on your operators with false alarms and more time for handling real alarms"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <CheckIcon className={classes.check} />
-                    </ListItemAvatar>
-                    <ListItemText
-                      className={classes.points}
-                      primary="Reduction of the intervention time for real alarms"
+                      primary="Leistungsfähigere SLAs & Verbesserung der gesamten Schadensverhütungsstandards"
                     />
                   </ListItem>
                 </List>
@@ -196,7 +165,7 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="Reduce your own false alarm management costs"
+                      primary="Gesteigerte Motivation in der NSL und Reduktion von Aufmerksamkeitsfehlern"
                     />
                   </ListItem>
                   <ListItem>
@@ -205,7 +174,7 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="Benefit from the constantly improving promiseQ Threat Detect"
+                      primary="95% weniger Belastung Ihrer Operatoren mit Falschalarmen und mehr Zeit für die Bearbeitung echter Alarme"
                     />
                   </ListItem>
                   <ListItem>
@@ -214,7 +183,38 @@ const Affiliate = () => {
                     </ListItemAvatar>
                     <ListItemText
                       className={classes.points}
-                      primary="More camera connections and customers without fixed costs due to additional personnel"
+                      primary="Reduktion der Interventionszeit bei echten Alarmen"
+                    />
+                  </ListItem>
+                </List>
+              </Grid>
+              <Grid item sm={4}>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      className={classes.points}
+                      primary="Reduzieren Sie Ihre eigenen Kosten für das Falschalarm-Management"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      className={classes.points}
+                      primary="Profitieren Sie von dem sich ständig verbessernden promiseQ Threat Detect"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <CheckIcon className={classes.check} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      className={classes.points}
+                      primary="Mehr Aufschaltungen ohne sprungfixe Kosten durch zusätzliches Personal"
                     />
                   </ListItem>
                 </List>
@@ -223,7 +223,7 @@ const Affiliate = () => {
             <Grid container item sm={12} spacing={3} justify="center">
               <Button
                 id="about section redirect"
-                text="ROI Calculator"
+                text="ROI Rechner"
                 href="/roi"
               />
             </Grid>
@@ -249,8 +249,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  Increase the motivation and well-being of your operators.
-                  Proactive decisions in the event of real alarms
+                  Sie erhöhen die Motivation und das Wohlbefinden ihrer
+                  Operatoren. Proaktive Entscheidungen bei echten Alarmen
                 </Typography>
               </Grid>
               <Grid item sm={4}>
@@ -259,19 +259,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Use latest technology to increase customer satisfaction" />
+                    <ListItemText primary="Neueste Technologie und mehr Kundenzufriedenheit" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Automated optimization, updates, health checks of your cameras" />
+                    <ListItemText primary="Automatisierte Optimierung, Updates, Health Checks Ihrer Kameras " />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="More capable SLAs & Improve overall loss prevention standards" />
+                    <ListItemText primary="Leistungsfähigere SLAs & Verbesserung der gesamten Schadensverhütungsstandards" />
                   </ListItem>
                 </List>
               </Grid>
@@ -294,8 +294,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  Revolutionize your security offering to better protect your
-                  customers
+                  Sie revolutionieren Ihr Sicherheitsangebot, um Ihre Kunden
+                  besser zu schützen
                 </Typography>
               </Grid>
 
@@ -305,19 +305,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Increased motivation in security operating center and reduction of attention errors." />
+                    <ListItemText primary="Gesteigerte Motivation in der NSL und Reduktion von Aufmerksamkeitsfehlern" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="95% less burden on your operators with false alarms and more time for handling real alarms" />
+                    <ListItemText primary="95% weniger Belastung Ihrer Operatoren mit Falschalarmen und mehr Zeit für die Bearbeitung echter Alarme" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Reduction of the intervention time for real alarms" />
+                    <ListItemText primary="Reduktion der Interventionszeit bei echten Alarmen" />
                   </ListItem>
                 </List>
               </Grid>
@@ -339,8 +339,8 @@ const Affiliate = () => {
                   component="h6"
                   align="center"
                 >
-                  Increase your margins with promiseQ as part of your solution
-                  portfolio
+                  Sie steigern Ihre Margen mit promiseQ als Teil Ihres
+                  Lösungsportfolios
                 </Typography>
               </Grid>
               <Grid item sm={4}>
@@ -349,19 +349,19 @@ const Affiliate = () => {
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Reduce your own false alarm management costs" />
+                    <ListItemText primary="Reduzieren Sie Ihre eigenen Kosten für das Falschalarm-Management" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="Benefit from the constantly improving promiseQ Threat Detect" />
+                    <ListItemText primary="Profitieren Sie von dem sich ständig verbessernden promiseQ Threat Detect" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <CheckIcon className={classes.check2} />
                     </ListItemAvatar>
-                    <ListItemText primary="More camera connections and customers without fixed costs due to additional personnel" />
+                    <ListItemText primary="Mehr Aufschaltungen ohne sprungfixe Kosten durch zusätzliches Personal" />
                   </ListItem>
                 </List>
               </Grid>

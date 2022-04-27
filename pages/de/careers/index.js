@@ -46,12 +46,12 @@ const careers = () => {
       <Container maxWidth="lg" className={classes.fullBox}>
         <Box marginTop={currentJob === null ? 15 : 5}>
           <Meta title="Careers" />
-          {currentJob === null && <Header title="Join Our Team" />}
+          {currentJob === null && <Header title="Trete unserem Team bei" />}
           <section id="current_jobs" style={{ minHeight: "60vh" }}>
             {currentJob === null && (
               <Grid>
                 <Typography variant="h6" style={{ marginBottom: "30px" }}>
-                  Current job vacancies :
+                  Aktuelle Stellenangebote :
                 </Typography>
               </Grid>
             )}
