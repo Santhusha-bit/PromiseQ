@@ -16,6 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { Typography, Box, Container } from "@material-ui/core";
+import moment from "moment-timezone";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -107,11 +108,22 @@ function ElevationScroll(props) {
 const Navbar = (props) => {
   const [isLangEnglish, setIsLangEnglish] = useState(true);
   const prefix = isLangEnglish ? "/" : "/de/";
+  const timeZone = moment.tz.guess();
 
   useEffect(() => {
     localStorage.getItem("lang") &&
       setIsLangEnglish(localStorage.getItem("lang") === "eng");
-  }, []);
+
+    if (!localStorage.getItem("lang")) {
+      if (timeZone === "Europe/Berlin") {
+        if (isLangEnglish) {
+          localStorage.setItem("lang", "de");
+          router.push("/de");
+          setIsLangEnglish(false);
+        }
+      }
+    }
+  }, [timeZone]);
 
   const languageSwitch = () => {
     if (isLangEnglish) {
