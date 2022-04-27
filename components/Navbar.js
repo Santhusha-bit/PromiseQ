@@ -115,8 +115,7 @@ const Navbar = (props) => {
       setIsLangEnglish(localStorage.getItem("lang") === "eng");
 
     if (!localStorage.getItem("lang")) {
-      if (timeZone === "Asia/Colombo") {
-        // Europe/Berlin
+      if (timeZone === "Europe/Berlin") {
         if (isLangEnglish) {
           localStorage.setItem("lang", "de");
           router.push("/de");
