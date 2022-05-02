@@ -32,25 +32,32 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The following are the instructions to deply the project as a static site. 
 
-1. Init firebase:
+The following are the instructions to deply the project as a static site. 
 
-```bash
-firebase init hosting  # select /out as your hosting directory
+1. Delete firebaserc & firebase.json files 
+
+2. Init firebase:
+
+```shell
+firebase init hosting  
+# select Use an existing project
+# select promiseq-homepage (promiseq-homepage)
+# select /out as your hosting directory
 ```
 
-2. Buid the project
+3. Buid the project
 
 ```bash
 npm run build
 ```
 
-3. Export files to hosting directory
+4. Export files to hosting directory
 
 ```bash
 npm run export
 ```
 
-4. Deploy on Firebase
+5. Deploy on Firebase
 
 ```bash
 firebase deploy --only hosting
