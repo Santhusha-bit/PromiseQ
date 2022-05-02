@@ -121,7 +121,7 @@ export default function Home() {
             <Grid container justify="center">
               <Grid item xs={12}>
                 <VideoLayout
-                  videoSrc="/promiseq_video.mp4"
+                  videoSrc="/promiseq_video_de.mp4"
                   videoType="video/mp4"
                   width="100%"
                   height="auto"
