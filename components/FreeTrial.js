@@ -88,7 +88,7 @@ const FreeTrial = () => {
                   <Button
                     id="contact section redirect"
                     text="Free Trial"
-                    href="/contact"
+                    href="https://promiseq-production2.web.app/login"
                     className={classes.btnOutline}
                   />
                 </Grid>
