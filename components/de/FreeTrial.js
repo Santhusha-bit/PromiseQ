@@ -82,7 +82,7 @@ const FreeTrial = () => {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="about section redirect"
-                    text="Book a meeting"
+                    text="Termin buchen"
                     href="/de/booking"
                     className={classes.btn}
                   />
@@ -90,8 +90,8 @@ const FreeTrial = () => {
                 <Grid item xs={12} sm={12} md={6}>
                   <Button
                     id="contact section redirect"
-                    text="Free Trial"
-                    href="/de/contact"
+                    text="Kostenloser Test"
+                    href="https://promiseq-production2.web.app/login"
                     className={classes.btnOutline}
                   />
                 </Grid>

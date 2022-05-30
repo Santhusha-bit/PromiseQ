@@ -103,7 +103,7 @@ export default function Home() {
                   <Button
                     id="contact section redirect"
                     text="Kostenloser Test"
-                    href="/de/contact"
+                    href="https://promiseq-production2.web.app/login"
                     className={classes.btnOutline}
                   />
                 </Grid>
