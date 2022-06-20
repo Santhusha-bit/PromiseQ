@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontSize: "large",
     align: "right",
-    marginLeft: theme.spacing(5.6),
+    marginLeft: theme.spacing(3),
     "&:hover": {
       color: theme.palette.primary.main,
       backgroundColor: "transparent",
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontSize: "large",
     align: "right",
-    marginLeft: theme.spacing(5.6),
+    marginLeft: theme.spacing(5),
     backgroundColor: "#FFD42A",
     "&:hover": {
       backgroundColor: "#EBC327",
@@ -218,6 +218,20 @@ const Navbar = (props) => {
                       {isLangEnglish ? "Careers" : "Jobs"}
                     </Button>
                   </Link>
+                  <Link
+                    href={"https://9094398.hs-sites.com/promiseqblog"}
+                    passHref
+                  >
+                    {/* Blog */}
+                    <Button
+                      id="navigation button"
+                      className={classes.buttonStyles}
+                      disableRipple
+                      component="a"
+                    >
+                      {isLangEnglish ? "Blog" : "Blog"}
+                    </Button>
+                  </Link>
 
                   <Button
                     id="lang navigation button"
@@ -309,6 +323,12 @@ const Navbar = (props) => {
               {/* Careers */}
               <ListItem button component="a" className={classes.buttonStyles}>
                 <ListItemText primary="Careers" />
+              </ListItem>
+            </Link>
+            <Link href={"https://9094398.hs-sites.com/promiseqblog"} passHref>
+              {/* Blog */}
+              <ListItem button component="a" className={classes.buttonStyles}>
+                <ListItemText primary="Blog" />
               </ListItem>
             </Link>
             <Link href={`${prefix}`} onClick={languageSwitch}>
