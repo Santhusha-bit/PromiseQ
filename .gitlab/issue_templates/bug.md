@@ -10,4 +10,4 @@ tbd
 
 tbd
 
-/label ~"team::web" ~"project::web app" ~"remark::refinement needed" ~"remark::weight needed"
+/label ~"team::web" ~"project::home page" ~"remark::refinement needed"
