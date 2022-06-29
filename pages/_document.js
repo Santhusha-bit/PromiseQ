@@ -10,10 +10,7 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-          />
+          <link rel="stylesheet" href="../styles/global.css" />
           {/* <!-- Google Tag Manager --> */}
           <script
             dangerouslySetInnerHTML={{
