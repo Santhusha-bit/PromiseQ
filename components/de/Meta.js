@@ -14,7 +14,7 @@ const Meta = ({ title, keywords, description }) => {
 };
 
 Meta.defaultProps = {
-	title: "promiseQ",
+	title: "AI Based False Alarm  Detection CCTV & Monitoring Secure Cloud Service",
 	keywords: "IoT Camera Analytics,False Alarm Filtering Solution",
 	description:
 		"Our mission is to reduce false alarms in video-based intruder detection systems. With our hybrid approach of artificial intelligence and humans in the loop We Make AI Human.",
