@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import Header from "components/Header";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
@@ -45,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => {
   const classes = useStyles();
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -52,8 +54,7 @@ const Contact = () => {
         <Header title="Contact Us" />
         <Paper className={classes.formContainer}>
           <Typography variant="subtitle1" gutterBottom>
-            Do you have any questions? Please do not hesitate to contact us
-            directly.
+            {t("des")}
           </Typography>
           <HubspotForm
             portalId="9094398"

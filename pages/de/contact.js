@@ -52,8 +52,7 @@ const Contact = () => {
         <Header title="Kontaktieren Sie uns" />
         <Paper className={classes.formContainer}>
           <Typography variant="subtitle1" gutterBottom>
-            Do you have any questions? Please do not hesitate to contact us
-            directly.
+            Do you have any questions?
           </Typography>
           <HubspotForm
             portalId="9094398"
