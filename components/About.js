@@ -51,7 +51,7 @@ const About = () => {
               <ImageLayout imageRef="/Tolga.svg" desc="team" />
               <Typography gutterBottom variant="body1" align="center">
                 <Box fontWeight="fontWeightBold" display="inline">
-                  Tolga 
+                  Tolga Ermis
                 </Box>
               </Typography>
             </Grid>
